@@ -1,4 +1,5 @@
 
+
 import React from 'react';
 const Hero = () => {
   const scrollToContact = () => {
@@ -32,7 +33,7 @@ const Hero = () => {
             Connect your wallet, configure your AI assistant, and let advanced algorithms handle your trading strategy while you focus on what matters most.
           </p>
           
-          <button onClick={scrollToContact} className="bg-white text-zinc-950 px-10 py-5 text-lg rounded-lg font-semibold hover:bg-gray-100 transition-colors duration-300 tracking-wide">
+          <button onClick={scrollToContact} className="bg-white text-zinc-950 px-10 py-5 text-lg rounded-lg font-semibold hover:bg-gray-100 hover:scale-105 transition-all duration-300 tracking-wide">
             Contact Me
           </button>
         </div>
@@ -52,3 +53,4 @@ const Hero = () => {
     </section>;
 };
 export default Hero;
+
