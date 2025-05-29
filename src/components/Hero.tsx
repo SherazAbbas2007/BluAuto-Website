@@ -35,13 +35,13 @@ const Hero = () => {
         </div>
 
         {/* Video Placeholder with 16:9 aspect ratio - scaled up by 30% */}
-        <div className="hidden lg:block flex-1 animate-fade-in-up max-w-5xl" style={{
+        <div className="hidden lg:block flex-1 animate-fade-in-up max-w-4xl" style={{
           animationDelay: '0.3s'
         }}>
-          <div className="glass-card p-16 aspect-video flex items-center justify-center w-full">
+          <div className="glass-card p-13 aspect-video flex items-center justify-center w-full">
             <div className="text-center text-white/60">
-              <i className="ph ph-play-circle text-9xl mb-6"></i>
-              <p className="text-2xl font-light">Video Coming Soon</p>
+              <i className="ph ph-play-circle text-7xl mb-5"></i>
+              <p className="text-xl font-light">Video Coming Soon</p>
             </div>
           </div>
         </div>
