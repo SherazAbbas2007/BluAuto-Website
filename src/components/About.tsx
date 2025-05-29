@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { useInView } from 'react-intersection-observer';
 
@@ -15,7 +16,7 @@ const About = () => {
   };
 
   return (
-    <section id="about" className="py-20 bg-gradient-to-b from-slate-900 via-slate-800 to-slate-700" ref={ref}>
+    <section id="about" className="py-20 bg-gradient-to-b from-baby-blue-600 via-baby-blue-700 to-baby-blue-800" ref={ref}>
       <div className="max-w-7xl mx-auto px-6">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
           <div className={`transition-all duration-700 ${inView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
@@ -23,7 +24,7 @@ const About = () => {
               How could AI help you?
             </h2>
             
-            <p className="text-xl text-slate-200 font-light mb-8 leading-relaxed">
+            <p className="text-xl text-white/90 font-light mb-8 leading-relaxed">
               Transforming manual, inconsistent and time-consuming processes into operational excellence through our AI-powered automation services
             </p>
             
@@ -36,38 +37,38 @@ const About = () => {
           </div>
 
           <div className={`transition-all duration-700 ${inView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`} style={{ transitionDelay: '0.3s' }}>
-            <div className="bg-slate-800/50 backdrop-blur-sm border border-slate-700/50 rounded-xl p-8">
+            <div className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-xl p-8">
               <div className="grid grid-cols-2 gap-6">
                 <div className="text-center">
-                  <div className="w-16 h-16 bg-gradient-to-br from-baby-blue-400 to-baby-blue-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <div className="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-4">
                     <i className="ph ph-lightning text-2xl text-white"></i>
                   </div>
                   <h3 className="font-semibold text-white mb-2">Efficiency</h3>
-                  <p className="text-sm text-slate-300 font-light">Automate repetitive tasks</p>
+                  <p className="text-sm text-white/80 font-light">Automate repetitive tasks</p>
                 </div>
                 
                 <div className="text-center">
-                  <div className="w-16 h-16 bg-gradient-to-br from-baby-blue-500 to-baby-blue-700 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <div className="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-4">
                     <i className="ph ph-chart-line-up text-2xl text-white"></i>
                   </div>
                   <h3 className="font-semibold text-white mb-2">Growth</h3>
-                  <p className="text-sm text-slate-300 font-light">Scale your operations</p>
+                  <p className="text-sm text-white/80 font-light">Scale your operations</p>
                 </div>
                 
                 <div className="text-center">
-                  <div className="w-16 h-16 bg-gradient-to-br from-baby-blue-400 to-baby-blue-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <div className="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-4">
                     <i className="ph ph-brain text-2xl text-white"></i>
                   </div>
                   <h3 className="font-semibold text-white mb-2">Intelligence</h3>
-                  <p className="text-sm text-slate-300 font-light">Smart decision making</p>
+                  <p className="text-sm text-white/80 font-light">Smart decision making</p>
                 </div>
                 
                 <div className="text-center">
-                  <div className="w-16 h-16 bg-gradient-to-br from-baby-blue-500 to-baby-blue-700 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <div className="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-4">
                     <i className="ph ph-clock text-2xl text-white"></i>
                   </div>
                   <h3 className="font-semibold text-white mb-2">24/7</h3>
-                  <p className="text-sm text-slate-300 font-light">Round-the-clock operations</p>
+                  <p className="text-sm text-white/80 font-light">Round-the-clock operations</p>
                 </div>
               </div>
             </div>

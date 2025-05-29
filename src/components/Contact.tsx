@@ -43,7 +43,7 @@ const Contact = () => {
   };
 
   return (
-    <section id="contact" className="py-20 bg-gradient-to-br from-slate-800 to-slate-900" ref={ref}>
+    <section id="contact" className="py-20 bg-gradient-to-b from-baby-blue-800 via-baby-blue-900 to-slate-900" ref={ref}>
       <div className="max-w-4xl mx-auto px-6">
         <div className={`text-center mb-12 transition-all duration-700 ${inView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-6 tracking-tight">
