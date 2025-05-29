@@ -27,7 +27,7 @@ const About = () => {
               <div className="grid grid-cols-2 gap-6">
                 <div className="text-center">
                   <div className="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <i className="ph ph-lightning text-2xl text-white"></i>
+                    <i className="ph ph-lightning text-2xl text-baby-blue-200"></i>
                   </div>
                   <h3 className="font-semibold text-white mb-2">Efficiency</h3>
                   <p className="text-sm text-white/80 font-light">Automate repetitive tasks</p>
@@ -35,7 +35,7 @@ const About = () => {
                 
                 <div className="text-center">
                   <div className="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <i className="ph ph-chart-line-up text-2xl text-white"></i>
+                    <i className="ph ph-chart-line-up text-2xl text-baby-blue-200"></i>
                   </div>
                   <h3 className="font-semibold text-white mb-2">Growth</h3>
                   <p className="text-sm text-white/80 font-light">Scale your operations</p>
@@ -43,7 +43,7 @@ const About = () => {
                 
                 <div className="text-center">
                   <div className="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <i className="ph ph-brain text-2xl text-white"></i>
+                    <i className="ph ph-brain text-2xl text-baby-blue-200"></i>
                   </div>
                   <h3 className="font-semibold text-white mb-2">Intelligence</h3>
                   <p className="text-sm text-white/80 font-light">Smart decision making</p>
@@ -51,7 +51,7 @@ const About = () => {
                 
                 <div className="text-center">
                   <div className="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <i className="ph ph-clock text-2xl text-white"></i>
+                    <i className="ph ph-clock text-2xl text-baby-blue-200"></i>
                   </div>
                   <h3 className="font-semibold text-white mb-2">24/7</h3>
                   <p className="text-sm text-white/80 font-light">Round-the-clock operations</p>
