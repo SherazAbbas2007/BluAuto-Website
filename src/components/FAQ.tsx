@@ -11,7 +11,7 @@ const FAQ = () => {
   const faqs = [
     {
       question: "How long does it take to implement AI automation?",
-      answer: "Implementation timelines vary based on complexity, but most projects are completed within 2-8 weeks from consultation to deployment."
+      answer: "Implementation timelines vary based on complexity, but most projects are completed within 1-4 weeks from consultation to deployment."
     },
     {
       question: "Do you provide ongoing support and maintenance?",
