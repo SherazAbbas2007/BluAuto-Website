@@ -32,7 +32,16 @@ const Hero = () => {
           
           <button 
             onClick={scrollToContact}
-            className="white-glow-button text-lg px-8 py-3 h-auto"
+            className="bg-white text-slate-800 font-medium rounded-xl px-8 py-3 transition-all duration-300 shadow-lg hover:shadow-xl cursor-pointer border-none hover:bg-gray-50"
+            style={{
+              boxShadow: '0 4px 6px rgba(0, 0, 0, 0.1)'
+            }}
+            onMouseEnter={(e) => {
+              e.currentTarget.style.boxShadow = '0 0 20px rgba(255, 255, 255, 0.8), 0 0 40px rgba(255, 255, 255, 0.6), 0 8px 25px rgba(255, 255, 255, 0.3)';
+            }}
+            onMouseLeave={(e) => {
+              e.currentTarget.style.boxShadow = '0 4px 6px rgba(0, 0, 0, 0.1)';
+            }}
           >
             Contact Me
           </button>
