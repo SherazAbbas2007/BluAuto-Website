@@ -21,8 +21,8 @@ const Hero = () => {
       }}></div>
       </div>
 
-      <div className="max-w-7xl mx-auto px-6 flex items-center justify-center gap-12 relative z-10">
-        <div className="flex-1 max-w-2xl animate-fade-in-up">
+      <div className="max-w-7xl mx-auto px-6 flex items-center justify-center gap-8 relative z-10 w-full">
+        <div className="flex-1 max-w-2xl animate-fade-in-up text-center lg:text-left">
           <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-6 tracking-tight leading-tight">
             Revolutionary AI{' '}
             <span className="block">Trading Automation</span>
@@ -38,10 +38,10 @@ const Hero = () => {
         </div>
 
         {/* Video Placeholder with 16:9 aspect ratio - 1.5x bigger */}
-        <div className="hidden lg:block flex-1 animate-fade-in-up" style={{
+        <div className="hidden lg:block flex-1 animate-fade-in-up max-w-2xl" style={{
         animationDelay: '0.3s'
       }}>
-          <div className="glass-card p-8 aspect-video flex items-center justify-center w-[150%]">
+          <div className="glass-card p-8 aspect-video flex items-center justify-center w-full">
             <div className="text-center text-white/60">
               <i className="ph ph-play-circle text-6xl mb-4"></i>
               <p className="text-lg font-light">Video Coming Soon</p>
