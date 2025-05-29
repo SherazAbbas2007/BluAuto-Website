@@ -82,7 +82,7 @@ const Contact = () => {
             <div className="pt-4">
               <button 
                 type="submit" 
-                className="bg-white text-slate-800 px-10 py-5 text-lg rounded-lg font-semibold hover:bg-gray-100 hover:scale-105 transition-all duration-300 tracking-wide hover:shadow-[0_0_20px_rgba(255,255,255,0.6)]"
+                className="bg-white text-slate-800 px-10 py-5 text-lg rounded-2xl font-semibold hover:bg-gray-100 hover:scale-105 transition-all duration-300 tracking-wide hover:shadow-[0_0_20px_rgba(255,255,255,0.6)]"
               >
                 Book Now
               </button>
