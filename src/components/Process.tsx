@@ -37,7 +37,7 @@ const Process = () => {
   ];
 
   return (
-    <section id="process" className="py-20 bg-gradient-to-b from-baby-blue-400 via-baby-blue-500 to-baby-blue-600" ref={ref}>
+    <section id="process" className="py-20 bg-gradient-to-b from-baby-blue-900 to-baby-blue-800" ref={ref}>
       <div className="max-w-7xl mx-auto px-6">
         <div className={`text-center mb-16 transition-all duration-700 ${inView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
           <p className="text-white/80 font-medium mb-4 tracking-wide uppercase text-sm">OUR PROCESS</p>
