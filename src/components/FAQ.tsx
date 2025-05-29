@@ -38,13 +38,13 @@ const FAQ = () => {
   };
 
   return (
-    <section className="py-20 bg-gradient-to-b from-baby-blue-300 to-baby-blue-400" ref={ref}>
+    <section className="py-20 bg-gradient-to-b from-slate-600 to-slate-700" ref={ref}>
       <div className="max-w-4xl mx-auto px-6">
         <div className={`text-center mb-16 transition-all duration-700 ${inView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
-          <h2 className="text-4xl md:text-5xl font-bold text-baby-blue-900 mb-6 tracking-tight">
+          <h2 className="text-4xl md:text-5xl font-bold text-white mb-6 tracking-tight">
             Frequently Asked Questions
           </h2>
-          <p className="text-xl text-baby-blue-700 font-light">
+          <p className="text-xl text-slate-200 font-light">
             Get answers to common questions about our AI automation services
           </p>
         </div>
@@ -53,26 +53,26 @@ const FAQ = () => {
           {faqs.map((faq, index) => (
             <div 
               key={index}
-              className={`bg-white/30 backdrop-blur-sm border border-baby-blue-300/40 rounded-xl overflow-hidden transition-all duration-700 ${
+              className={`bg-white/10 backdrop-blur-sm border border-white/20 rounded-xl overflow-hidden transition-all duration-700 ${
                 inView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
               }`}
               style={{ transitionDelay: `${index * 0.1}s` }}
             >
               <button
-                className="w-full p-6 text-left flex items-center justify-between hover:bg-white/20 transition-colors"
+                className="w-full p-6 text-left flex items-center justify-between hover:bg-white/10 transition-colors"
                 onClick={() => toggleFAQ(index)}
               >
-                <h3 className="text-lg font-semibold text-baby-blue-900 pr-4">
+                <h3 className="text-lg font-semibold text-white pr-4">
                   {faq.question}
                 </h3>
-                <i className={`ph ${openIndex === index ? 'ph-minus' : 'ph-plus'} text-xl text-baby-blue-700 transition-transform`}></i>
+                <i className={`ph ${openIndex === index ? 'ph-minus' : 'ph-plus'} text-xl text-slate-300 transition-transform`}></i>
               </button>
               
               <div className={`overflow-hidden transition-all duration-300 ${
                 openIndex === index ? 'max-h-96 pb-6' : 'max-h-0'
               }`}>
                 <div className="px-6">
-                  <p className="text-baby-blue-700 font-light leading-relaxed">
+                  <p className="text-slate-300 font-light leading-relaxed">
                     {faq.answer}
                   </p>
                 </div>
