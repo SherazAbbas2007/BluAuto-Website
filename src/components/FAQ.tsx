@@ -1,13 +1,18 @@
-import React, { useState } from 'react';
+
+import React from 'react';
 import { useInView } from 'react-intersection-observer';
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "@/components/ui/accordion";
 
 const FAQ = () => {
   const { ref, inView } = useInView({
     threshold: 0.1,
     triggerOnce: true,
   });
-
-  const [openIndex, setOpenIndex] = useState<number | null>(null);
 
   const faqs = [
     {
@@ -32,10 +37,6 @@ const FAQ = () => {
     }
   ];
 
-  const toggleFAQ = (index: number) => {
-    setOpenIndex(openIndex === index ? null : index);
-  };
-
   return (
     <section className="py-20 bg-gradient-to-b from-baby-blue-600 to-baby-blue-500" ref={ref}>
       <div className="max-w-4xl mx-auto px-6">
@@ -48,37 +49,28 @@ const FAQ = () => {
           </p>
         </div>
 
-        <div className="space-y-4">
+        <Accordion type="single" collapsible className="space-y-4">
           {faqs.map((faq, index) => (
-            <div 
+            <AccordionItem 
               key={index}
+              value={`item-${index}`}
               className={`bg-slate-800/50 backdrop-blur-sm border border-slate-700/50 rounded-xl overflow-hidden transition-all duration-700 ${
                 inView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
               }`}
               style={{ transitionDelay: `${index * 0.1}s` }}
             >
-              <button
-                className="w-full p-6 text-left flex items-center justify-between hover:bg-slate-700/50 transition-colors"
-                onClick={() => toggleFAQ(index)}
-              >
-                <h3 className="text-lg font-semibold text-white pr-4">
-                  {faq.question}
-                </h3>
-                <i className={`ph ${openIndex === index ? 'ph-minus' : 'ph-plus'} text-xl text-slate-300 transition-transform`}></i>
-              </button>
+              <AccordionTrigger className="w-full p-6 text-left flex items-center justify-between hover:bg-slate-700/50 transition-colors text-lg font-semibold text-white [&[data-state=open]>svg]:rotate-180">
+                {faq.question}
+              </AccordionTrigger>
               
-              <div className={`overflow-hidden transition-all duration-300 ${
-                openIndex === index ? 'max-h-96 pb-6' : 'max-h-0'
-              }`}>
-                <div className="px-6">
-                  <p className="text-slate-300 font-light leading-relaxed">
-                    {faq.answer}
-                  </p>
-                </div>
-              </div>
-            </div>
+              <AccordionContent className="px-6 pb-6">
+                <p className="text-slate-300 font-light leading-relaxed">
+                  {faq.answer}
+                </p>
+              </AccordionContent>
+            </AccordionItem>
           ))}
-        </div>
+        </Accordion>
       </div>
     </section>
   );
