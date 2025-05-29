@@ -135,6 +135,14 @@ export default {
 					'50%': {
 						boxShadow: '0 0 30px rgba(14, 165, 233, 0.8)'
 					}
+				},
+				'white-glow': {
+					'0%, 100%': {
+						boxShadow: '0 0 20px rgba(255, 255, 255, 0.6), 0 0 40px rgba(255, 255, 255, 0.4), 0 8px 25px rgba(255, 255, 255, 0.2)'
+					},
+					'50%': {
+						boxShadow: '0 0 30px rgba(255, 255, 255, 0.8), 0 0 60px rgba(255, 255, 255, 0.6), 0 8px 25px rgba(255, 255, 255, 0.3)'
+					}
 				}
 			},
 			animation: {
@@ -144,7 +152,8 @@ export default {
 				'fade-in': 'fade-in 0.6s ease-out',
 				'slide-in-right': 'slide-in-right 0.3s ease-out',
 				'slide-out-right': 'slide-out-right 0.3s ease-out',
-				'glow': 'glow 2s ease-in-out infinite'
+				'glow': 'glow 2s ease-in-out infinite',
+				'white-glow': 'white-glow 2s ease-in-out infinite'
 			},
 			backdropBlur: {
 				xs: '2px',

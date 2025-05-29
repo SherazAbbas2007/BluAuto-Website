@@ -1,5 +1,6 @@
 
 import React from 'react';
+import { Button } from '@/components/ui/button';
 
 const Hero = () => {
   const scrollToContact = () => {
@@ -30,12 +31,12 @@ const Hero = () => {
             Connect your wallet, configure your AI assistant, and let advanced algorithms handle your trading strategy while you focus on what matters most.
           </p>
           
-          <button 
+          <Button 
             onClick={scrollToContact}
-            className="neuro-button text-lg"
+            className="white-glow-button text-lg px-8 py-3 h-auto"
           >
             Contact Me
-          </button>
+          </Button>
         </div>
 
         {/* Video Placeholder */}

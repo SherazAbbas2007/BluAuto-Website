@@ -120,6 +120,18 @@
     animation: glow 2s ease-in-out infinite;
   }
 
+  .white-glow-button {
+    @apply bg-white text-slate-800 font-medium rounded-xl transition-all duration-300 shadow-lg hover:shadow-xl;
+  }
+  
+  .white-glow-button:hover {
+    box-shadow: 
+      0 0 20px rgba(255, 255, 255, 0.6),
+      0 0 40px rgba(255, 255, 255, 0.4),
+      0 8px 25px rgba(255, 255, 255, 0.2);
+    animation: white-glow 2s ease-in-out infinite;
+  }
+
   .text-gradient {
     background: linear-gradient(135deg, #38bdf8, #0ea5e9);
     -webkit-background-clip: text;
