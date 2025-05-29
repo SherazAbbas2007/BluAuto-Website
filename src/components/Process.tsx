@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { useInView } from 'react-intersection-observer';
 
@@ -11,7 +10,7 @@ const Process = () => {
   const steps = [
     {
       icon: 'ph-phone',
-      title: 'Consultation',
+      title: 'Discovery call',
       description: 'We learn about your business processes and core technologies to discover opportunities where AI automation can optimise your operations.'
     },
     {
