@@ -4,18 +4,19 @@ const Footer = () => {
     name: 'HOME',
     href: '#'
   }, {
-    name: 'CASE STUDIES',
-    href: '#usecases'
-  }, {
-    name: 'TESTIMONIALS',
-    href: '#about'
-  }, {
-    name: 'SERVICES',
+    name: 'OUR PROCESS',
     href: '#process'
   }, {
-    name: 'PRICING',
+    name: 'USE CASES',
+    href: '#usecases'
+  }, {
+    name: 'FAQ',
+    href: '#about'
+  }, {
+    name: 'CONTACT',
     href: '#contact'
   }];
+  
   const scrollToSection = (href: string) => {
     if (href === '#') {
       window.scrollTo({
