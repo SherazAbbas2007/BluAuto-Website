@@ -1,4 +1,3 @@
-
 import React from 'react';
 const Hero = () => {
   const handleContactClick = () => {
@@ -21,9 +20,7 @@ const Hero = () => {
             <span className="block">Business</span>
           </h1>
           
-          <p className="text-xl text-white/80 font-light mb-8 leading-relaxed">
-            Connect your wallet, configure your AI assistant, and let advanced algorithms handle your trading strategy while you focus on what matters most.
-          </p>
+          <p className="text-xl text-white/80 font-light mb-8 leading-relaxed">At BluAuto AI, we harness the power of AI to optimize business processes, improving efficiency for organizations of all sizes. Our custom solutions reduce manual work, allowing teams to focus on strategic growth and scalable success.</p>
           
           <button onClick={handleContactClick} className="bg-white text-zinc-950 px-10 py-5 text-lg rounded-2xl font-semibold hover:bg-gray-100 hover:scale-105 transition-all duration-300 tracking-wide hover:shadow-[0_0_20px_rgba(255,255,255,0.6)]">Book a call</button>
         </div>
