@@ -56,7 +56,7 @@ const UseCases = () => {
               }`}
               style={{ transitionDelay: `${index * 0.2}s` }}
             >
-              <div className="bg-baby-blue-900/80 backdrop-blur-sm border border-white/20 rounded-2xl p-8 hover:bg-baby-blue-900/90 transition-all duration-300 group shadow-lg hover:shadow-white/20 h-full">
+              <div className="bg-baby-blue-900 backdrop-blur-sm border border-white/20 rounded-2xl p-8 hover:bg-baby-blue-900/90 transition-all duration-300 group shadow-lg hover:shadow-white/20 h-full">
                 <h3 className="text-2xl font-bold text-white mb-6 text-center group-hover:text-white/90 transition-colors">
                   {category.title}
                 </h3>
@@ -64,7 +64,7 @@ const UseCases = () => {
                   {category.services.map((service) => (
                     <div 
                       key={service}
-                      className="text-white/90 font-medium text-center py-2 px-4 bg-baby-blue-950/80 rounded-lg border border-white/10"
+                      className="text-white/90 font-medium text-center py-2 px-4 bg-baby-blue-950 rounded-lg border border-white/10"
                     >
                       {service}
                     </div>
