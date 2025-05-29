@@ -40,12 +40,12 @@ const FAQ = () => {
           {faqs.map((faq, index) => <AccordionItem key={index} value={`item-${index}`} className={`bg-slate-800/50 backdrop-blur-sm border border-slate-700/50 rounded-xl overflow-hidden transition-all duration-700 ${inView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`} style={{
           transitionDelay: `${index * 0.1}s`
         }}>
-              <AccordionTrigger className="w-full p-6 text-left flex items-center justify-between hover:bg-slate-700/50 transition-colors font-semibold text-white [&[data-state=open]>svg]:rotate-180 text-lg">
+              <AccordionTrigger className="w-full p-6 text-left flex items-center justify-between hover:bg-slate-700/50 transition-colors font-semibold text-white [&[data-state=open]>svg]:rotate-180 text-2xl">
                 {faq.question}
               </AccordionTrigger>
               
               <AccordionContent className="px-6 pb-6">
-                <p className="text-slate-300 font-light leading-relaxed text-xl">
+                <p className="leading-relaxed text-xl font-light text-slate-50">
                   {faq.answer}
                 </p>
               </AccordionContent>
