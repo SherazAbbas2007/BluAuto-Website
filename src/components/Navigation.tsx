@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect } from 'react';
 import { useInView } from 'react-intersection-observer';
 
@@ -24,8 +23,8 @@ const Navigation = () => {
   useEffect(() => {
     const sections = ['process', 'usecases', 'about', 'contact'];
     const observerOptions = {
-      rootMargin: '-20% 0px -70% 0px',
-      threshold: 0
+      rootMargin: '-10% 0px -60% 0px',
+      threshold: 0.1
     };
 
     const observers = sections.map(sectionId => {
