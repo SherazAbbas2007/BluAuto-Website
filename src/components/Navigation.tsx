@@ -91,12 +91,13 @@ const Navigation = () => {
                     onClick={() => scrollToSection(item.href)} 
                     className="text-white hover:text-white transition-all duration-300 text-xl font-semibold px-3 py-2" 
                     style={{
-                      textShadow: isActive(item.href) ? '0 0 20px rgba(255,255,255,0.8)' : 'none',
-                      transition: 'text-shadow 0.3s ease'
+                      textShadow: isActive(item.href) ? '0 0 25px rgba(255,255,255,0.9)' : 'none',
+                      transform: isActive(item.href) ? 'scale(1.05)' : 'scale(1)',
+                      transition: 'text-shadow 0.3s ease, transform 0.3s ease'
                     }} 
                     onMouseEnter={(e) => {
                       if (!isActive(item.href)) {
-                        e.currentTarget.style.textShadow = '0 0 20px rgba(255,255,255,0.8)';
+                        e.currentTarget.style.textShadow = '0 0 25px rgba(255,255,255,0.9)';
                       }
                     }} 
                     onMouseLeave={(e) => {
@@ -134,12 +135,13 @@ const Navigation = () => {
                 className={`text-left py-4 text-white/80 hover:text-white font-light transition-all duration-200 border-b border-white/10 animate-fade-in-up text-lg px-2`} 
                 style={{
                   animationDelay: `${index * 0.1}s`,
-                  textShadow: isActive(item.href) ? '0 0 15px rgba(255,255,255,0.6)' : 'none',
-                  transition: 'text-shadow 0.3s ease, color 0.2s ease'
+                  textShadow: isActive(item.href) ? '0 0 20px rgba(255,255,255,0.8)' : 'none',
+                  transform: isActive(item.href) ? 'scale(1.05)' : 'scale(1)',
+                  transition: 'text-shadow 0.3s ease, color 0.2s ease, transform 0.3s ease'
                 }} 
                 onMouseEnter={(e) => {
                   if (!isActive(item.href)) {
-                    e.currentTarget.style.textShadow = '0 0 15px rgba(255,255,255,0.6)';
+                    e.currentTarget.style.textShadow = '0 0 20px rgba(255,255,255,0.8)';
                   }
                 }} 
                 onMouseLeave={(e) => {
