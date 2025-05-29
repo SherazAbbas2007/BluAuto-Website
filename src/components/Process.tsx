@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { useInView } from 'react-intersection-observer';
 
@@ -31,7 +32,7 @@ const Process = () => {
     {
       icon: 'ph-sparkle',
       title: 'Manage',
-      description: 'Helping you optimise and scale your automation as your business grows.'
+      description: 'Providing ongoing support beyond implementation.'
     }
   ];
 
