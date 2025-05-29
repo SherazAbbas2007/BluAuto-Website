@@ -2,6 +2,25 @@
 import React from 'react';
 
 const Footer = () => {
+  const navItems = [
+    { name: 'HOME', href: '#' },
+    { name: 'CASE STUDIES', href: '#usecases' },
+    { name: 'TESTIMONIALS', href: '#about' },
+    { name: 'SERVICES', href: '#process' },
+    { name: 'PRICING', href: '#contact' }
+  ];
+
+  const scrollToSection = (href: string) => {
+    if (href === '#') {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+      return;
+    }
+    const element = document.querySelector(href);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   return (
     <footer className="bg-gradient-to-b from-slate-800 to-slate-900 text-white py-12">
       <div className="max-w-7xl mx-auto px-6">
@@ -10,16 +29,22 @@ const Footer = () => {
             <span className="text-xl font-semibold tracking-tight">BluAuto</span>
           </div>
           
-          <div className="text-center md:text-right">
-            <p className="text-slate-300 font-light">
-              © 2024 BluAuto. All rights reserved.
-            </p>
+          <div className="flex flex-col items-center md:items-end space-y-2">
+            {navItems.map(item => (
+              <button
+                key={item.name}
+                onClick={() => scrollToSection(item.href)}
+                className="text-slate-300 hover:text-white transition-colors duration-200 text-sm font-medium tracking-wide"
+              >
+                {item.name}
+              </button>
+            ))}
           </div>
         </div>
         
         <div className="mt-8 pt-8 border-t border-slate-700 text-center">
           <p className="text-slate-300 font-light">
-            Transform your business with AI-powered automation
+            © 2024 BluAuto. All rights reserved.
           </p>
         </div>
       </div>
