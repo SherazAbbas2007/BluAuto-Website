@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect } from 'react';
 const Navigation = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -39,7 +38,9 @@ const Navigation = () => {
     });
   };
   return <>
-      <nav className="fixed top-0 left-0 right-0 z-50 transition-all duration-300 backdrop-blur-md" style={{ backgroundColor: 'rgba(7, 90, 134, 0.5)' }}>
+      <nav className="fixed top-0 left-0 right-0 z-50 transition-all duration-300 backdrop-blur-md" style={{
+      backgroundColor: 'rgba(7, 90, 134, 0.5)'
+    }}>
         <div className="max-w-7xl mx-auto px-6">
           <div className="flex items-center justify-between h-20">
             {/* Logo Section - Left Side */}
@@ -51,7 +52,7 @@ const Navigation = () => {
             {/* Desktop Navigation - Center */}
             <div className="hidden md:flex items-center justify-center flex-1">
               <div className="flex items-center space-x-8">
-                {navItems.map(item => <button key={item.name} onClick={() => scrollToSection(item.href)} className="text-white/80 hover:text-white font-light transition-colors duration-200 text-lg">
+                {navItems.map(item => <button key={item.name} onClick={() => scrollToSection(item.href)} className="text-white/80 hover:text-white transition-colors duration-200 text-xl font-semibold">
                     {item.name}
                   </button>)}
               </div>
