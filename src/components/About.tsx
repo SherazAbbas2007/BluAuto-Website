@@ -30,7 +30,7 @@ const About = () => {
                   <div className="w-16 h-16 bg-white/40 rounded-full flex items-center justify-center mx-auto mb-4">
                     <i className="ph ph-lightning text-2xl text-white"></i>
                   </div>
-                  <h3 className="font-semibold text-white mb-2">Efficiency</h3>
+                  <h3 className="font-semibold text-white mb-2 text-xl">Efficiency</h3>
                   <p className="text-white/80 font-light text-lg">Automate repetitive tasks</p>
                 </div>
                 
@@ -38,7 +38,7 @@ const About = () => {
                   <div className="w-16 h-16 bg-white/40 rounded-full flex items-center justify-center mx-auto mb-4">
                     <i className="ph ph-chart-line-up text-2xl text-white"></i>
                   </div>
-                  <h3 className="font-semibold text-white mb-2">Growth</h3>
+                  <h3 className="font-semibold text-white mb-2 text-xl">Growth</h3>
                   <p className="text-white/80 font-light text-lg">Scale your operations</p>
                 </div>
                 
@@ -46,7 +46,7 @@ const About = () => {
                   <div className="w-16 h-16 bg-white/40 rounded-full flex items-center justify-center mx-auto mb-4">
                     <i className="ph ph-brain text-2xl text-white"></i>
                   </div>
-                  <h3 className="font-semibold text-white mb-2">Intelligence</h3>
+                  <h3 className="font-semibold text-white mb-2 text-xl">Intelligence</h3>
                   <p className="text-white/80 font-light text-lg">Smart decision making</p>
                 </div>
                 
@@ -54,7 +54,7 @@ const About = () => {
                   <div className="w-16 h-16 bg-white/40 rounded-full flex items-center justify-center mx-auto mb-4">
                     <i className="ph ph-clock text-2xl text-white"></i>
                   </div>
-                  <h3 className="font-semibold text-white mb-2">24/7</h3>
+                  <h3 className="font-semibold text-white mb-2 text-xl">24/7</h3>
                   <p className="text-white/80 font-light text-lg">Round-the-clock operations</p>
                 </div>
               </div>
