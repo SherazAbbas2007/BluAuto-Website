@@ -1,4 +1,6 @@
+
 import React from 'react';
+
 const Hero = () => {
   const scrollToContact = () => {
     console.log('Contact button clicked!'); // Debug log
@@ -11,13 +13,15 @@ const Hero = () => {
       console.log('Contact section not found');
     }
   };
-  return <section className="min-h-screen bg-hero-gradient flex items-center justify-center relative overflow-hidden">
+
+  return (
+    <section className="min-h-screen bg-hero-gradient flex items-center justify-center relative overflow-hidden">
       {/* Background Pattern */}
       <div className="absolute inset-0 opacity-10 pointer-events-none">
         <div className="absolute inset-0" style={{
-        backgroundImage: `radial-gradient(circle at 1px 1px, rgba(255,255,255,0.3) 1px, transparent 0)`,
-        backgroundSize: '20px 20px'
-      }}></div>
+          backgroundImage: `radial-gradient(circle at 1px 1px, rgba(255,255,255,0.3) 1px, transparent 0)`,
+          backgroundSize: '20px 20px'
+        }}></div>
       </div>
 
       <div className="max-w-7xl mx-auto px-6 flex items-center justify-center gap-8 relative z-10 w-full">
@@ -31,13 +35,18 @@ const Hero = () => {
             Connect your wallet, configure your AI assistant, and let advanced algorithms handle your trading strategy while you focus on what matters most.
           </p>
           
-          <button onClick={scrollToContact} className="bg-white text-zinc-950 px-10 py-5 text-lg rounded-2xl font-semibold hover:bg-gray-100 hover:scale-105 transition-all duration-300 tracking-wide hover:shadow-[0_0_20px_rgba(255,255,255,0.6)]">Book A Call</button>
+          <button 
+            onClick={scrollToContact} 
+            className="bg-white text-zinc-950 px-10 py-5 text-lg rounded-2xl font-semibold hover:bg-gray-100 hover:scale-105 transition-all duration-300 tracking-wide hover:shadow-[0_0_20px_rgba(255,255,255,0.6)]"
+          >
+            Contact Me
+          </button>
         </div>
 
         {/* Video Placeholder with 16:9 aspect ratio - 1.5x bigger */}
         <div className="hidden lg:block flex-1 animate-fade-in-up max-w-2xl" style={{
-        animationDelay: '0.3s'
-      }}>
+          animationDelay: '0.3s'
+        }}>
           <div className="glass-card p-8 aspect-video flex items-center justify-center w-full">
             <div className="text-center text-white/60">
               <i className="ph ph-play-circle text-6xl mb-4"></i>
@@ -46,6 +55,8 @@ const Hero = () => {
           </div>
         </div>
       </div>
-    </section>;
+    </section>
+  );
 };
+
 export default Hero;
