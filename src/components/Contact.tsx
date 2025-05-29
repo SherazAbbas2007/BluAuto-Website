@@ -1,8 +1,6 @@
-
 import React, { useState } from 'react';
 import { useInView } from 'react-intersection-observer';
 import { toast } from '@/hooks/use-toast';
-
 const Contact = () => {
   const {
     ref,
@@ -41,9 +39,7 @@ const Contact = () => {
       contactNumber: ''
     });
   };
-
-  return (
-    <section id="contact" className="py-20 bg-baby-blue-500" ref={ref}>
+  return <section id="contact" className="py-20 bg-baby-blue-500" ref={ref}>
       <div className="max-w-4xl mx-auto px-6">
         <div className={`text-center mb-12 transition-all duration-700 ${inView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-6 tracking-tight">
@@ -80,18 +76,11 @@ const Contact = () => {
             </div>
 
             <div className="pt-4">
-              <button 
-                type="submit" 
-                className="bg-white text-slate-800 px-10 py-5 text-lg rounded-2xl font-semibold hover:bg-gray-100 hover:scale-105 transition-all duration-300 tracking-wide hover:shadow-[0_0_20px_rgba(255,255,255,0.6)]"
-              >
-                Book Now
-              </button>
+              <button type="submit" className="bg-white text-slate-800 px-10 py-5 text-lg rounded-2xl font-semibold hover:bg-gray-100 hover:scale-105 transition-all duration-300 tracking-wide hover:shadow-[0_0_20px_rgba(255,255,255,0.6)]">Book A Call</button>
             </div>
           </form>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default Contact;
