@@ -1,4 +1,5 @@
 
+
 import React from 'react';
 const Hero = () => {
   const scrollToContact = () => {
@@ -37,11 +38,11 @@ const Hero = () => {
           </button>
         </div>
 
-        {/* Video Placeholder with 16:9 aspect ratio */}
+        {/* Video Placeholder with 16:9 aspect ratio - 1.5x bigger */}
         <div className="hidden lg:block flex-1 ml-12 animate-fade-in-up" style={{
         animationDelay: '0.3s'
       }}>
-          <div className="glass-card p-8 aspect-video flex items-center justify-center">
+          <div className="glass-card p-8 aspect-video flex items-center justify-center w-[150%]">
             <div className="text-center text-white/60">
               <i className="ph ph-play-circle text-6xl mb-4"></i>
               <p className="text-lg font-light">Video Coming Soon</p>
@@ -52,3 +53,4 @@ const Hero = () => {
     </section>;
 };
 export default Hero;
+
