@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect } from 'react';
 const Navigation = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -53,11 +52,11 @@ const Navigation = () => {
             {/* Desktop Navigation - Center */}
             <div className="hidden md:flex items-center justify-center flex-1">
               <div className="flex items-center space-x-8">
-                {navItems.map(item => <button key={item.name} onClick={() => scrollToSection(item.href)} className="text-white hover:text-white transition-all duration-300 text-xl font-semibold px-3 py-2 hover:text-shadow-[0_0_10px_rgba(255,255,255,0.8)]" style={{
+                {navItems.map(item => <button key={item.name} onClick={() => scrollToSection(item.href)} className="text-white hover:text-white transition-all duration-300 text-xl font-semibold px-3 py-2 hover:text-shadow-[0_0_20px_rgba(255,255,255,0.8)]" style={{
                   textShadow: 'none',
                   transition: 'text-shadow 0.3s ease'
                 }} onMouseEnter={(e) => {
-                  e.currentTarget.style.textShadow = '0 0 10px rgba(255,255,255,0.8)';
+                  e.currentTarget.style.textShadow = '0 0 20px rgba(255,255,255,0.8)';
                 }} onMouseLeave={(e) => {
                   e.currentTarget.style.textShadow = 'none';
                 }}>
@@ -87,7 +86,7 @@ const Navigation = () => {
             textShadow: 'none',
             transition: 'text-shadow 0.3s ease, color 0.2s ease'
           }} onMouseEnter={(e) => {
-            e.currentTarget.style.textShadow = '0 0 8px rgba(255,255,255,0.6)';
+            e.currentTarget.style.textShadow = '0 0 15px rgba(255,255,255,0.6)';
           }} onMouseLeave={(e) => {
             e.currentTarget.style.textShadow = 'none';
           }}>
