@@ -52,7 +52,7 @@ const Navigation = () => {
             {/* Desktop Navigation - Center */}
             <div className="hidden md:flex items-center justify-center flex-1">
               <div className="flex items-center space-x-8">
-                {navItems.map(item => <button key={item.name} onClick={() => scrollToSection(item.href)} className="text-white/80 hover:text-white transition-colors duration-200 text-xl font-semibold">
+                {navItems.map(item => <button key={item.name} onClick={() => scrollToSection(item.href)} className="text-white hover:text-white transition-colors duration-200 text-xl font-semibold">
                     {item.name}
                   </button>)}
               </div>
