@@ -21,7 +21,7 @@ const Process = () => {
     {
       icon: 'ph-magnifying-glass',
       title: 'Identify key areas for AI automation',
-      description: 'We conduct a comprehensive analysis of your workflows to identify opportunities that will provide you the best ROI.'
+      description: 'We analyze your workflows to uncover high-impact opportunities that deliver the greatest return on investment.'
     },
     {
       icon: 'ph-gear',
