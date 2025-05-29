@@ -76,7 +76,7 @@ const Contact = () => {
             </div>
 
             <div className="pt-4">
-              <button type="submit" className="bg-white text-slate-800 px-10 py-5 text-lg rounded-lg font-semibold hover:bg-slate-100 transition-all duration-300 tracking-wide shadow-[0_0_10px_rgba(255,255,255,0.3)] hover:shadow-[0_0_20px_rgba(255,255,255,0.6),0_0_40px_rgba(255,255,255,0.4)] hover:scale-105">Book Now</button>
+              <button type="submit" className="bg-white text-slate-800 px-10 py-5 text-lg rounded-lg font-semibold hover:bg-slate-100 transition-all duration-300 uppercase tracking-wide shadow-[0_0_10px_rgba(255,255,255,0.3)] hover:shadow-[0_0_20px_rgba(255,255,255,0.6),0_0_40px_rgba(255,255,255,0.4)] hover:scale-105">Book Now</button>
             </div>
           </form>
         </div>
