@@ -121,14 +121,15 @@
   }
 
   .white-glow-button {
-    @apply bg-white text-slate-800 font-medium rounded-xl transition-all duration-300 shadow-lg hover:shadow-xl;
+    @apply bg-white text-slate-800 font-medium rounded-xl px-6 py-3 transition-all duration-300 shadow-lg border-none cursor-pointer inline-flex items-center justify-center;
   }
   
   .white-glow-button:hover {
+    @apply shadow-xl;
     box-shadow: 
-      0 0 20px rgba(255, 255, 255, 0.6),
-      0 0 40px rgba(255, 255, 255, 0.4),
-      0 8px 25px rgba(255, 255, 255, 0.2);
+      0 0 20px rgba(255, 255, 255, 0.8),
+      0 0 40px rgba(255, 255, 255, 0.6),
+      0 8px 25px rgba(255, 255, 255, 0.3);
     animation: white-glow 2s ease-in-out infinite;
   }
 
