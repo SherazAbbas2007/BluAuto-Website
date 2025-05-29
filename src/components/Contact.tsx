@@ -18,7 +18,7 @@ const Contact = () => {
           <h2 className="text-4xl font-bold text-white mb-6 tracking-tight md:text-5xl">
             Contact Us
           </h2>
-          <p className="text-white/90 font-medium text-2xl">Ready to transform your business with AI automation? Schedule a discovery call .</p>
+          <p className="text-white/90 font-medium text-2xl">Ready to transform your business with AI automation? Schedule a discovery call.</p>
         </div>
 
         <div className={`text-center transition-all duration-700 ${inView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`} style={{
