@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { useInView } from 'react-intersection-observer';
 import { Rocket, User, BarChart3, Settings, Database, FileText, Headphones, DollarSign } from 'lucide-react';
@@ -17,7 +16,7 @@ const UseCases = () => {
     },
     {
       title: 'Client Onboarding',
-      description: 'Expedite onboarding, improve accuracy and enhance overall client satisfaction',
+      description: 'Streamline onboarding, increase accuracy, and elevate client satisfaction.',
       icon: User
     },
     {
