@@ -38,7 +38,7 @@ const FAQ = () => {
   };
 
   return (
-    <section className="py-20 bg-gradient-to-b from-slate-600 to-slate-700" ref={ref}>
+    <section className="py-20 bg-gradient-to-b from-slate-900 via-slate-800 to-slate-700" ref={ref}>
       <div className="max-w-4xl mx-auto px-6">
         <div className={`text-center mb-16 transition-all duration-700 ${inView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-6 tracking-tight">
@@ -53,13 +53,13 @@ const FAQ = () => {
           {faqs.map((faq, index) => (
             <div 
               key={index}
-              className={`bg-white/10 backdrop-blur-sm border border-white/20 rounded-xl overflow-hidden transition-all duration-700 ${
+              className={`bg-slate-800/50 backdrop-blur-sm border border-slate-700/50 rounded-xl overflow-hidden transition-all duration-700 ${
                 inView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
               }`}
               style={{ transitionDelay: `${index * 0.1}s` }}
             >
               <button
-                className="w-full p-6 text-left flex items-center justify-between hover:bg-white/10 transition-colors"
+                className="w-full p-6 text-left flex items-center justify-between hover:bg-slate-700/50 transition-colors"
                 onClick={() => toggleFAQ(index)}
               >
                 <h3 className="text-lg font-semibold text-white pr-4">

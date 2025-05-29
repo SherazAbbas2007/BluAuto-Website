@@ -16,7 +16,7 @@ const UseCases = () => {
   ];
 
   return (
-    <section id="usecases" className="py-20 bg-gradient-to-b from-slate-800 via-slate-700 to-slate-600" ref={ref}>
+    <section id="usecases" className="py-20 bg-gradient-to-b from-slate-900 via-slate-800 to-slate-700" ref={ref}>
       <div className="max-w-7xl mx-auto px-6">
         <div className={`text-center mb-16 transition-all duration-700 ${inView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-6 tracking-tight">
@@ -39,7 +39,7 @@ const UseCases = () => {
               {column.map((useCase, index) => (
                 <div 
                   key={useCase}
-                  className="bg-gradient-to-br from-baby-blue-500/20 to-baby-blue-600/10 backdrop-blur-sm border border-baby-blue-400/30 rounded-2xl p-6 hover:bg-gradient-to-br hover:from-baby-blue-400/30 hover:to-baby-blue-500/20 hover:border-baby-blue-300/50 transition-all duration-300 group cursor-pointer shadow-lg hover:shadow-baby-blue-500/20"
+                  className="bg-slate-800/50 backdrop-blur-sm border border-slate-700/50 rounded-2xl p-6 hover:bg-slate-700/50 transition-all duration-300 group cursor-pointer shadow-lg hover:shadow-baby-blue-500/20"
                 >
                   <h3 className="text-lg font-semibold text-white group-hover:text-baby-blue-200 transition-colors">
                     {useCase}

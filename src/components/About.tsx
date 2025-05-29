@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { useInView } from 'react-intersection-observer';
 
@@ -16,7 +15,7 @@ const About = () => {
   };
 
   return (
-    <section id="about" className="py-20 bg-gradient-to-b from-slate-700 to-slate-800" ref={ref}>
+    <section id="about" className="py-20 bg-gradient-to-b from-slate-900 via-slate-800 to-slate-700" ref={ref}>
       <div className="max-w-7xl mx-auto px-6">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
           <div className={`transition-all duration-700 ${inView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
@@ -37,7 +36,7 @@ const About = () => {
           </div>
 
           <div className={`transition-all duration-700 ${inView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`} style={{ transitionDelay: '0.3s' }}>
-            <div className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-xl p-8">
+            <div className="bg-slate-800/50 backdrop-blur-sm border border-slate-700/50 rounded-xl p-8">
               <div className="grid grid-cols-2 gap-6">
                 <div className="text-center">
                   <div className="w-16 h-16 bg-gradient-to-br from-baby-blue-400 to-baby-blue-600 rounded-full flex items-center justify-center mx-auto mb-4">
