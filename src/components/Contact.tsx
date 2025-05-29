@@ -1,3 +1,4 @@
+
 import React, { useState } from 'react';
 import { useInView } from 'react-intersection-observer';
 import { toast } from '@/hooks/use-toast';
@@ -40,6 +41,7 @@ const Contact = () => {
       contactNumber: ''
     });
   };
+
   return (
     <section id="contact" className="py-20 bg-baby-blue-500" ref={ref}>
       <div className="max-w-4xl mx-auto px-6">
@@ -80,7 +82,7 @@ const Contact = () => {
             <div className="pt-4">
               <button 
                 type="submit" 
-                className="bg-white text-slate-800 px-10 py-5 text-lg rounded-lg font-semibold hover:bg-gray-100 hover:scale-105 transition-all duration-300 tracking-wide"
+                className="bg-white text-slate-800 px-10 py-5 text-lg rounded-lg font-semibold hover:bg-gray-100 hover:scale-105 transition-all duration-300 tracking-wide hover:shadow-[0_0_20px_rgba(255,255,255,0.6)]"
               >
                 Book Now
               </button>
