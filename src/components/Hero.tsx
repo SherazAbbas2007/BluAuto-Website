@@ -1,4 +1,3 @@
-
 import React from 'react';
 const Hero = () => {
   const scrollToContact = () => {
@@ -32,7 +31,7 @@ const Hero = () => {
             Connect your wallet, configure your AI assistant, and let advanced algorithms handle your trading strategy while you focus on what matters most.
           </p>
           
-          <button onClick={scrollToContact} className="bg-white text-baby-blue-600 px-8 py-4 rounded-lg font-semibold hover:bg-baby-blue-50 transition-colors duration-300 uppercase tracking-wide">
+          <button onClick={scrollToContact} className="bg-white text-baby-blue-600 px-8 py-4 rounded-lg font-semibold hover:bg-baby-blue-50 transition-colors duration-300 uppercase tracking-wide text-zinc-950">
             Contact Me
           </button>
         </div>
