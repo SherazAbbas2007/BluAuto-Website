@@ -9,10 +9,30 @@ const UseCases = () => {
   });
 
   const useCases = [
-    ['Lead Generation', 'AI Personalised Cold Email Systems', 'Application Systems', 'Content Systems'],
-    ['Project Management', 'AI Automated Fulfillment', 'AI Onboarding Systems', 'PM Systems'],
-    ['Hiring Systems', 'Intake Systems', 'AI Scoring Systems', 'Trial Systems'],
-    ['Sales Administration', 'Customized CRMs', 'AI Asset Generators', 'AI Nurture Systems']
+    {
+      title: 'Lead Generation',
+      services: [
+        'AI Personalised Cold Email Systems',
+        'Application Systems',
+        'Content Systems'
+      ]
+    },
+    {
+      title: 'Hiring Systems',
+      services: [
+        'Intake Systems',
+        'AI Scoring Systems',
+        'Trial Systems'
+      ]
+    },
+    {
+      title: 'Sales Administration',
+      services: [
+        'Customized CRMs',
+        'AI Asset Generators',
+        'AI Nurture Systems'
+      ]
+    }
   ];
 
   return (
@@ -27,25 +47,30 @@ const UseCases = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-          {useCases.map((column, colIndex) => (
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          {useCases.map((category, index) => (
             <div 
-              key={colIndex}
-              className={`space-y-6 transition-all duration-700 ${
+              key={category.title}
+              className={`transition-all duration-700 ${
                 inView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
               }`}
-              style={{ transitionDelay: `${colIndex * 0.2}s` }}
+              style={{ transitionDelay: `${index * 0.2}s` }}
             >
-              {column.map((useCase, index) => (
-                <div 
-                  key={useCase}
-                  className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-2xl p-6 hover:bg-white/20 transition-all duration-300 group cursor-pointer shadow-lg hover:shadow-white/20"
-                >
-                  <h3 className="text-lg font-semibold text-white group-hover:text-white/90 transition-colors">
-                    {useCase}
-                  </h3>
+              <div className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-2xl p-8 hover:bg-white/20 transition-all duration-300 group shadow-lg hover:shadow-white/20 h-full">
+                <h3 className="text-2xl font-bold text-white mb-6 text-center group-hover:text-white/90 transition-colors">
+                  {category.title}
+                </h3>
+                <div className="space-y-4">
+                  {category.services.map((service) => (
+                    <div 
+                      key={service}
+                      className="text-white/90 font-medium text-center py-2 px-4 bg-white/5 rounded-lg border border-white/10"
+                    >
+                      {service}
+                    </div>
+                  ))}
                 </div>
-              ))}
+              </div>
             </div>
           ))}
         </div>
