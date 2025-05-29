@@ -42,7 +42,7 @@ const Hero = () => {
         <div className="hidden lg:block flex-1 ml-12 animate-fade-in-up" style={{
         animationDelay: '0.3s'
       }}>
-          <div className="glass-card flex items-center justify-center py-[32px] px-[240px]">
+          <div className="glass-card p-8 h-96 w-150 flex items-center justify-center py-[32px]">
             <div className="text-center text-white/60">
               <i className="ph ph-play-circle text-6xl mb-4"></i>
               <p className="text-lg font-light">Video Coming Soon</p>
