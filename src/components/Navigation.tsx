@@ -1,3 +1,4 @@
+
 import React, { useState, useEffect } from 'react';
 const Navigation = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -40,7 +41,7 @@ const Navigation = () => {
   return <>
       <nav className="fixed top-0 left-0 right-0 z-50 transition-all duration-300 backdrop-blur-md" style={{ backgroundColor: 'rgba(7, 90, 134, 0.5)' }}>
         <div className="max-w-7xl mx-auto px-6">
-          <div className="flex items-center justify-between h-16">
+          <div className="flex items-center justify-between h-20">
             {/* Logo Section - Left Side */}
             <div className="flex items-center cursor-pointer" onClick={scrollToTop}>
               <img src="/lovable-uploads/124b600a-111d-4f2c-aaa8-925d05de7cdb.png" alt="BluAuto Logo" className="h-8 w-8 object-contain mr-3" />
@@ -50,7 +51,7 @@ const Navigation = () => {
             {/* Desktop Navigation - Center */}
             <div className="hidden md:flex items-center justify-center flex-1">
               <div className="flex items-center space-x-8">
-                {navItems.map(item => <button key={item.name} onClick={() => scrollToSection(item.href)} className="text-white/80 hover:text-white font-light transition-colors duration-200">
+                {navItems.map(item => <button key={item.name} onClick={() => scrollToSection(item.href)} className="text-white/80 hover:text-white font-light transition-colors duration-200 text-lg">
                     {item.name}
                   </button>)}
               </div>
@@ -61,7 +62,7 @@ const Navigation = () => {
 
             {/* Mobile Menu Button */}
             <button className="md:hidden text-white" onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}>
-              <i className={`ph ${isMobileMenuOpen ? 'ph-x' : 'ph-list'} text-2xl`}></i>
+              <i className={`ph ${isMobileMenuOpen ? 'ph-x' : 'ph-list'} text-3xl`}></i>
             </button>
           </div>
         </div>
@@ -72,7 +73,7 @@ const Navigation = () => {
         <div className="absolute inset-0 bg-black/50 backdrop-blur-sm" onClick={() => setIsMobileMenuOpen(false)} />
         <div className={`absolute right-0 top-0 h-full w-80 bg-gradient-to-b from-slate-900 to-slate-800 shadow-xl transform transition-transform duration-300 ${isMobileMenuOpen ? 'translate-x-0' : 'translate-x-full'}`}>
           <div className="flex flex-col h-full pt-20 px-6">
-            {navItems.map((item, index) => <button key={item.name} onClick={() => scrollToSection(item.href)} className={`text-left py-4 text-white/80 hover:text-white font-light transition-all duration-200 border-b border-white/10 animate-fade-in-up`} style={{
+            {navItems.map((item, index) => <button key={item.name} onClick={() => scrollToSection(item.href)} className={`text-left py-4 text-white/80 hover:text-white font-light transition-all duration-200 border-b border-white/10 animate-fade-in-up text-lg`} style={{
             animationDelay: `${index * 0.1}s`
           }}>
                 {item.name}
