@@ -1,3 +1,4 @@
+
 import React, { useState, useEffect } from 'react';
 import { useInView } from 'react-intersection-observer';
 
@@ -51,7 +52,7 @@ const Navigation = () => {
   const navItems = [
     { name: 'Our Process', href: '#process' },
     { name: 'Use Cases', href: '#usecases' },
-    { name: 'About', href: '#about' },
+    { name: 'FAQ', href: '#about' },
     { name: 'Contact', href: '#contact' }
   ];
 
