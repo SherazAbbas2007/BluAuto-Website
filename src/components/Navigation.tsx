@@ -1,10 +1,7 @@
-
 import React, { useState, useEffect } from 'react';
-
 const Navigation = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 50);
@@ -12,7 +9,6 @@ const Navigation = () => {
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
-
   const navItems = [{
     name: 'Our Process',
     href: '#process'
@@ -26,48 +22,21 @@ const Navigation = () => {
     name: 'Contact',
     href: '#contact'
   }];
-
-  // Much gentler easing function for truly smooth S-curve
-  const easeInOutSine = (t: number): number => {
-    return -(Math.cos(Math.PI * t) - 1) / 2;
-  };
-
-  const smoothScrollTo = (targetY: number, duration: number = 1000) => {
-    const startY = window.scrollY;
-    const distance = targetY - startY;
-    let startTime: number | null = null;
-
-    const animation = (currentTime: number) => {
-      if (startTime === null) startTime = currentTime;
-      const timeElapsed = currentTime - startTime;
-      const progress = Math.min(timeElapsed / duration, 1);
-      
-      const easedProgress = easeInOutSine(progress);
-      const currentPosition = startY + distance * easedProgress;
-      
-      window.scrollTo(0, currentPosition);
-
-      if (progress < 1) {
-        requestAnimationFrame(animation);
-      }
-    };
-
-    requestAnimationFrame(animation);
-  };
-
   const scrollToSection = (href: string) => {
     const element = document.querySelector(href);
     if (element) {
-      const targetY = element.getBoundingClientRect().top + window.scrollY;
-      smoothScrollTo(targetY);
+      element.scrollIntoView({
+        behavior: 'smooth'
+      });
     }
     setIsMobileMenuOpen(false);
   };
-
   const scrollToTop = () => {
-    smoothScrollTo(0);
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    });
   };
-
   return <>
       <nav className="fixed top-0 left-0 right-0 z-50 transition-all duration-300 backdrop-blur-md" style={{ backgroundColor: 'rgba(7, 90, 134, 0.5)' }}>
         <div className="max-w-7xl mx-auto px-6">
@@ -113,5 +82,4 @@ const Navigation = () => {
       </div>
     </>;
 };
-
 export default Navigation;
