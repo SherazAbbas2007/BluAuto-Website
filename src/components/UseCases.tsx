@@ -16,13 +16,13 @@ const UseCases = () => {
   ];
 
   return (
-    <section id="usecases" className="py-20 bg-gradient-to-b from-slate-900 via-slate-800 to-slate-700" ref={ref}>
+    <section id="usecases" className="py-20 bg-hero-gradient" ref={ref}>
       <div className="max-w-7xl mx-auto px-6">
         <div className={`text-center mb-16 transition-all duration-700 ${inView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-6 tracking-tight">
             Use Cases
           </h2>
-          <p className="text-xl text-slate-200 font-light max-w-3xl mx-auto">
+          <p className="text-xl text-white/80 font-light max-w-3xl mx-auto">
             Discover the various ways AI automation can transform your business operations
           </p>
         </div>
@@ -39,9 +39,9 @@ const UseCases = () => {
               {column.map((useCase, index) => (
                 <div 
                   key={useCase}
-                  className="bg-slate-800/50 backdrop-blur-sm border border-slate-700/50 rounded-2xl p-6 hover:bg-slate-700/50 transition-all duration-300 group cursor-pointer shadow-lg hover:shadow-baby-blue-500/20"
+                  className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-2xl p-6 hover:bg-white/20 transition-all duration-300 group cursor-pointer shadow-lg hover:shadow-white/20"
                 >
-                  <h3 className="text-lg font-semibold text-white group-hover:text-baby-blue-200 transition-colors">
+                  <h3 className="text-lg font-semibold text-white group-hover:text-white/90 transition-colors">
                     {useCase}
                   </h3>
                 </div>
