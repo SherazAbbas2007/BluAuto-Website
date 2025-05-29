@@ -41,7 +41,7 @@ const UseCases = () => {
     },
     {
       title: 'Customer Service',
-      description: 'Customer enquiries often follow a repetitive pattern, hence are ideal for automation',
+      description: 'Customer enquiries often follow predictable patterns, making them perfect candidates for automation.',
       icon: Headphones
     },
     {
