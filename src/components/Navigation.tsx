@@ -43,12 +43,12 @@ const Navigation = () => {
           <div className="flex items-center justify-between h-16">
             {/* Logo Section - Left Side */}
             <div className="flex items-center cursor-pointer" onClick={scrollToTop}>
-              <span className="text-xl font-semibold text-white tracking-tight mr-3">BluAuto</span>
               <img 
                 src="/lovable-uploads/124b600a-111d-4f2c-aaa8-925d05de7cdb.png" 
                 alt="BluAuto Logo" 
-                className="h-8 w-8 object-contain"
+                className="h-8 w-8 object-contain mr-3"
               />
+              <span className="text-xl font-semibold text-white tracking-tight">BluAuto</span>
             </div>
 
             {/* Desktop Navigation - Center */}
