@@ -26,7 +26,7 @@ const Process = () => {
     {
       icon: 'ph-gear',
       title: 'Implementation',
-      description: 'We use our tech stack to create a custom solution for you, that integrates seamlessly with your existing set up.'
+      description: 'We leverage our tech stack to build a tailored solution that integrates smoothly with your current systems.'
     },
     {
       icon: 'ph-sparkle',
