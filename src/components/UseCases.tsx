@@ -21,7 +21,7 @@ const UseCases = () => {
     },
     {
       title: 'Project Management',
-      description: 'Streamline workflows, increase efficiency and optimise resource utilisation',
+      description: 'Simplify workflows, boost efficiency, and maximize resource utilization.',
       icon: BarChart3
     },
     {
