@@ -2,7 +2,7 @@ import React from 'react';
 const Hero = () => {
   const handleContactClick = () => {
     console.log('Contact Me button clicked!');
-    // Button does nothing as requested
+    window.open('https://cal.com/sheraz-abbas-cmlcws/book-a-call', '_blank');
   };
   return <section className="min-h-screen bg-hero-gradient flex items-center justify-center relative overflow-hidden">
       {/* Background Pattern */}
