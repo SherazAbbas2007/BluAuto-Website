@@ -64,7 +64,7 @@ const UseCases = () => {
                   {category.services.map((service) => (
                     <div 
                       key={service}
-                      className="text-white/90 font-medium text-center py-2 px-4 bg-baby-blue-950/60 rounded-lg border border-white/10"
+                      className="text-white/90 font-medium text-center py-2 px-4 bg-baby-blue-950/80 rounded-lg border border-white/10"
                     >
                       {service}
                     </div>
