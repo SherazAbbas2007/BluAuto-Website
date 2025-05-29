@@ -56,9 +56,25 @@ export default {
 					DEFAULT: 'hsl(var(--card))',
 					foreground: 'hsl(var(--card-foreground))'
 				},
+				'slate': {
+					800: '#1e293b',
+					700: '#334155',
+					600: '#475569',
+					900: '#0f172a',
+				},
+				'blue': {
+					600: '#2563eb',
+					700: '#1d4ed8',
+					800: '#1e40af',
+					400: '#60a5fa',
+					500: '#3b82f6',
+				},
 				'blue-light': '#E6F3FF',
 				'blue-medium': '#4DA6FF',
 				'blue-dark': '#0066CC',
+			},
+			backgroundImage: {
+				'hero-gradient': 'linear-gradient(135deg, #1e293b 0%, #334155 15%, #475569 30%, #0f172a 45%, #1e40af 60%, #2563eb 75%, #3b82f6 90%, #60a5fa 100%)',
 			},
 			borderRadius: {
 				lg: 'var(--radius)',
