@@ -79,7 +79,7 @@ const UseCases = () => {
                   <h3 className="text-3xl font-bold text-white mb-6">
                     {useCase.title}
                   </h3>
-                  <p className="text-white/80 text-base leading-relaxed">
+                  <p className="text-white/80 text-xl leading-relaxed">
                     {useCase.description}
                   </p>
                 </div>
