@@ -37,7 +37,7 @@ const FAQ = () => {
   };
 
   return (
-    <section className="py-20 bg-baby-blue-500" ref={ref}>
+    <section className="py-20 bg-gradient-to-b from-baby-blue-600 to-baby-blue-500" ref={ref}>
       <div className="max-w-4xl mx-auto px-6">
         <div className={`text-center mb-16 transition-all duration-700 ${inView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-6 tracking-tight">
