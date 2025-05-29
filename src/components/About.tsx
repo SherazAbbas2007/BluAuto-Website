@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { useInView } from 'react-intersection-observer';
 
@@ -7,13 +6,6 @@ const About = () => {
     threshold: 0.1,
     triggerOnce: true,
   });
-
-  const scrollToContact = () => {
-    const contactSection = document.querySelector('#contact');
-    if (contactSection) {
-      contactSection.scrollIntoView({ behavior: 'smooth' });
-    }
-  };
 
   return (
     <section id="about" className="py-20 bg-gradient-to-b from-baby-blue-700 to-baby-blue-600" ref={ref}>
@@ -27,13 +19,6 @@ const About = () => {
             <p className="text-xl text-white/90 font-light mb-8 leading-relaxed">
               Transforming manual, inconsistent and time-consuming processes into operational excellence through our AI-powered automation services
             </p>
-            
-            <button 
-              onClick={scrollToContact}
-              className="neuro-button text-lg"
-            >
-              Free Consultation
-            </button>
           </div>
 
           <div className={`transition-all duration-700 ${inView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`} style={{ transitionDelay: '0.3s' }}>
