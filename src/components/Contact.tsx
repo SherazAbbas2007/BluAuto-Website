@@ -1,6 +1,7 @@
-import React, { useState } from 'react';
+
+import React from 'react';
 import { useInView } from 'react-intersection-observer';
-import { toast } from '@/hooks/use-toast';
+
 const Contact = () => {
   const {
     ref,
@@ -9,36 +10,12 @@ const Contact = () => {
     threshold: 0.1,
     triggerOnce: true
   });
-  const [formData, setFormData] = useState({
-    firstName: '',
-    lastName: '',
-    companyName: '',
-    workEmail: '',
-    contactNumber: ''
-  });
-  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    setFormData({
-      ...formData,
-      [e.target.name]: e.target.value
-    });
-  };
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    console.log('Form submitted:', formData);
-    toast({
-      title: "Message Sent!",
-      description: "Thank you for your interest. We'll get back to you soon."
-    });
 
-    // Reset form
-    setFormData({
-      firstName: '',
-      lastName: '',
-      companyName: '',
-      workEmail: '',
-      contactNumber: ''
-    });
+  const handleBookCall = () => {
+    console.log('Book A Call button clicked');
+    // Add your booking logic here
   };
+
   return <section id="contact" className="py-20 bg-baby-blue-500" ref={ref}>
       <div className="max-w-4xl mx-auto px-6">
         <div className={`text-center mb-12 transition-all duration-700 ${inView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
@@ -50,37 +27,18 @@ const Contact = () => {
           </p>
         </div>
 
-        <div className={`transition-all duration-700 ${inView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`} style={{
+        <div className={`text-center transition-all duration-700 ${inView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`} style={{
         transitionDelay: '0.3s'
       }}>
-          <form onSubmit={handleSubmit} className="space-y-6">
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              <div>
-                <input type="text" name="firstName" placeholder="FIRST NAME *" value={formData.firstName} onChange={handleInputChange} required className="w-full px-4 py-4 bg-white/20 border border-white/30 rounded-lg text-white placeholder-white/70 focus:outline-none focus:ring-2 focus:ring-white/50 font-light" />
-              </div>
-              <div>
-                <input type="text" name="lastName" placeholder="LAST NAME *" value={formData.lastName} onChange={handleInputChange} required className="w-full px-4 py-4 bg-white/20 border border-white/30 rounded-lg text-white placeholder-white/70 focus:outline-none focus:ring-2 focus:ring-white/50 font-light" />
-              </div>
-            </div>
-
-            <div>
-              <input type="text" name="companyName" placeholder="COMPANY NAME *" value={formData.companyName} onChange={handleInputChange} required className="w-full px-4 py-4 bg-white/20 border border-white/30 rounded-lg text-white placeholder-white/70 focus:outline-none focus:ring-2 focus:ring-white/50 font-light" />
-            </div>
-
-            <div>
-              <input type="email" name="workEmail" placeholder="WORK EMAIL *" value={formData.workEmail} onChange={handleInputChange} required className="w-full px-4 py-4 bg-white/20 border border-white/30 rounded-lg text-white placeholder-white/70 focus:outline-none focus:ring-2 focus:ring-white/50 font-light" />
-            </div>
-
-            <div>
-              <input type="tel" name="contactNumber" placeholder="CONTACT NUMBER *" value={formData.contactNumber} onChange={handleInputChange} required className="w-full px-4 py-4 bg-white/20 border border-white/30 rounded-lg text-white placeholder-white/70 focus:outline-none focus:ring-2 focus:ring-white/50 font-light" />
-            </div>
-
-            <div className="pt-4">
-              <button type="submit" className="bg-white text-slate-800 px-10 py-5 text-lg rounded-2xl font-semibold hover:bg-gray-100 hover:scale-105 transition-all duration-300 tracking-wide hover:shadow-[0_0_20px_rgba(255,255,255,0.6)]">Book A Call</button>
-            </div>
-          </form>
+          <button 
+            onClick={handleBookCall}
+            className="bg-white text-slate-800 px-10 py-5 text-lg rounded-2xl font-semibold hover:bg-gray-100 hover:scale-105 transition-all duration-300 tracking-wide hover:shadow-[0_0_20px_rgba(255,255,255,0.6)]"
+          >
+            Book A Call
+          </button>
         </div>
       </div>
     </section>;
 };
+
 export default Contact;
