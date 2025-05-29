@@ -10,6 +10,11 @@ const Navigation = () => {
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 50);
+      
+      // Clear active section when at the top (hero section)
+      if (window.scrollY < 100) {
+        setActiveSection('');
+      }
     };
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
@@ -29,7 +34,7 @@ const Navigation = () => {
 
       const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
-          if (entry.isIntersecting) {
+          if (entry.isIntersecting && window.scrollY > 100) {
             setActiveSection(sectionId);
           }
         });
