@@ -11,7 +11,7 @@ const Process = () => {
     {
       icon: 'ph-phone',
       title: 'Discovery call',
-      description: 'We learn about your business processes and core technologies to discover opportunities where AI automation can optimise your operations.'
+      description: 'We analyze your business processes and core systems to identify opportunities where AI automation can enhance and streamline your operations.'
     },
     {
       icon: 'ph-flow-arrow',
