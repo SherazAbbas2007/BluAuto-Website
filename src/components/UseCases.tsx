@@ -46,7 +46,7 @@ const UseCases = () => {
     },
     {
       title: 'Invoicing',
-      description: 'Expedite billing and optimise financial management',
+      description: 'Accelerate billing and enhance financial management.',
       icon: DollarSign
     }
   ];
