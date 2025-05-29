@@ -1,3 +1,4 @@
+
 import React, { useState, useEffect } from 'react';
 
 const Navigation = () => {
@@ -26,12 +27,12 @@ const Navigation = () => {
     href: '#contact'
   }];
 
-  // Smoother easing function for S-curve animation
-  const easeInOutQuart = (t: number): number => {
-    return t < 0.5 ? 8 * t * t * t * t : 1 - Math.pow(-2 * t + 2, 4) / 2;
+  // Much gentler easing function for truly smooth S-curve
+  const easeInOutSine = (t: number): number => {
+    return -(Math.cos(Math.PI * t) - 1) / 2;
   };
 
-  const smoothScrollTo = (targetY: number, duration: number = 1500) => {
+  const smoothScrollTo = (targetY: number, duration: number = 1000) => {
     const startY = window.scrollY;
     const distance = targetY - startY;
     let startTime: number | null = null;
@@ -41,8 +42,10 @@ const Navigation = () => {
       const timeElapsed = currentTime - startTime;
       const progress = Math.min(timeElapsed / duration, 1);
       
-      const easedProgress = easeInOutQuart(progress);
-      window.scrollTo(0, startY + distance * easedProgress);
+      const easedProgress = easeInOutSine(progress);
+      const currentPosition = startY + distance * easedProgress;
+      
+      window.scrollTo(0, currentPosition);
 
       if (progress < 1) {
         requestAnimationFrame(animation);
