@@ -9,7 +9,7 @@ const UseCases = () => {
   });
 
   const useCases = [
-    ['Lead Generation', 'AI Cold Email Systems', 'Application Systems', 'Content Systems'],
+    ['Lead Generation', 'AI Personalised Cold Email Systems', 'Application Systems', 'Content Systems'],
     ['Project Management', 'AI Automated Fulfillment', 'AI Onboarding Systems', 'PM Systems'],
     ['Hiring Systems', 'Intake Systems', 'AI Scoring Systems', 'Trial Systems'],
     ['Sales Administration', 'Customized CRMs', 'AI Asset Generators', 'AI Nurture Systems']
