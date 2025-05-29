@@ -1,7 +1,6 @@
 
 import React from 'react';
 import { useInView } from 'react-intersection-observer';
-import { Rocket, User, BarChart3, Settings, Database, FileText, Headphones, DollarSign } from 'lucide-react';
 
 const UseCases = () => {
   const { ref, inView } = useInView({
@@ -13,42 +12,42 @@ const UseCases = () => {
     {
       title: 'Sales Outreach',
       description: 'Maximise engagement with potential leads',
-      Icon: Rocket
+      icon: '🚀'
     },
     {
       title: 'Client Onboarding',
       description: 'Expedite onboarding, improve accuracy and enhance overall client satisfaction',
-      Icon: User
+      icon: '👤'
     },
     {
       title: 'Project Management',
       description: 'Streamline workflows, increase efficiency and optimise resource utilisation',
-      Icon: BarChart3
+      icon: '📊'
     },
     {
       title: 'Workforce Optimisation',
       description: 'Save employees several hours a day by automating their most time-consuming tasks',
-      Icon: Settings
+      icon: '⚙️'
     },
     {
       title: 'Data Entry',
       description: 'Eliminate manual errors and ensure timely data processing',
-      Icon: Database
+      icon: '🗃️'
     },
     {
       title: 'Document Creation',
       description: 'Save time on creating various documents (e.g. proposals, contracts etc.) whilst maintaining accuracy and consistency',
-      Icon: FileText
+      icon: '📄'
     },
     {
       title: 'Customer Service',
       description: 'Customer enquiries often follow a repetitive pattern, hence are ideal for automation',
-      Icon: Headphones
+      icon: '🎧'
     },
     {
       title: 'Invoicing',
       description: 'Expedite billing and optimise financial management',
-      Icon: DollarSign
+      icon: '💰'
     }
   ];
 
@@ -71,9 +70,7 @@ const UseCases = () => {
               style={{ transitionDelay: `${index * 0.1}s` }}
             >
               <div className="text-center">
-                <div className="mb-4">
-                  <useCase.Icon className="w-16 h-16 text-white mx-auto" fill="currentColor" />
-                </div>
+                <div className="text-6xl mb-4">{useCase.icon}</div>
                 <h3 className="text-xl font-bold text-white mb-4">
                   {useCase.title}
                 </h3>
