@@ -43,7 +43,7 @@ const Contact = () => {
   };
 
   return (
-    <section id="contact" className="py-20 bg-gradient-to-br from-orange-400 via-orange-500 to-red-500" ref={ref}>
+    <section id="contact" className="py-20 bg-gradient-to-br from-baby-blue-400 to-baby-blue-600" ref={ref}>
       <div className="max-w-4xl mx-auto px-6">
         <div className={`text-center mb-12 transition-all duration-700 ${inView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-6 tracking-tight">
@@ -120,7 +120,7 @@ const Contact = () => {
             <div className="pt-4">
               <button
                 type="submit"
-                className="bg-gray-900 text-white px-8 py-4 rounded-lg font-semibold hover:bg-gray-800 transition-colors duration-300 uppercase tracking-wide"
+                className="bg-white text-baby-blue-600 px-8 py-4 rounded-lg font-semibold hover:bg-baby-blue-50 transition-colors duration-300 uppercase tracking-wide"
               >
                 Book Now
               </button>
