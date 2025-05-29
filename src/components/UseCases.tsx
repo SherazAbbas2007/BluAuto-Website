@@ -56,7 +56,7 @@ const UseCases = () => {
               }`}
               style={{ transitionDelay: `${index * 0.2}s` }}
             >
-              <div className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-2xl p-8 hover:bg-white/20 transition-all duration-300 group shadow-lg hover:shadow-white/20 h-full">
+              <div className="bg-white/8 backdrop-blur-sm border border-white/20 rounded-2xl p-8 hover:bg-white/16 transition-all duration-300 group shadow-lg hover:shadow-white/20 h-full">
                 <h3 className="text-2xl font-bold text-white mb-6 text-center group-hover:text-white/90 transition-colors">
                   {category.title}
                 </h3>
