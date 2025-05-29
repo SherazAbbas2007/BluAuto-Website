@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { useInView } from 'react-intersection-observer';
 
@@ -13,7 +12,7 @@ const Contact = () => {
 
   const handleBookCall = () => {
     console.log('Book A Call button clicked');
-    // Add your booking logic here
+    window.open('https://cal.com/sheraz-abbas-cmlcws/book-a-call', '_blank');
   };
 
   return <section id="contact" className="py-20 bg-baby-blue-500" ref={ref}>
