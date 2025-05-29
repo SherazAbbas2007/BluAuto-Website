@@ -73,13 +73,13 @@ const UseCases = () => {
                 style={{ transitionDelay: `${index * 0.1}s` }}
               >
                 <div className="text-center">
-                  <div className="mb-4 flex justify-center">
-                    <IconComponent size={48} className="text-white" />
+                  <div className="mb-6 flex justify-center">
+                    <IconComponent size={72} className="text-white" />
                   </div>
-                  <h3 className="text-xl font-bold text-white mb-4">
+                  <h3 className="text-3xl font-bold text-white mb-6">
                     {useCase.title}
                   </h3>
-                  <p className="text-white/80 text-sm leading-relaxed">
+                  <p className="text-white/80 text-base leading-relaxed">
                     {useCase.description}
                   </p>
                 </div>
