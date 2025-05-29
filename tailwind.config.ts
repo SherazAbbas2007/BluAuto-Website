@@ -70,7 +70,7 @@ export default {
 				},
 			},
 			backgroundImage: {
-				'hero-gradient': 'linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 20%, #bae6fd 40%, #7dd3fc 60%, #38bdf8 80%, #0ea5e9 100%)',
+				'hero-gradient': 'linear-gradient(135deg, #0c4a6e 0%, #075985 20%, #0369a1 40%, #0284c7 60%, #0ea5e9 80%, #38bdf8 100%)',
 			},
 			borderRadius: {
 				lg: 'var(--radius)',
