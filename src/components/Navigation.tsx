@@ -37,26 +37,28 @@ const Navigation = () => {
       }`}>
         <div className="max-w-7xl mx-auto px-6">
           <div className="flex items-center justify-between h-16">
-            {/* Logo */}
-            <div className="flex items-center space-x-3">
-              <div className="w-8 h-8 bg-gradient-to-br from-blue-400 to-blue-600 rounded-lg flex items-center justify-center">
-                <i className="ph ph-robot text-white text-lg"></i>
-              </div>
+            {/* Logo - Left Side */}
+            <div className="flex items-center">
               <span className="text-xl font-semibold text-white tracking-tight">BluAuto</span>
             </div>
 
-            {/* Desktop Navigation */}
-            <div className="hidden md:flex items-center space-x-8">
-              {navItems.map((item) => (
-                <button
-                  key={item.name}
-                  onClick={() => scrollToSection(item.href)}
-                  className="text-white/80 hover:text-white font-light transition-colors duration-200"
-                >
-                  {item.name}
-                </button>
-              ))}
+            {/* Desktop Navigation - Center */}
+            <div className="hidden md:flex items-center justify-center flex-1">
+              <div className="flex items-center space-x-8">
+                {navItems.map((item) => (
+                  <button
+                    key={item.name}
+                    onClick={() => scrollToSection(item.href)}
+                    className="text-white/80 hover:text-white font-light transition-colors duration-200"
+                  >
+                    {item.name}
+                  </button>
+                ))}
+              </div>
             </div>
+
+            {/* Empty div for flex balance */}
+            <div className="hidden md:block w-20"></div>
 
             {/* Mobile Menu Button */}
             <button

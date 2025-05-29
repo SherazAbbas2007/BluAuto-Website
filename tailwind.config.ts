@@ -56,25 +56,21 @@ export default {
 					DEFAULT: 'hsl(var(--card))',
 					foreground: 'hsl(var(--card-foreground))'
 				},
-				'slate': {
-					800: '#1e293b',
-					700: '#334155',
-					600: '#475569',
-					900: '#0f172a',
+				'baby-blue': {
+					50: '#f0f9ff',
+					100: '#e0f2fe',
+					200: '#bae6fd',
+					300: '#7dd3fc',
+					400: '#38bdf8',
+					500: '#0ea5e9',
+					600: '#0284c7',
+					700: '#0369a1',
+					800: '#075985',
+					900: '#0c4a6e',
 				},
-				'blue': {
-					600: '#2563eb',
-					700: '#1d4ed8',
-					800: '#1e40af',
-					400: '#60a5fa',
-					500: '#3b82f6',
-				},
-				'blue-light': '#E6F3FF',
-				'blue-medium': '#4DA6FF',
-				'blue-dark': '#0066CC',
 			},
 			backgroundImage: {
-				'hero-gradient': 'linear-gradient(135deg, #1e293b 0%, #334155 15%, #475569 30%, #0f172a 45%, #1e40af 60%, #2563eb 75%, #3b82f6 90%, #60a5fa 100%)',
+				'hero-gradient': 'linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 20%, #bae6fd 40%, #7dd3fc 60%, #38bdf8 80%, #0ea5e9 100%)',
 			},
 			borderRadius: {
 				lg: 'var(--radius)',
@@ -134,10 +130,10 @@ export default {
 				},
 				'glow': {
 					'0%, 100%': {
-						boxShadow: '0 0 20px rgba(77, 166, 255, 0.5)'
+						boxShadow: '0 0 20px rgba(14, 165, 233, 0.5)'
 					},
 					'50%': {
-						boxShadow: '0 0 30px rgba(77, 166, 255, 0.8)'
+						boxShadow: '0 0 30px rgba(14, 165, 233, 0.8)'
 					}
 				}
 			},
