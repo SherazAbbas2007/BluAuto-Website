@@ -10,28 +10,44 @@ const UseCases = () => {
 
   const useCases = [
     {
-      title: 'Lead Generation',
-      services: [
-        'AI Personalised Cold Email Systems',
-        'Application Systems',
-        'Content Systems'
-      ]
+      title: 'Sales Outreach',
+      description: 'Maximise engagement with potential leads',
+      icon: '🚀'
     },
     {
-      title: 'Hiring Systems',
-      services: [
-        'Intake Systems',
-        'AI Scoring Systems',
-        'Trial Systems'
-      ]
+      title: 'Client Onboarding',
+      description: 'Expedite onboarding, improve accuracy and enhance overall client satisfaction',
+      icon: '👤'
     },
     {
-      title: 'Sales Administration',
-      services: [
-        'Customized CRMs',
-        'AI Asset Generators',
-        'AI Nurture Systems'
-      ]
+      title: 'Project Management',
+      description: 'Streamline workflows, increase efficiency and optimise resource utilisation',
+      icon: '📊'
+    },
+    {
+      title: 'Workforce Optimisation',
+      description: 'Save employees several hours a day by automating their most time-consuming tasks',
+      icon: '⚙️'
+    },
+    {
+      title: 'Data Entry',
+      description: 'Eliminate manual errors and ensure timely data processing',
+      icon: '🗃️'
+    },
+    {
+      title: 'Document Creation',
+      description: 'Save time on creating various documents (e.g. proposals, contracts etc.) whilst maintaining accuracy and consistency',
+      icon: '📄'
+    },
+    {
+      title: 'Customer Service',
+      description: 'Customer enquiries often follow a repetitive pattern, hence are ideal for automation',
+      icon: '🎧'
+    },
+    {
+      title: 'Invoicing',
+      description: 'Expedite billing and optimise financial management',
+      icon: '💰'
     }
   ];
 
@@ -40,36 +56,27 @@ const UseCases = () => {
       <div className="max-w-7xl mx-auto px-6">
         <div className={`text-center mb-16 transition-all duration-700 ${inView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-6 tracking-tight">
-            Use Cases
+            How Automation Could Help You
           </h2>
-          <p className="text-xl text-white/80 font-light max-w-3xl mx-auto">
-            Discover the various ways AI automation can transform your business operations
-          </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          {useCases.map((category, index) => (
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          {useCases.map((useCase, index) => (
             <div 
-              key={category.title}
+              key={useCase.title}
               className={`transition-all duration-700 ${
                 inView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
               }`}
-              style={{ transitionDelay: `${index * 0.2}s` }}
+              style={{ transitionDelay: `${index * 0.1}s` }}
             >
-              <div className="bg-baby-blue-900 backdrop-blur-sm border border-white/20 rounded-2xl p-8 hover:bg-baby-blue-900/90 transition-all duration-300 group shadow-lg hover:shadow-white/20 h-full">
-                <h3 className="text-2xl font-bold text-white mb-6 text-center group-hover:text-white/90 transition-colors">
-                  {category.title}
+              <div className="text-center">
+                <div className="text-6xl mb-4">{useCase.icon}</div>
+                <h3 className="text-xl font-bold text-white mb-4">
+                  {useCase.title}
                 </h3>
-                <div className="space-y-4">
-                  {category.services.map((service) => (
-                    <div 
-                      key={service}
-                      className="text-white/90 font-medium text-center py-2 px-4 bg-baby-blue-950 rounded-lg border border-white/10"
-                    >
-                      {service}
-                    </div>
-                  ))}
-                </div>
+                <p className="text-white/80 text-sm leading-relaxed">
+                  {useCase.description}
+                </p>
               </div>
             </div>
           ))}
