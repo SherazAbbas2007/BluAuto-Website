@@ -60,11 +60,11 @@ const Process = () => {
                   <i className={`ph ${step.icon} text-2xl text-white`}></i>
                 </div>
                 
-                <h3 className="text-xl font-semibold text-white mb-3 tracking-tight">
+                <h3 className="text-2xl font-semibold text-white mb-3 tracking-tight">
                   {step.title}
                 </h3>
                 
-                <p className="text-white/90 font-light leading-relaxed">
+                <p className="text-white/90 font-light leading-relaxed text-xl">
                   {step.description}
                 </p>
               </div>
