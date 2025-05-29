@@ -16,7 +16,7 @@ const Process = () => {
     {
       icon: 'ph-flow-arrow',
       title: 'Outline current workflows',
-      description: 'We create visual process flows of your current systems and manual tasks.'
+      description: 'We design visual workflows that map your existing systems and manual tasks.'
     },
     {
       icon: 'ph-magnifying-glass',
