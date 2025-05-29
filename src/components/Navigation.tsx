@@ -1,3 +1,4 @@
+
 import React, { useState, useEffect } from 'react';
 const Navigation = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -52,7 +53,7 @@ const Navigation = () => {
             {/* Desktop Navigation - Center */}
             <div className="hidden md:flex items-center justify-center flex-1">
               <div className="flex items-center space-x-8">
-                {navItems.map(item => <button key={item.name} onClick={() => scrollToSection(item.href)} className="text-white hover:text-white transition-colors duration-200 text-xl font-semibold">
+                {navItems.map(item => <button key={item.name} onClick={() => scrollToSection(item.href)} className="text-white hover:text-white transition-all duration-300 text-xl font-semibold hover:shadow-[0_0_15px_rgba(255,255,255,0.5)] rounded-lg px-3 py-2">
                     {item.name}
                   </button>)}
               </div>
@@ -74,7 +75,7 @@ const Navigation = () => {
         <div className="absolute inset-0 bg-black/50 backdrop-blur-sm" onClick={() => setIsMobileMenuOpen(false)} />
         <div className={`absolute right-0 top-0 h-full w-80 bg-gradient-to-b from-slate-900 to-slate-800 shadow-xl transform transition-transform duration-300 ${isMobileMenuOpen ? 'translate-x-0' : 'translate-x-full'}`}>
           <div className="flex flex-col h-full pt-20 px-6">
-            {navItems.map((item, index) => <button key={item.name} onClick={() => scrollToSection(item.href)} className={`text-left py-4 text-white/80 hover:text-white font-light transition-all duration-200 border-b border-white/10 animate-fade-in-up text-lg`} style={{
+            {navItems.map((item, index) => <button key={item.name} onClick={() => scrollToSection(item.href)} className={`text-left py-4 text-white/80 hover:text-white font-light transition-all duration-200 border-b border-white/10 animate-fade-in-up text-lg hover:shadow-[0_0_10px_rgba(255,255,255,0.3)] rounded px-2`} style={{
             animationDelay: `${index * 0.1}s`
           }}>
                 {item.name}
