@@ -30,18 +30,9 @@ const Hero = () => {
             Connect your wallet, configure your AI assistant, and let advanced algorithms handle your trading strategy while you focus on what matters most.
           </p>
           
-          <button 
+          <button
             onClick={scrollToContact}
-            className="bg-white text-slate-800 font-medium rounded-xl px-8 py-3 transition-all duration-300 shadow-lg hover:shadow-xl cursor-pointer border-none hover:bg-gray-50"
-            style={{
-              boxShadow: '0 4px 6px rgba(0, 0, 0, 0.1)'
-            }}
-            onMouseEnter={(e) => {
-              e.currentTarget.style.boxShadow = '0 0 20px rgba(255, 255, 255, 0.8), 0 0 40px rgba(255, 255, 255, 0.6), 0 8px 25px rgba(255, 255, 255, 0.3)';
-            }}
-            onMouseLeave={(e) => {
-              e.currentTarget.style.boxShadow = '0 4px 6px rgba(0, 0, 0, 0.1)';
-            }}
+            className="bg-white text-baby-blue-600 px-8 py-4 rounded-lg font-semibold hover:bg-baby-blue-50 transition-colors duration-300 uppercase tracking-wide"
           >
             Contact Me
           </button>
