@@ -1,3 +1,4 @@
+
 import React from 'react';
 const Hero = () => {
   const scrollToContact = () => {
@@ -31,18 +32,16 @@ const Hero = () => {
             Connect your wallet, configure your AI assistant, and let advanced algorithms handle your trading strategy while you focus on what matters most.
           </p>
           
-          <button onClick={scrollToContact} style={{
-          pointerEvents: 'auto'
-        }} className="bg-white text-baby-blue-600 px-8 py-4 rounded-lg font-semibold hover:bg-baby-blue-50 transition-colors duration-300 uppercase tracking-wide cursor-pointer relative z-20 text-zinc-950">
+          <button onClick={scrollToContact} className="bg-white text-baby-blue-600 px-8 py-4 rounded-lg font-semibold hover:bg-baby-blue-50 transition-colors duration-300 uppercase tracking-wide">
             Contact Me
           </button>
         </div>
 
-        {/* Video Placeholder */}
+        {/* Video Placeholder with 16:9 aspect ratio */}
         <div className="hidden lg:block flex-1 ml-12 animate-fade-in-up" style={{
         animationDelay: '0.3s'
       }}>
-          <div className="glass-card p-8 h-96 w-150 flex items-center justify-center py-[32px]">
+          <div className="glass-card p-8 aspect-video flex items-center justify-center">
             <div className="text-center text-white/60">
               <i className="ph ph-play-circle text-6xl mb-4"></i>
               <p className="text-lg font-light">Video Coming Soon</p>
