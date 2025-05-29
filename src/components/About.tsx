@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { useInView } from 'react-intersection-observer';
 
@@ -22,7 +23,7 @@ const About = () => {
           </div>
 
           <div className={`transition-all duration-700 ${inView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`} style={{ transitionDelay: '0.3s' }}>
-            <div className="bg-white/20 backdrop-blur-sm border border-white/30 rounded-xl p-8">
+            <div className="bg-baby-blue-800/80 backdrop-blur-sm border border-baby-blue-700/50 rounded-xl p-8">
               <div className="grid grid-cols-2 gap-6">
                 <div className="text-center">
                   <div className="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-4">
