@@ -1,6 +1,7 @@
 
 import React from 'react';
 import { useInView } from 'react-intersection-observer';
+import { ArrowRight } from 'lucide-react';
 
 const Process = () => {
   const { ref, inView } = useInView({
@@ -46,30 +47,44 @@ const Process = () => {
           </h2>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-5 gap-10">
-          {steps.map((step, index) => (
-            <div 
-              key={step.title}
-              className={`text-center transition-all duration-700 ${
-                inView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
-              }`}
-              style={{ transitionDelay: `${index * 0.2}s` }}
-            >
-              <div className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-2xl p-8 hover:bg-white/20 transition-all duration-300 group">
-                <div className="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-6 shadow-lg group-hover:scale-110 transition-transform duration-300">
-                  <i className={`ph ${step.icon} text-2xl text-white`}></i>
+        <div className="relative">
+          {/* Arrow connector line - hidden on mobile, visible on md+ */}
+          <div className="hidden md:block absolute top-16 left-0 right-0 h-0.5">
+            <div className="flex items-center justify-between px-16">
+              {[...Array(4)].map((_, index) => (
+                <div key={index} className="flex items-center">
+                  <div className="w-24 h-0.5 bg-white/30"></div>
+                  <ArrowRight className="text-white/50 w-6 h-6 mx-2" />
                 </div>
-                
-                <h3 className="text-2xl font-semibold text-white mb-3 tracking-tight">
-                  {step.title}
-                </h3>
-                
-                <p className="text-white/90 font-light leading-relaxed text-xl">
-                  {step.description}
-                </p>
-              </div>
+              ))}
             </div>
-          ))}
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-5 gap-10">
+            {steps.map((step, index) => (
+              <div 
+                key={step.title}
+                className={`text-center transition-all duration-700 ${
+                  inView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
+                }`}
+                style={{ transitionDelay: `${index * 0.2}s` }}
+              >
+                <div className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-2xl p-8 hover:bg-white/20 transition-all duration-300 group">
+                  <div className="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-6 shadow-lg group-hover:scale-110 transition-transform duration-300">
+                    <i className={`ph ${step.icon} text-2xl text-white`}></i>
+                  </div>
+                  
+                  <h3 className="text-2xl font-semibold text-white mb-3 tracking-tight">
+                    {step.title}
+                  </h3>
+                  
+                  <p className="text-white/90 font-light leading-relaxed text-xl">
+                    {step.description}
+                  </p>
+                </div>
+              </div>
+            ))}
+          </div>
         </div>
       </div>
     </section>
