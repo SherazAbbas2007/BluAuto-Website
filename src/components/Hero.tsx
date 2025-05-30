@@ -17,8 +17,8 @@ const Hero = () => {
         }}></div>
       </div>
 
-      <div className="max-w-7xl mx-auto px-6 flex items-center justify-center gap-8 relative z-10 w-full">
-        <div className="flex-1 max-w-2xl animate-fade-in-up text-center lg:text-left">
+      <div className="max-w-7xl mx-auto px-6 flex items-center justify-center relative z-10 w-full">
+        <div className="max-w-4xl animate-fade-in-up text-center">
           <h1 className="text-7xl md:text-8xl lg:text-9xl font-bold text-white mb-8 tracking-tight leading-tight">
             Automate Your{' '}
             <span className="block">Business</span>
@@ -32,23 +32,6 @@ const Hero = () => {
           >
             Book a call
           </button>
-        </div>
-
-        {/* Video Box - 30% larger */}
-        <div className="hidden lg:block flex-1 animate-fade-in-up" style={{
-          animationDelay: '0.3s',
-          width: '130%',
-          maxWidth: '900px'
-        }}>
-          <div className="glass-card p-16 flex items-center justify-center" style={{
-            aspectRatio: '16/9',
-            height: '520px'
-          }}>
-            <div className="text-center text-white/60">
-              <i className="ph ph-play-circle text-9xl mb-6"></i>
-              <p className="text-2xl font-light">Video Coming Soon</p>
-            </div>
-          </div>
         </div>
       </div>
     </section>
