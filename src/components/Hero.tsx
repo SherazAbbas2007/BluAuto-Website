@@ -1,4 +1,3 @@
-
 import React from 'react';
 
 const Hero = () => {
@@ -8,7 +7,7 @@ const Hero = () => {
   };
 
   return (
-    <section className="min-h-screen bg-hero-gradient flex items-center justify-center relative overflow-hidden py-8 lg:py-0">
+    <section className="min-h-screen bg-hero-gradient flex items-center justify-center relative overflow-hidden py-8 lg:py-0 pt-24 lg:pt-8">
       {/* Background Pattern */}
       <div className="absolute inset-0 opacity-10 pointer-events-none">
         <div className="absolute inset-0" style={{
