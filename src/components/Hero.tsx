@@ -18,17 +18,28 @@ const Hero = () => {
       </div>
 
       <div className="max-w-7xl mx-auto px-6 flex items-center justify-center relative z-10 w-full">
-        <div className="max-w-4xl animate-fade-in-up text-center">
-          <h1 className="text-7xl md:text-8xl lg:text-9xl font-bold text-white mb-8 tracking-tight leading-tight">
+        <div className="max-w-4xl text-center">
+          <h1 className="text-7xl md:text-8xl lg:text-9xl font-bold text-white mb-8 tracking-tight leading-tight animate-fade-in-up">
             Automate Your{' '}
             <span className="block">Business</span>
           </h1>
           
-          <p className="text-2xl text-white/90 font-light mb-12 leading-relaxed">At BluAuto AI, we use advanced AI to streamline operations and deliver scalable B2B growth solutions. Our custom systems cut manual work, boost efficiency, and free teams to focus on strategic growth.</p>
+          <p className="text-2xl text-white/90 font-light mb-12 leading-relaxed animate-fade-in-up" style={{
+            animationDelay: '0.3s',
+            opacity: 0,
+            animationFillMode: 'forwards'
+          }}>
+            At BluAuto AI, we use advanced AI to streamline operations and deliver scalable B2B growth solutions. Our custom systems cut manual work, boost efficiency, and free teams to focus on strategic growth.
+          </p>
           
           <button 
             onClick={handleContactClick} 
-            className="bg-white text-zinc-950 px-12 py-7 text-xl rounded-2xl font-semibold hover:bg-gray-100 hover:scale-105 transition-all duration-300 tracking-wide hover:shadow-[0_0_20px_rgba(255,255,255,0.6)]"
+            className="bg-white text-zinc-950 px-12 py-7 text-xl rounded-2xl font-semibold hover:bg-gray-100 hover:scale-105 transition-all duration-300 tracking-wide hover:shadow-[0_0_20px_rgba(255,255,255,0.6)] animate-fade-in-up"
+            style={{
+              animationDelay: '0.6s',
+              opacity: 0,
+              animationFillMode: 'forwards'
+            }}
           >
             Book a call
           </button>
