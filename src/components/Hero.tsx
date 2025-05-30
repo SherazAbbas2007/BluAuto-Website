@@ -7,7 +7,7 @@ const Hero = () => {
   };
 
   return (
-    <section className="min-h-screen bg-hero-gradient flex items-center justify-center relative overflow-hidden py-8 lg:py-0 pt-24 lg:pt-8">
+    <section className="min-h-screen bg-hero-gradient flex items-center justify-center relative overflow-hidden pt-28 md:pt-32 lg:pt-8">
       {/* Background Pattern */}
       <div className="absolute inset-0 opacity-10 pointer-events-none">
         <div className="absolute inset-0" style={{
@@ -16,7 +16,7 @@ const Hero = () => {
         }}></div>
       </div>
 
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 flex flex-col lg:flex-row items-center justify-center gap-6 lg:gap-8 relative z-10 w-full">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 flex flex-col lg:flex-row items-center justify-center gap-6 lg:gap-8 relative z-10 w-full py-8 lg:py-0">
         <div className="flex-1 max-w-2xl animate-fade-in-up text-center lg:text-left">
           <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl 2xl:text-9xl font-bold text-white mb-4 sm:mb-6 lg:mb-8 tracking-tight leading-tight">
             Automate Your{' '}
