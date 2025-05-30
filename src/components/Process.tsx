@@ -46,16 +46,16 @@ const Process = () => {
           </h2>
         </div>
 
-        <div className="flex flex-col lg:flex-row gap-8 overflow-x-auto">
+        <div className="grid grid-cols-1 md:grid-cols-5 gap-8">
           {steps.map((step, index) => (
             <div 
               key={step.title}
-              className={`flex-shrink-0 w-full lg:w-1/5 text-center transition-all duration-700 ${
+              className={`text-center transition-all duration-700 ${
                 inView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
               }`}
               style={{ transitionDelay: `${index * 0.2}s` }}
             >
-              <div className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-2xl p-6 hover:bg-white/20 transition-all duration-300 group h-full">
+              <div className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-2xl p-6 hover:bg-white/20 transition-all duration-300 group">
                 <div className="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-6 shadow-lg group-hover:scale-110 transition-transform duration-300">
                   <i className={`ph ${step.icon} text-2xl text-white`}></i>
                 </div>
