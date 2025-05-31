@@ -16,7 +16,6 @@ const Footer = () => {
     name: 'CONTACT',
     href: '#contact'
   }];
-  
   const scrollToSection = (href: string) => {
     if (href === '#') {
       window.scrollTo({
@@ -47,7 +46,7 @@ const Footer = () => {
         </div>
         
         <div className="mt-8 pt-8 border-t border-slate-700 text-center">
-          <p className="text-slate-300 font-light">© 2025 BluAuto. All rights reserved.</p>
+          <p className="text-slate-300 font-light">© 2025 BluAuto. All rights reserved. Made by Sheraz ☺️</p>
         </div>
       </div>
     </footer>;
