@@ -42,10 +42,7 @@ const Contact = () => {
         <div className={`text-center transition-all duration-700 ${inView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`} style={{
           transitionDelay: '0.3s'
         }}>
-          <button 
-            onClick={handleBookCall} 
-            className="bg-white text-slate-800 px-16 py-8 text-2xl rounded-2xl font-semibold transition-all duration-300 tracking-wide will-change-auto transform-gpu hover:shadow-[0_0_20px_rgba(255,255,255,0.6)] hover:brightness-110"
-          >
+          <button onClick={handleBookCall} className="bg-white text-slate-800 px-16 py-8 text-2xl rounded-2xl font-semibold hover:bg-gray-100 hover:scale-105 transition-all duration-300 tracking-wide hover:shadow-[0_0_20px_rgba(255,255,255,0.6)]">
             Book A Call
           </button>
         </div>
