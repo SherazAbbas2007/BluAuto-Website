@@ -18,7 +18,7 @@ const Contact = () => {
 
   const handleEmailClick = () => {
     console.log('Email link clicked');
-    window.open('https://mail.google.com/mail/?view=cm&fs=1&to=sheraz@bluauto.io', '_blank');
+    window.open('https://mail.google.com/mail/?view=cm&fs=1&to=info@bluauto.io', '_blank');
   };
 
   return (
@@ -34,7 +34,7 @@ const Contact = () => {
               onClick={handleEmailClick}
               className="underline hover:text-white transition-colors duration-200 cursor-pointer"
             >
-              sheraz@bluauto.io
+              info@bluauto.io
             </button>
           </p>
         </div>
