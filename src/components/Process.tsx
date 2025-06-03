@@ -46,7 +46,7 @@ const Process = () => {
           </h2>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-8 sm:gap-10 lg:gap-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-4 lg:gap-6">
           {steps.map((step, index) => (
             <div 
               key={step.title}
@@ -55,16 +55,16 @@ const Process = () => {
               }`}
               style={{ transitionDelay: `${index * 0.2}s` }}
             >
-              <div className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-2xl p-8 sm:p-10 lg:p-12 hover:bg-white/20 transition-all duration-300 group h-full">
+              <div className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-2xl p-6 sm:p-8 lg:p-10 hover:bg-white/20 transition-all duration-300 group h-full min-h-[300px] flex flex-col">
                 <div className="w-12 h-12 sm:w-16 sm:h-16 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-4 sm:mb-6 shadow-lg group-hover:scale-110 transition-transform duration-300">
                   <i className={`ph ${step.icon} text-xl sm:text-2xl text-white`}></i>
                 </div>
                 
-                <h3 className="text-xl sm:text-2xl font-semibold text-white mb-3 tracking-tight">
+                <h3 className="text-lg sm:text-xl lg:text-2xl font-semibold text-white mb-3 tracking-tight">
                   {step.title}
                 </h3>
                 
-                <p className="text-white/90 font-light leading-relaxed text-base sm:text-lg lg:text-xl">
+                <p className="text-white/90 font-light leading-relaxed text-sm sm:text-base lg:text-lg flex-grow">
                   {step.description}
                 </p>
               </div>
