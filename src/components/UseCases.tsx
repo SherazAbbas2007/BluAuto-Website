@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { useInView } from 'react-intersection-observer';
 import { Rocket, User, BarChart3, Settings, Database, FileText, Headphones, DollarSign } from 'lucide-react';
@@ -53,15 +52,15 @@ const UseCases = () => {
   ];
 
   return (
-    <section id="usecases" className="py-12 sm:py-16 lg:py-20 bg-gradient-to-b from-baby-blue-800 to-baby-blue-700" ref={ref}>
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className={`text-center mb-12 sm:mb-16 transition-all duration-700 ${inView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-6 tracking-tight px-4">
+    <section id="usecases" className="py-20 bg-gradient-to-b from-baby-blue-800 to-baby-blue-700" ref={ref}>
+      <div className="max-w-7xl mx-auto px-6">
+        <div className={`text-center mb-16 transition-all duration-700 ${inView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
+          <h2 className="text-4xl md:text-5xl font-bold text-white mb-6 tracking-tight">
             Example Use Cases
           </h2>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 sm:gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {useCases.map((useCase, index) => {
             const IconComponent = useCase.icon;
             return (
@@ -72,14 +71,14 @@ const UseCases = () => {
                 }`}
                 style={{ transitionDelay: `${index * 0.1}s` }}
               >
-                <div className="text-center h-full">
-                  <div className="mb-4 sm:mb-6 flex justify-center">
-                    <IconComponent size={56} className="text-white sm:w-16 sm:h-16 lg:w-18 lg:h-18" />
+                <div className="text-center">
+                  <div className="mb-6 flex justify-center">
+                    <IconComponent size={72} className="text-white" />
                   </div>
-                  <h3 className="text-xl sm:text-2xl lg:text-3xl font-bold text-white mb-4 sm:mb-6">
+                  <h3 className="text-3xl font-bold text-white mb-6">
                     {useCase.title}
                   </h3>
-                  <p className="text-white/80 text-base sm:text-lg lg:text-xl leading-relaxed">
+                  <p className="text-white/80 text-xl leading-relaxed">
                     {useCase.description}
                   </p>
                 </div>

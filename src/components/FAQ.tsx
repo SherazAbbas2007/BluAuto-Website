@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { useInView } from 'react-intersection-observer';
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
@@ -33,13 +32,13 @@ const FAQ = () => {
   ];
 
   return (
-    <section className="py-12 sm:py-16 lg:py-20 bg-gradient-to-b from-baby-blue-600 to-baby-blue-500" ref={ref}>
-      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className={`text-center mb-12 sm:mb-16 transition-all duration-700 ${inView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-6 tracking-tight px-4">
+    <section className="py-20 bg-gradient-to-b from-baby-blue-600 to-baby-blue-500" ref={ref}>
+      <div className="max-w-4xl mx-auto px-6">
+        <div className={`text-center mb-16 transition-all duration-700 ${inView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
+          <h2 className="text-4xl md:text-5xl font-bold text-white mb-6 tracking-tight">
             Frequently Asked Questions
           </h2>
-          <p className="text-lg sm:text-xl text-slate-200 font-light">
+          <p className="text-xl text-slate-200 font-light">
             Get answers to common questions about our AI automation services
           </p>
         </div>
@@ -52,12 +51,12 @@ const FAQ = () => {
               className={`bg-slate-800/50 backdrop-blur-sm border border-slate-700/50 rounded-xl overflow-hidden transition-all duration-700 ${inView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}
               style={{ transitionDelay: `${index * 0.1}s` }}
             >
-              <AccordionTrigger className="w-full p-4 sm:p-6 text-left flex items-center justify-between hover:bg-slate-700/50 transition-colors font-semibold text-white [&[data-state=open]>svg]:rotate-180 text-lg sm:text-xl lg:text-2xl">
+              <AccordionTrigger className="w-full p-6 text-left flex items-center justify-between hover:bg-slate-700/50 transition-colors font-semibold text-white [&[data-state=open]>svg]:rotate-180 text-2xl">
                 {faq.question}
               </AccordionTrigger>
               
-              <AccordionContent className="px-4 sm:px-6 pb-4 sm:pb-6">
-                <p className="leading-relaxed text-base sm:text-lg lg:text-xl font-light text-slate-50">
+              <AccordionContent className="px-6 pb-6">
+                <p className="leading-relaxed text-xl font-light text-slate-50">
                   {faq.answer}
                 </p>
               </AccordionContent>
