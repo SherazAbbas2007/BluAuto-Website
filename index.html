@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -18,6 +19,9 @@
     <!-- Phosphor Icons -->
     <script src="https://unpkg.com/@phosphor-icons/web@2.0.3"></script>
 
+    <!-- n8n Chat Styles -->
+    <link href="https://cdn.jsdelivr.net/npm/@n8n/chat/dist/style.css" rel="stylesheet" />
+
     <meta property="og:title" content="BluAuto - Revolutionary AI Trading Automation" />
     <meta property="og:description" content="Transform your business with AI-powered automation services" />
     <meta property="og:type" content="website" />
@@ -33,5 +37,14 @@
     <!-- IMPORTANT: DO NOT REMOVE THIS SCRIPT TAG OR THIS VERY COMMENT! -->
     <script src="https://cdn.gpteng.co/gptengineer.js" type="module"></script>
     <script type="module" src="/src/main.tsx"></script>
+    
+    <!-- n8n Chat Integration -->
+    <script type="module">
+      import { createChat } from 'https://cdn.jsdelivr.net/npm/@n8n/chat/dist/chat.bundle.es.js';
+
+      createChat({
+        webhookUrl: 'YOUR_PRODUCTION_WEBHOOK_URL'
+      });
+    </script>
   </body>
 </html>
