@@ -8,7 +8,7 @@ const Hero = () => {
   };
 
   return (
-    <section className="min-h-screen bg-hero-gradient flex items-center justify-center relative overflow-hidden">
+    <section className="min-h-screen bg-hero-gradient flex items-center justify-center relative overflow-hidden pt-16 sm:pt-20">
       {/* Background Pattern */}
       <div className="absolute inset-0 opacity-10 pointer-events-none">
         <div className="absolute inset-0" style={{
@@ -17,14 +17,14 @@ const Hero = () => {
         }}></div>
       </div>
 
-      <div className="max-w-7xl mx-auto px-6 flex items-center justify-center relative z-10 w-full">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-center relative z-10 w-full">
         <div className="max-w-4xl text-center">
-          <h1 className="text-7xl md:text-8xl lg:text-9xl font-bold text-white mb-8 tracking-tight leading-tight animate-fade-in-up">
+          <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl 2xl:text-9xl font-bold text-white mb-6 sm:mb-8 tracking-tight leading-tight animate-fade-in-up">
             Automate Your{' '}
             <span className="block">Business</span>
           </h1>
           
-          <p className="text-2xl text-white/90 font-light mb-12 leading-relaxed animate-fade-in-up" style={{
+          <p className="text-lg sm:text-xl md:text-2xl text-white/90 font-light mb-8 sm:mb-12 leading-relaxed animate-fade-in-up px-4" style={{
             animationDelay: '0.3s',
             opacity: 0,
             animationFillMode: 'forwards'
@@ -34,7 +34,7 @@ const Hero = () => {
           
           <button 
             onClick={handleContactClick} 
-            className="bg-white text-zinc-950 px-12 py-7 text-xl rounded-2xl font-semibold hover:bg-gray-100 hover:scale-105 transition-all duration-300 tracking-wide hover:shadow-[0_0_20px_rgba(255,255,255,0.6)] animate-fade-in-up"
+            className="bg-white text-zinc-950 px-8 sm:px-12 py-5 sm:py-7 text-lg sm:text-xl rounded-2xl font-semibold hover:bg-gray-100 hover:scale-105 transition-all duration-300 tracking-wide hover:shadow-[0_0_20px_rgba(255,255,255,0.6)] animate-fade-in-up"
             style={{
               animationDelay: '0.6s',
               opacity: 0,
