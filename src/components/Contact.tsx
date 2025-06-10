@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { useInView } from 'react-intersection-observer';
 
@@ -13,7 +12,7 @@ const Contact = () => {
 
   const handleBookCall = () => {
     console.log('Book A Call button clicked');
-    window.open('https://cal.com/sheraz-abbas-cmlcws/book-a-call', '_blank');
+    window.open('https://cal.com/sheraz-bluauto/want-to-work-with-me-d', '_blank');
   };
 
   const handleEmailClick = () => {
