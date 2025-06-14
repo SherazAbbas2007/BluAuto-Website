@@ -55,43 +55,16 @@ const Navigation = () => {
     { name: 'Contact', href: '#contact' }
   ];
 
-  // Custom easing function for smooth scroll with ease-in-out
-  const easeInOutScroll = (targetPosition: number, duration: number = 1000) => {
-    const startPosition = window.pageYOffset;
-    const distance = targetPosition - startPosition;
-    let startTime: number | null = null;
-
-    const animateScroll = (currentTime: number) => {
-      if (startTime === null) startTime = currentTime;
-      const timeElapsed = currentTime - startTime;
-      const progress = Math.min(timeElapsed / duration, 1);
-      
-      // Ease-in-out function
-      const easeInOut = progress < 0.5 
-        ? 2 * progress * progress 
-        : 1 - Math.pow(-2 * progress + 2, 2) / 2;
-      
-      window.scrollTo(0, startPosition + distance * easeInOut);
-      
-      if (timeElapsed < duration) {
-        requestAnimationFrame(animateScroll);
-      }
-    };
-
-    requestAnimationFrame(animateScroll);
-  };
-
   const scrollToSection = (href: string) => {
     const element = document.querySelector(href);
     if (element) {
-      const targetPosition = element.getBoundingClientRect().top + window.pageYOffset;
-      easeInOutScroll(targetPosition);
+      element.scrollIntoView({ behavior: 'smooth' });
     }
     setIsMobileMenuOpen(false);
   };
 
   const scrollToTop = () => {
-    easeInOutScroll(0);
+    window.scrollTo({ top: 0, behavior: 'smooth' });
     setActiveSection('');
   };
 
