@@ -43,11 +43,11 @@ const About = () => {
     description: "By targeting only the most relevant prospects, the BluAuto Method shortens the sales cycle, helping you close deals quicker and get cash flowing faster, accelerating revenue growth."
   }];
   return <section id="about" className="py-20 bg-gradient-to-b from-baby-blue-700 to-baby-blue-600" ref={ref}>
-      <div className="max-w-7xl mx-auto px-4">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-stretch">
+      <div className="max-w-[1600px] mx-auto px-8">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 items-stretch">
           {/* Problems Section */}
           <div className={`transition-all duration-700 ${inView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'} flex`}>
-            <div className="bg-baby-blue-900/80 backdrop-blur-sm border border-baby-blue-700/50 rounded-xl p-10 flex-1 flex flex-col">
+            <div className="bg-baby-blue-900/80 backdrop-blur-sm border border-baby-blue-700/50 rounded-xl p-12 flex-1 flex flex-col">
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-8 tracking-tight leading-tight">
                 What 99% of SDRs/lead gen agencies do
               </h2>
@@ -76,7 +76,7 @@ const About = () => {
           <div className={`transition-all duration-700 ${inView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'} flex`} style={{
           transitionDelay: '0.3s'
         }}>
-            <div className="bg-baby-blue-900/80 backdrop-blur-sm border border-baby-blue-700/50 rounded-xl p-10 flex-1 flex flex-col">
+            <div className="bg-baby-blue-900/80 backdrop-blur-sm border border-baby-blue-700/50 rounded-xl p-12 flex-1 flex flex-col">
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-8 tracking-tight leading-tight">
                 The "BluAuto Way"
               </h2>
