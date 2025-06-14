@@ -53,22 +53,26 @@ const UseCases = () => {
           </h2>
         </div>
 
-        <div className="relative">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-20 lg:gap-52">
-            {useCases.map((category, categoryIndex) => (
-              <div 
-                key={category.title}
-                className={`transition-all duration-700 ${
-                  inView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
-                }`}
-                style={{ transitionDelay: `${categoryIndex * 0.2}s` }}
-              >
-                <div className="text-center border-2 border-white/30 rounded-3xl p-20 bg-transparent backdrop-blur-sm">
-                  <h3 className="text-3xl lg:text-4xl font-bold text-white mb-16 tracking-tight h-20 flex items-center justify-center">
-                    {category.title}
-                  </h3>
+        <div className="space-y-12">
+          {useCases.map((category, categoryIndex) => (
+            <div 
+              key={category.title}
+              className={`transition-all duration-700 ${
+                inView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
+              }`}
+              style={{ transitionDelay: `${categoryIndex * 0.2}s` }}
+            >
+              <div className="border-2 border-white/30 rounded-3xl p-12 bg-transparent backdrop-blur-sm">
+                <div className="grid grid-cols-1 lg:grid-cols-4 gap-8 items-center">
+                  {/* Category Title */}
+                  <div className="lg:col-span-1">
+                    <h3 className="text-3xl lg:text-4xl font-bold text-white tracking-tight text-center lg:text-left">
+                      {category.title}
+                    </h3>
+                  </div>
                   
-                  <div className="space-y-16">
+                  {/* Category Items */}
+                  <div className="lg:col-span-3 grid grid-cols-1 md:grid-cols-3 gap-8">
                     {category.items.map((item, itemIndex) => {
                       const IconComponent = item.icon;
                       return (
@@ -79,11 +83,11 @@ const UseCases = () => {
                           }`}
                           style={{ transitionDelay: `${(categoryIndex * 0.2) + (itemIndex * 0.1)}s` }}
                         >
-                          <div className="flex flex-col items-center px-4">
-                            <div className="mb-8 w-24 h-24 flex items-center justify-center flex-shrink-0">
-                              <IconComponent size={64} className="text-white w-16 h-16" />
+                          <div className="flex flex-col items-center text-center">
+                            <div className="mb-4 w-16 h-16 flex items-center justify-center flex-shrink-0">
+                              <IconComponent size={48} className="text-white" />
                             </div>
-                            <p className="text-white/90 text-xl lg:text-2xl font-medium text-center leading-tight h-16 flex items-center justify-center">
+                            <p className="text-white/90 text-lg lg:text-xl font-medium leading-tight">
                               {item.name}
                             </p>
                           </div>
@@ -93,8 +97,8 @@ const UseCases = () => {
                   </div>
                 </div>
               </div>
-            ))}
-          </div>
+            </div>
+          ))}
         </div>
       </div>
     </section>
