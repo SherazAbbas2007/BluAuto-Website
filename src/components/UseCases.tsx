@@ -62,7 +62,7 @@ const UseCases = () => {
               }`}
               style={{ transitionDelay: `${categoryIndex * 0.2}s` }}
             >
-              <div className="border-2 border-white/30 rounded-3xl p-12 bg-transparent backdrop-blur-sm">
+              <div className="border-4 border-white/40 rounded-3xl p-12 bg-transparent backdrop-blur-sm">
                 <div className="grid grid-cols-1 lg:grid-cols-4 gap-8 items-center">
                   {/* Category Title */}
                   <div className="lg:col-span-1">
@@ -84,8 +84,8 @@ const UseCases = () => {
                           style={{ transitionDelay: `${(categoryIndex * 0.2) + (itemIndex * 0.1)}s` }}
                         >
                           <div className="flex flex-col items-center text-center">
-                            <div className="mb-4 w-16 h-16 flex items-center justify-center flex-shrink-0">
-                              <IconComponent size={48} className="text-white" />
+                            <div className="mb-6 w-24 h-24 flex items-center justify-center flex-shrink-0">
+                              <IconComponent size={72} className="text-white" />
                             </div>
                             <p className="text-white/90 text-lg lg:text-xl font-medium leading-tight">
                               {item.name}
