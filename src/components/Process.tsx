@@ -11,7 +11,7 @@ const Process = () => {
     {
       icon: 'ph-phone',
       title: 'Discovery call',
-      description: 'We analyze your sales processes and outbound systems to identify key opportunities where AI automation can boost lead generation, reduce manual outreach, and accelerate client acquisition.'
+      description: 'We assess your sales process to uncover where AI can automate outreach and accelerate client acquisition.'
     },
     {
       icon: 'ph-flow-arrow',
