@@ -63,21 +63,30 @@ const Navigation = () => {
       const startPosition = window.scrollY;
       const distance = targetPosition - startPosition;
       
-      // Custom cubic-bezier scroll with cubic-bezier(0.45, 0, 0.55, 1)
-      const duration = 1000; // 1 second duration
+      // More accurate cubic-bezier(0.45, 0, 0.55, 1) implementation
+      const duration = 1000;
       const startTime = performance.now();
       
       function cubicBezier(t: number): number {
-        // Implementing cubic-bezier(0.45, 0, 0.55, 1)
-        const p1x = 0.45, p1y = 0;
-        const p2x = 0.55, p2y = 1;
+        // More precise implementation of cubic-bezier(0.45, 0, 0.55, 1)
+        // This creates a smooth ease-in-out curve
+        if (t <= 0) return 0;
+        if (t >= 1) return 1;
         
-        // Approximation of cubic bezier curve
-        const c = 3 * p1x;
-        const b = 3 * (p2x - p1x) - c;
-        const a = 1 - c - b;
+        // Binary search for accurate cubic bezier
+        let start = 0;
+        let end = 1;
+        let mid = t;
         
-        return ((a * t + b) * t + c) * t;
+        for (let i = 0; i < 10; i++) {
+          const x = 3 * (1 - mid) * (1 - mid) * mid * 0.45 + 3 * (1 - mid) * mid * mid * 0.55 + mid * mid * mid;
+          if (Math.abs(x - t) < 0.001) break;
+          if (x < t) start = mid;
+          else end = mid;
+          mid = (start + end) / 2;
+        }
+        
+        return 3 * (1 - mid) * (1 - mid) * mid * 0 + 3 * (1 - mid) * mid * mid * 1 + mid * mid * mid;
       }
       
       function scroll() {
@@ -99,20 +108,27 @@ const Navigation = () => {
 
   const scrollToTop = () => {
     const startPosition = window.scrollY;
-    const duration = 1000; // 1 second duration
+    const duration = 1000;
     const startTime = performance.now();
     
     function cubicBezier(t: number): number {
-      // Implementing cubic-bezier(0.45, 0, 0.55, 1)
-      const p1x = 0.45, p1y = 0;
-      const p2x = 0.55, p2y = 1;
+      // Same accurate implementation
+      if (t <= 0) return 0;
+      if (t >= 1) return 1;
       
-      // Approximation of cubic bezier curve
-      const c = 3 * p1x;
-      const b = 3 * (p2x - p1x) - c;
-      const a = 1 - c - b;
+      let start = 0;
+      let end = 1;
+      let mid = t;
       
-      return ((a * t + b) * t + c) * t;
+      for (let i = 0; i < 10; i++) {
+        const x = 3 * (1 - mid) * (1 - mid) * mid * 0.45 + 3 * (1 - mid) * mid * mid * 0.55 + mid * mid * mid;
+        if (Math.abs(x - t) < 0.001) break;
+        if (x < t) start = mid;
+        else end = mid;
+        mid = (start + end) / 2;
+      }
+      
+      return 3 * (1 - mid) * (1 - mid) * mid * 0 + 3 * (1 - mid) * mid * mid * 1 + mid * mid * mid;
     }
     
     function scroll() {
