@@ -1,14 +1,8 @@
 
-// Cubic Bezier helper
-function cubicBezier(p0: number, p1: number, p2: number, p3: number) {
-  return function (t: number) {
-    const u = 1 - t;
-    return (u ** 3) * p0 + 3 * (u ** 2) * t * p1 + 3 * u * (t ** 2) * p2 + (t ** 3) * p3;
-  };
-}
+import BezierEasing from 'bezier-easing';
 
 // Easing function for cubic-bezier(0.65, 0, 0.35, 1)
-const ease = cubicBezier(0, 0, 0.65, 1);
+const ease = BezierEasing(0.65, 0, 0.35, 1);
 
 // Animate scroll
 export function animateScroll(targetY: number, duration = 700, callback?: () => void) {
