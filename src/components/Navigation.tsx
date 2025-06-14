@@ -1,6 +1,7 @@
+
 import React, { useState, useEffect } from 'react';
 import { useInView } from 'react-intersection-observer';
-import { animateScroll } from '../utils/scrollUtils';
+import { scrollToSection, scrollToTop } from '../utils/scrollUtils';
 
 const Navigation = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -56,23 +57,14 @@ const Navigation = () => {
     { name: 'Contact', href: '#contact' }
   ];
 
-  const scrollToSection = (href: string) => {
-    const element = document.querySelector(href);
-    if (element) {
-      // Get the top position relative to the document
-      const top = (element as HTMLElement).getBoundingClientRect().top + window.scrollY;
-      animateScroll(top, 700, () => {
-        setIsMobileMenuOpen(false);
-      });
-    } else {
-      setIsMobileMenuOpen(false);
-    }
+  const handleScrollToSection = (href: string) => {
+    scrollToSection(href);
+    setIsMobileMenuOpen(false);
   };
 
-  const scrollToTop = () => {
-    animateScroll(0, 700, () => {
-      setActiveSection('');
-    });
+  const handleScrollToTop = () => {
+    scrollToTop();
+    setActiveSection('');
   };
 
   const isActive = (href: string) => {
@@ -88,7 +80,7 @@ const Navigation = () => {
         <div className="max-w-7xl mx-auto px-6">
           <div className="flex items-center justify-between h-20">
             {/* Logo Section - Left Side */}
-            <div className="flex items-center cursor-pointer" onClick={scrollToTop}>
+            <div className="flex items-center cursor-pointer" onClick={handleScrollToTop}>
               <img src="/lovable-uploads/124b600a-111d-4f2c-aaa8-925d05de7cdb.png" alt="BluAuto Logo" className="h-8 w-8 object-contain mr-3" />
               <span className="font-semibold text-white tracking-tight text-2xl">BluAuto</span>
             </div>
@@ -99,7 +91,7 @@ const Navigation = () => {
                 {navItems.map(item => (
                   <button 
                     key={item.name} 
-                    onClick={() => scrollToSection(item.href)} 
+                    onClick={() => handleScrollToSection(item.href)} 
                     className="text-white hover:text-white transition-all duration-300 text-xl font-semibold px-3 py-2" 
                     style={{
                       textShadow: isActive(item.href) ? '0 0 25px rgba(255,255,255,0.9)' : 'none',
@@ -142,7 +134,7 @@ const Navigation = () => {
             {navItems.map((item, index) => (
               <button 
                 key={item.name} 
-                onClick={() => scrollToSection(item.href)} 
+                onClick={() => handleScrollToSection(item.href)} 
                 className={`text-left py-4 text-white/80 hover:text-white font-light transition-all duration-200 border-b border-white/10 animate-fade-in-up text-lg px-2`} 
                 style={{
                   animationDelay: `${index * 0.1}s`,

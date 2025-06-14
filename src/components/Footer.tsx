@@ -1,4 +1,6 @@
+
 import React from 'react';
+import { scrollToSection } from '../utils/scrollUtils';
 
 const Footer = () => {
   const navItems = [
@@ -8,17 +10,6 @@ const Footer = () => {
     { name: 'FAQ', href: '#faq' },
     { name: 'CONTACT', href: '#contact' }
   ];
-
-  const scrollToSection = (href: string) => {
-    if (href === '#') {
-      window.scrollTo({ top: 0, behavior: 'smooth' });
-      return;
-    }
-    const element = document.querySelector(href);
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
-    }
-  };
 
   return (
     <footer className="bg-gradient-to-b from-slate-800 to-slate-900 text-white py-12">
