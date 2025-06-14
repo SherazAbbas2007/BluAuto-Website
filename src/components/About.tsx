@@ -12,46 +12,46 @@ const About = () => {
   const problems = [
     {
       title: "Generic Outreach:",
-      description: "Messaging is too broad and fails to resonate with prospect's unique pain points and business challenges."
+      description: "Messaging is too broad and fails to resonate with prospect's unique pain points."
     },
     {
       title: "Missed Opportunities:",
-      description: "You might overlook potential clients who need AI automation but don't fit traditional targeting criteria."
+      description: "You might overlook potential clients who need your help but don't fit the usual criteria."
     },
     {
       title: "Wasted Resources:",
-      description: "Time and effort are spent on unqualified leads, leading to lost revenue and inefficient resource allocation."
+      description: "Time and effort are spent on leads that aren't interested, leading to you losing money and time."
     },
     {
       title: "Advertising Cost Spiral:",
-      description: "When generic outreach fails to convert, companies panic-pivot to expensive paid ads, burning through budgets on inflated CPAs without solving the core lead qualification problem."
+      description: "When generic cold emails fail to convert, companies panic-pivot to paid ads, and spend way too much cash on pricey PPC campaigns and inflated CPAs - a budget-draining cycle that rarely solves the core prospecting problem."
     },
     {
       title: "Opportunity Cost Creep:",
-      description: "While your team wastes time chasing unqualified prospects, competitors are implementing AI systems and scaling efficiently."
+      description: "While your team wastes billable hours chasing unqualified prospects, your competitors are closing deals."
     }
   ];
 
   const solutions = [
     {
-      title: "AI-Powered Personalization:",
-      description: "We use advanced AI to create highly targeted messaging that speaks directly to each prospect's specific operational challenges."
+      title: "Personalized Messaging:",
+      description: "We speak directly to the issues your prospects face, making them more relevant and timely."
     },
     {
-      title: "Higher Conversion Rates:",
-      description: "Prospects are more likely to engage when they see you understand their automation needs and can solve their efficiency problems."
+      title: "Better Conversion Rates:",
+      description: "Prospects are more likely to buy from you when they see you providing solutions to their problems (simple math)."
     },
     {
-      title: "Smart Lead Qualification:",
-      description: "Our AI systems identify and prioritize leads that truly need automation solutions, making your outreach laser-focused."
+      title: "No time wasted on prospection:",
+      description: "We target leads that really need your services, making your outreach more effective."
     },
     {
-      title: "Build Authority & Trust:",
-      description: "Demonstrating deep understanding of their operational challenges positions you as the go-to automation expert, leading to long-term partnerships."
+      title: "Build Trust:",
+      description: "Showing you understand their challenges and can solve their problem helps build trust and get them on retainers aka long-term relationships for your business."
     },
     {
-      title: "Accelerated Growth:",
-      description: "By targeting only the most relevant prospects with AI-driven precision, BluAuto's approach shortens sales cycles and accelerates revenue generation through automated systems."
+      title: "Faster Revenue Generation:",
+      description: "By targeting only the most relevant prospects, the myoProcess Method shortens the sales cycle, helping you close deals quicker and get cash flowing faster, accelerating revenue growth."
     }
   ];
 
@@ -63,11 +63,11 @@ const About = () => {
           <div className={`transition-all duration-700 ${inView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
             <div className="bg-baby-blue-900/80 backdrop-blur-sm border border-baby-blue-700/50 rounded-xl p-8">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-6 tracking-tight">
-                What 99% of B2B agencies do
+                What 99% of SDRs/lead gen agencies do
               </h2>
               
               <p className="text-lg text-white/90 font-light mb-8 leading-relaxed">
-                Let's target all CTOs at tech companies with 500+ employees and hope for the best.
+                Let's target all CFOs at manufacturing companies with 1000+ employees.
               </p>
 
               <div className="space-y-6">
@@ -100,11 +100,11 @@ const About = () => {
           <div className={`transition-all duration-700 ${inView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`} style={{ transitionDelay: '0.3s' }}>
             <div className="bg-baby-blue-900/80 backdrop-blur-sm border border-baby-blue-700/50 rounded-xl p-8">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-6 tracking-tight">
-                The "BluAuto Way"
+                The "myoProcessWay"
               </h2>
               
               <p className="text-lg text-white/90 font-light mb-8 leading-relaxed">
-                Let's target companies struggling with manual processes, inefficient workflows, or looking to scale their operations with AI automation.
+                Let's target companies struggling with cash flow management or looking to automate their financial reporting processes.
               </p>
 
               <div className="space-y-6">
