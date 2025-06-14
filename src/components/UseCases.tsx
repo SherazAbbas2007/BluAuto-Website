@@ -84,10 +84,10 @@ const UseCases = () => {
                           style={{ transitionDelay: `${(categoryIndex * 0.2) + (itemIndex * 0.1)}s` }}
                         >
                           <div className="flex flex-col items-center text-center">
-                            <div className="mb-6 w-24 h-24 flex items-center justify-center flex-shrink-0">
-                              <IconComponent size={72} className="text-white" />
+                            <div className="mb-6 w-16 h-16 flex items-center justify-center flex-shrink-0">
+                              <IconComponent size={50} className="text-white" />
                             </div>
-                            <p className="text-white/90 text-lg lg:text-xl font-medium leading-tight">
+                            <p className="text-white/90 text-xl lg:text-2xl font-medium leading-tight">
                               {item.name}
                             </p>
                           </div>
