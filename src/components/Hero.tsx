@@ -1,3 +1,4 @@
+
 import React from 'react';
 const Hero = () => {
   const handleContactClick = () => {
@@ -15,7 +16,7 @@ const Hero = () => {
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-center relative z-10 w-full">
         <div className="max-w-6xl xl:max-w-7xl 2xl:max-w-none text-center w-full">
-          <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl 2xl:text-9xl font-bold text-white mb-6 sm:mb-8 tracking-tight leading-tight animate-fade-in-up">
+          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl 2xl:text-8xl font-bold text-white mb-6 sm:mb-8 tracking-tight leading-tight animate-fade-in-up">
             We build hands-off{' '}
             <span className="block">growth systems for</span>
             <span className="block">B2B Owners.</span>
