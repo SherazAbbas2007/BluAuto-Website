@@ -1,6 +1,7 @@
 import React from 'react';
 import { useInView } from 'react-intersection-observer';
 import { X, CheckCircle } from 'lucide-react';
+
 const About = () => {
   const {
     ref,
@@ -20,7 +21,7 @@ const About = () => {
     description: "Time and effort are spent on leads that aren't interested, leading to you losing money and time."
   }, {
     title: "Advertising Cost Spiral:",
-    description: "When generic cold emails fail to convert, companies panic-pivot to paid ads, and spend way too much cash on pricey PPC campaigns and inflated CPAs - a budget-draining cycle that rarely solves the core prospecting problem."
+    description: "When cold emails flop, companies panic, overspend on PPC, and still don't fix their prospecting problem."
   }, {
     title: "Opportunity Cost Creep:",
     description: "While your team wastes billable hours chasing unqualified prospects, your competitors are closing deals."
@@ -107,4 +108,5 @@ const About = () => {
       </div>
     </section>;
 };
+
 export default About;
