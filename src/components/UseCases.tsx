@@ -1,9 +1,10 @@
 import React from 'react';
 import { useInView } from 'react-intersection-observer';
-import { Rocket, BarChart3, Users, DollarSign, Mail, Settings, Edit, User, CheckCircle, Target, Briefcase, ListChecks, FileText } from 'lucide-react';
+import { Rocket, BarChart3, Users, DollarSign, Mail, Settings, FileText, CheckCircle, Target, Briefcase, ListChecks } from 'lucide-react';
 import CustomCrmIcon from './icons/CustomCrmIcon';
 import AiAssetGeneratorIcon from './icons/AiAssetGeneratorIcon';
 import AiNurtureSystemsIcon from './icons/AiNurtureSystemsIcon';
+import AiOnboardingSystemsIcon from './icons/AiOnboardingSystemsIcon';
 
 const UseCases = () => {
   const {
@@ -33,7 +34,7 @@ const UseCases = () => {
         icon: CheckCircle
       }, {
         name: 'AI Onboarding Systems',
-        icon: User
+        icon: 'ai-onboarding-systems'
       }, {
         name: 'PM Systems',
         icon: BarChart3
@@ -100,6 +101,8 @@ const UseCases = () => {
                                 <AiAssetGeneratorIcon size={55} className="text-white" />
                               ) : item.icon === 'ai-nurture-systems' ? (
                                 <AiNurtureSystemsIcon size={55} className="text-white" />
+                              ) : item.icon === 'ai-onboarding-systems' ? (
+                                <AiOnboardingSystemsIcon size={55} className="text-white" />
                               ) : (
                                 React.createElement(item.icon, { size: 55, className: "text-white" })
                               )}
