@@ -59,7 +59,8 @@ const Navigation = () => {
 
   const handleScrollToSection = (href: string) => {
     scrollToSection(href);
-    setIsMobileMenuOpen(false);
+    // Close mobile menu after a small delay to allow scroll to start
+    setTimeout(() => setIsMobileMenuOpen(false), 100);
   };
 
   const handleScrollToTop = () => {
