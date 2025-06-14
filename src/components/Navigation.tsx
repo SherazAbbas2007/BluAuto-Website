@@ -1,4 +1,5 @@
 
+
 import React, { useState, useEffect } from 'react';
 import { useInView } from 'react-intersection-observer';
 
@@ -89,7 +90,7 @@ const Navigation = () => {
   };
 
   const scrollToSection = (href: string) => {
-    const element = document.querySelector(href);
+    const element = document.querySelector(href) as HTMLElement;
     if (element) {
       const targetY = element.offsetTop - 80; // Account for fixed header
       smoothScrollTo(targetY);
@@ -199,3 +200,4 @@ const Navigation = () => {
 };
 
 export default Navigation;
+
