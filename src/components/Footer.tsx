@@ -1,4 +1,3 @@
-
 import React from 'react';
 
 const Footer = () => {
@@ -6,7 +5,6 @@ const Footer = () => {
     { name: 'HOME', href: '#' },
     { name: 'OUR PROCESS', href: '#process' },
     { name: 'USE CASES', href: '#usecases' },
-    { name: 'ABOUT', href: '#about' },
     { name: 'FAQ', href: '#faq' },
     { name: 'CONTACT', href: '#contact' }
   ];

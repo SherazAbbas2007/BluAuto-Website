@@ -21,7 +21,7 @@ const Navigation = () => {
 
   // Track active section
   useEffect(() => {
-    const sections = ['process', 'usecases', 'about', 'faq', 'contact'];
+    const sections = ['process', 'usecases', 'faq', 'contact'];
     const observerOptions = {
       rootMargin: '-10% 0px -60% 0px',
       threshold: 0.1
@@ -51,7 +51,6 @@ const Navigation = () => {
   const navItems = [
     { name: 'Our Process', href: '#process' },
     { name: 'Use Cases', href: '#usecases' },
-    { name: 'About', href: '#about' },
     { name: 'FAQ', href: '#faq' },
     { name: 'Contact', href: '#contact' }
   ];
