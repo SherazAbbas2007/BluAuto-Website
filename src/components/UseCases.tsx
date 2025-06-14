@@ -1,6 +1,7 @@
+
 import React from 'react';
 import { useInView } from 'react-intersection-observer';
-import { Rocket, User, BarChart3, Settings, Database, FileText, Headphones, DollarSign } from 'lucide-react';
+import { Rocket, BarChart3, Users, DollarSign, Mail, Settings, Database, FileText, User, CheckCircle, Target, Briefcase } from 'lucide-react';
 
 const UseCases = () => {
   const { ref, inView } = useInView({
@@ -10,44 +11,36 @@ const UseCases = () => {
 
   const useCases = [
     {
-      title: 'Sales Outreach',
-      description: 'Maximise engagement with potential leads',
-      icon: Rocket
-    },
-    {
-      title: 'Client Onboarding',
-      description: 'Streamline onboarding, increase accuracy, and elevate client satisfaction.',
-      icon: User
+      title: 'Lead Generation',
+      items: [
+        { name: 'AI Cold Email Systems', icon: Mail },
+        { name: 'Application Systems', icon: Settings },
+        { name: 'Content Systems', icon: FileText }
+      ]
     },
     {
       title: 'Project Management',
-      description: 'Simplify workflows, boost efficiency, and maximize resource utilization.',
-      icon: BarChart3
+      items: [
+        { name: 'AI Automated Fulfillment', icon: CheckCircle },
+        { name: 'AI Onboarding Systems', icon: User },
+        { name: 'PM Systems', icon: BarChart3 }
+      ]
     },
     {
-      title: 'Workforce Optimisation',
-      description: 'Save employees several hours a day by automating their most time-consuming tasks',
-      icon: Settings
+      title: 'Hiring Systems',
+      items: [
+        { name: 'Intake Systems', icon: Database },
+        { name: 'AI Scoring Systems', icon: Target },
+        { name: 'Trial Systems', icon: Users }
+      ]
     },
     {
-      title: 'Data Entry',
-      description: 'Eliminate manual errors and ensure timely data processing',
-      icon: Database
-    },
-    {
-      title: 'Document Creation',
-      description: 'Save time on creating various documents (e.g. proposals, contracts etc.) whilst maintaining accuracy and consistency',
-      icon: FileText
-    },
-    {
-      title: 'Customer Service',
-      description: 'Customer enquiries often follow predictable patterns, making them perfect candidates for automation.',
-      icon: Headphones
-    },
-    {
-      title: 'Invoicing',
-      description: 'Accelerate billing and enhance financial management.',
-      icon: DollarSign
+      title: 'Sales Administration',
+      items: [
+        { name: 'Customized CRMs', icon: Database },
+        { name: 'AI Asset Generators', icon: Rocket },
+        { name: 'AI Nurture Systems', icon: Briefcase }
+      ]
     }
   ];
 
@@ -61,30 +54,45 @@ const UseCases = () => {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-          {useCases.map((useCase, index) => {
-            const IconComponent = useCase.icon;
-            return (
-              <div 
-                key={useCase.title}
-                className={`transition-all duration-700 ${
-                  inView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
-                }`}
-                style={{ transitionDelay: `${index * 0.1}s` }}
-              >
-                <div className="text-center">
-                  <div className="mb-6 flex justify-center">
-                    <IconComponent size={72} className="text-white" />
-                  </div>
-                  <h3 className="text-3xl font-bold text-white mb-6">
-                    {useCase.title}
-                  </h3>
-                  <p className="text-white/80 text-xl leading-relaxed">
-                    {useCase.description}
-                  </p>
+          {useCases.map((category, categoryIndex) => (
+            <div 
+              key={category.title}
+              className={`transition-all duration-700 ${
+                inView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
+              }`}
+              style={{ transitionDelay: `${categoryIndex * 0.2}s` }}
+            >
+              <div className="text-center mb-8">
+                <h3 className="text-3xl font-bold text-white mb-8">
+                  {category.title}
+                </h3>
+                
+                <div className="space-y-6">
+                  {category.items.map((item, itemIndex) => {
+                    const IconComponent = item.icon;
+                    return (
+                      <div 
+                        key={item.name}
+                        className={`transition-all duration-700 ${
+                          inView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
+                        }`}
+                        style={{ transitionDelay: `${(categoryIndex * 0.2) + (itemIndex * 0.1)}s` }}
+                      >
+                        <div className="flex flex-col items-center">
+                          <div className="mb-4 flex justify-center">
+                            <IconComponent size={48} className="text-white" />
+                          </div>
+                          <p className="text-white/90 text-lg font-medium">
+                            {item.name}
+                          </p>
+                        </div>
+                      </div>
+                    );
+                  })}
                 </div>
               </div>
-            );
-          })}
+            </div>
+          ))}
         </div>
       </div>
     </section>
