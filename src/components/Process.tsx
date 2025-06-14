@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { useInView } from 'react-intersection-observer';
 
@@ -45,7 +46,7 @@ const Process = () => {
           </h2>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-5 gap-10">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-8 lg:gap-10">
           {steps.map((step, index) => (
             <div 
               key={step.title}
@@ -54,16 +55,16 @@ const Process = () => {
               }`}
               style={{ transitionDelay: `${index * 0.2}s` }}
             >
-              <div className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-2xl p-8 hover:bg-white/20 transition-all duration-300 group">
-                <div className="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-6 shadow-lg group-hover:scale-110 transition-transform duration-300">
+              <div className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-2xl p-6 lg:p-8 hover:bg-white/20 transition-all duration-300 group h-full flex flex-col">
+                <div className="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-6 shadow-lg group-hover:scale-110 transition-transform duration-300 flex-shrink-0">
                   <i className={`ph ${step.icon} text-2xl text-white`}></i>
                 </div>
                 
-                <h3 className="text-2xl font-semibold text-white mb-3 tracking-tight">
+                <h3 className="text-xl lg:text-2xl font-semibold text-white mb-4 tracking-tight flex-shrink-0">
                   {step.title}
                 </h3>
                 
-                <p className="text-white/90 font-light leading-relaxed text-xl">
+                <p className="text-white/90 font-light leading-relaxed text-base lg:text-xl flex-grow">
                   {step.description}
                 </p>
               </div>
