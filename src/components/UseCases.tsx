@@ -62,11 +62,11 @@ const UseCases = () => {
               }`}
               style={{ transitionDelay: `${categoryIndex * 0.2}s` }}
             >
-              <div className="border-4 border-white rounded-3xl p-6 bg-transparent backdrop-blur-sm min-h-[200px]">
+              <div className="border-4 border-white rounded-3xl p-8 bg-transparent backdrop-blur-sm min-h-[200px]">
                 <div className="grid grid-cols-1 lg:grid-cols-4 gap-8 items-center h-full">
                   {/* Category Title */}
                   <div className="lg:col-span-1 flex items-center justify-center lg:justify-start">
-                    <h3 className="text-3xl lg:text-4xl font-bold text-white tracking-tight text-center lg:text-left">
+                    <h3 className="text-2xl lg:text-3xl font-bold text-white tracking-tight text-center lg:text-left">
                       {category.title}
                     </h3>
                   </div>
@@ -83,7 +83,7 @@ const UseCases = () => {
                           }`}
                           style={{ transitionDelay: `${(categoryIndex * 0.2) + (itemIndex * 0.1)}s` }}
                         >
-                          <div className="flex flex-col items-center text-center h-full justify-center">
+                          <div className="flex flex-col items-center text-center h-full justify-center p-4">
                             <div className="mb-6 w-16 h-16 flex items-center justify-center flex-shrink-0">
                               <IconComponent size={55} className="text-white" />
                             </div>
