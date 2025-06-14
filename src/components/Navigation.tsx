@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect } from 'react';
 import { useInView } from 'react-intersection-observer';
 
@@ -22,7 +21,7 @@ const Navigation = () => {
 
   // Track active section
   useEffect(() => {
-    const sections = ['process', 'usecases', 'about', 'contact'];
+    const sections = ['process', 'usecases', 'about', 'faq', 'contact'];
     const observerOptions = {
       rootMargin: '-10% 0px -60% 0px',
       threshold: 0.1
@@ -52,7 +51,8 @@ const Navigation = () => {
   const navItems = [
     { name: 'Our Process', href: '#process' },
     { name: 'Use Cases', href: '#usecases' },
-    { name: 'FAQ', href: '#about' },
+    { name: 'About', href: '#about' },
+    { name: 'FAQ', href: '#faq' },
     { name: 'Contact', href: '#contact' }
   ];
 
