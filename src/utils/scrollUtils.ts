@@ -1,24 +1,28 @@
 
-
 const cubicBezierEasing = (t: number): number => {
   // Implementation of cubic-bezier(0.65, 0, 0.35, 1)
   if (t <= 0) return 0;
   if (t >= 1) return 1;
   
-  // Binary search for accurate cubic bezier calculation
-  let start = 0;
-  let end = 1;
-  let mid = t;
+  // Direct calculation for cubic-bezier(0.65, 0, 0.35, 1)
+  // This creates a smooth ease-in-out effect
+  const c1 = 0.65;
+  const c2 = 0;
+  const c3 = 0.35;
+  const c4 = 1;
   
-  for (let i = 0; i < 10; i++) {
-    const x = 3 * (1 - mid) * (1 - mid) * mid * 0.65 + 3 * (1 - mid) * mid * mid * 0.35 + mid * mid * mid;
-    if (Math.abs(x - t) < 0.001) break;
-    if (x < t) start = mid;
-    else end = mid;
-    mid = (start + end) / 2;
-  }
+  // Calculate using the standard cubic bezier formula
+  const oneMinusT = 1 - t;
+  const tSquared = t * t;
+  const tCubed = tSquared * t;
+  const oneMinusTSquared = oneMinusT * oneMinusT;
+  const oneMinusTCubed = oneMinusTSquared * oneMinusT;
   
-  return 3 * (1 - mid) * (1 - mid) * mid * 0 + 3 * (1 - mid) * mid * mid * 1 + mid * mid * mid;
+  return (
+    3 * oneMinusTSquared * t * c2 +
+    3 * oneMinusT * tSquared * c4 +
+    tCubed
+  );
 };
 
 export const scrollToSection = (href: string, onComplete?: () => void) => {
@@ -72,4 +76,3 @@ export const scrollToTop = (onComplete?: () => void) => {
   
   requestAnimationFrame(scroll);
 };
-
