@@ -1,6 +1,9 @@
+
 import React from 'react';
 import { useInView } from 'react-intersection-observer';
-import { Rocket, BarChart3, Users, DollarSign, Mail, Settings, Database, FileText, User, CheckCircle, Target, Briefcase } from 'lucide-react';
+import { Rocket, BarChart3, Users, DollarSign, Mail, Settings, FileText, User, CheckCircle, Target, Briefcase } from 'lucide-react';
+import CustomCrmIcon from './icons/CustomCrmIcon';
+
 const UseCases = () => {
   const {
     ref,
@@ -37,7 +40,7 @@ const UseCases = () => {
     title: 'Hiring Systems',
     items: [{
       name: 'Intake Systems',
-      icon: Database
+      icon: Settings
     }, {
       name: 'AI Scoring Systems',
       icon: Target
@@ -49,7 +52,7 @@ const UseCases = () => {
     title: 'Sales Administration',
     items: [{
       name: 'Customized CRMs',
-      icon: Database
+      icon: 'custom-crm'
     }, {
       name: 'AI Asset Generators',
       icon: Rocket
@@ -58,6 +61,7 @@ const UseCases = () => {
       icon: Briefcase
     }]
   }];
+  
   return <section id="usecases" className="py-10 bg-gradient-to-b from-baby-blue-800 to-baby-blue-700 min-h-screen flex items-center" ref={ref}>
       <div className="max-w-7xl mx-auto px-6 w-full">
         <div className={`text-center mb-12 transition-all duration-700 ${inView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
@@ -82,13 +86,16 @@ const UseCases = () => {
                   {/* Category Items */}
                   <div className="lg:col-span-3 grid grid-cols-1 md:grid-cols-3 gap-8">
                     {category.items.map((item, itemIndex) => {
-                  const IconComponent = item.icon;
                   return <div key={item.name} className={`transition-all duration-700 ${inView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`} style={{
                     transitionDelay: `${categoryIndex * 0.2 + itemIndex * 0.1}s`
                   }}>
                           <div className="flex flex-col items-center text-center h-full justify-center p-4">
                             <div className="mb-6 w-16 h-16 flex items-center justify-center flex-shrink-0">
-                              <IconComponent size={55} className="text-white" />
+                              {item.icon === 'custom-crm' ? (
+                                <CustomCrmIcon size={55} className="text-white" />
+                              ) : (
+                                React.createElement(item.icon, { size: 55, className: "text-white" })
+                              )}
                             </div>
                             <p className="text-white/90 text-xl lg:text-2xl font-medium leading-tight whitespace-nowrap">
                               {item.name}
@@ -104,4 +111,5 @@ const UseCases = () => {
       </div>
     </section>;
 };
+
 export default UseCases;
