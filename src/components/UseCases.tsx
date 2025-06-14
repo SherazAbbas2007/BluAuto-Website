@@ -44,7 +44,7 @@ const UseCases = () => {
   ];
 
   return (
-    <section id="usecases" className="py-10 bg-gradient-to-b from-baby-blue-800 to-baby-blue-700 min-h-screen flex items-center" ref={ref}>
+    <section id="usecases" className="py-8 bg-gradient-to-b from-baby-blue-800 to-baby-blue-700 min-h-screen flex items-center" ref={ref}>
       <div className="max-w-7xl mx-auto px-6 w-full">
         <div className={`text-center mb-12 transition-all duration-700 ${inView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
           <h2 className="text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-8 tracking-tight">
