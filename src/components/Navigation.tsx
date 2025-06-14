@@ -63,21 +63,27 @@ const Navigation = () => {
       const startPosition = window.scrollY;
       const distance = targetPosition - startPosition;
       
-      // Custom cubic-bezier scroll
+      // Custom cubic-bezier scroll with cubic-bezier(0.45, 0, 0.55, 1)
       const duration = 1000; // 1 second duration
       const startTime = performance.now();
       
-      function easeInOutCubic(t: number): number {
-        // Implementing the cubic-bezier(0.45, 0, 0.55, 1) easing
-        return t < 0.5
-          ? 4 * t * t * t
-          : 1 - Math.pow(-2 * t + 2, 3) / 2;
+      function cubicBezier(t: number): number {
+        // Implementing cubic-bezier(0.45, 0, 0.55, 1)
+        const p1x = 0.45, p1y = 0;
+        const p2x = 0.55, p2y = 1;
+        
+        // Approximation of cubic bezier curve
+        const c = 3 * p1x;
+        const b = 3 * (p2x - p1x) - c;
+        const a = 1 - c - b;
+        
+        return ((a * t + b) * t + c) * t;
       }
       
       function scroll() {
         const elapsed = performance.now() - startTime;
         const progress = Math.min(elapsed / duration, 1);
-        const easeProgress = easeInOutCubic(progress);
+        const easeProgress = cubicBezier(progress);
         
         window.scrollTo(0, startPosition + distance * easeProgress);
         
@@ -96,17 +102,23 @@ const Navigation = () => {
     const duration = 1000; // 1 second duration
     const startTime = performance.now();
     
-    function easeInOutCubic(t: number): number {
-      // Implementing the cubic-bezier(0.45, 0, 0.55, 1) easing
-      return t < 0.5
-        ? 4 * t * t * t
-        : 1 - Math.pow(-2 * t + 2, 3) / 2;
+    function cubicBezier(t: number): number {
+      // Implementing cubic-bezier(0.45, 0, 0.55, 1)
+      const p1x = 0.45, p1y = 0;
+      const p2x = 0.55, p2y = 1;
+      
+      // Approximation of cubic bezier curve
+      const c = 3 * p1x;
+      const b = 3 * (p2x - p1x) - c;
+      const a = 1 - c - b;
+      
+      return ((a * t + b) * t + c) * t;
     }
     
     function scroll() {
       const elapsed = performance.now() - startTime;
       const progress = Math.min(elapsed / duration, 1);
-      const easeProgress = easeInOutCubic(progress);
+      const easeProgress = cubicBezier(progress);
       
       window.scrollTo(0, startPosition * (1 - easeProgress));
       
