@@ -45,15 +45,15 @@ const UseCases = () => {
   ];
 
   return (
-    <section id="usecases" className="py-20 bg-gradient-to-b from-baby-blue-800 to-baby-blue-700 min-h-screen flex items-center" ref={ref}>
+    <section id="usecases" className="py-12 bg-gradient-to-b from-baby-blue-800 to-baby-blue-700 min-h-screen flex items-center" ref={ref}>
       <div className="max-w-7xl mx-auto px-6 w-full">
-        <div className={`text-center mb-16 transition-all duration-700 ${inView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
+        <div className={`text-center mb-12 transition-all duration-700 ${inView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
           <h2 className="text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-8 tracking-tight">
             Example Use Cases
           </h2>
         </div>
 
-        <div className="space-y-8">
+        <div className="space-y-6">
           {useCases.map((category, categoryIndex) => (
             <div 
               key={category.title}
@@ -62,7 +62,7 @@ const UseCases = () => {
               }`}
               style={{ transitionDelay: `${categoryIndex * 0.2}s` }}
             >
-              <div className="border-4 border-white/40 rounded-3xl p-8 bg-transparent backdrop-blur-sm">
+              <div className="border-4 border-white rounded-3xl p-6 bg-transparent backdrop-blur-sm">
                 <div className="grid grid-cols-1 lg:grid-cols-4 gap-8 items-center">
                   {/* Category Title */}
                   <div className="lg:col-span-1">
@@ -85,7 +85,7 @@ const UseCases = () => {
                         >
                           <div className="flex flex-col items-center text-center">
                             <div className="mb-6 w-16 h-16 flex items-center justify-center flex-shrink-0">
-                              <IconComponent size={50} className="text-white" />
+                              <IconComponent size={55} className="text-white" />
                             </div>
                             <p className="text-white/90 text-xl lg:text-2xl font-medium leading-tight">
                               {item.name}
