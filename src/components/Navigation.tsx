@@ -1,3 +1,4 @@
+
 import React, { useState, useEffect } from 'react';
 import { useInView } from 'react-intersection-observer';
 
@@ -55,16 +56,49 @@ const Navigation = () => {
     { name: 'Contact', href: '#contact' }
   ];
 
+  const smoothScrollTo = (targetY: number, duration: number = 1000) => {
+    const startY = window.scrollY;
+    const distance = targetY - startY;
+    const startTime = performance.now();
+
+    const cubicBezier = (t: number) => {
+      // cubic-bezier(0.45, 0, 0.55, 1)
+      const p1 = 0.45;
+      const p2 = 0;
+      const p3 = 0.55;
+      const p4 = 1;
+      
+      return 3 * (1 - t) * (1 - t) * t * p1 + 
+             3 * (1 - t) * t * t * p3 + 
+             t * t * t * p4;
+    };
+
+    const animateScroll = (currentTime: number) => {
+      const elapsed = currentTime - startTime;
+      const progress = Math.min(elapsed / duration, 1);
+      const easedProgress = cubicBezier(progress);
+      
+      window.scrollTo(0, startY + distance * easedProgress);
+      
+      if (progress < 1) {
+        requestAnimationFrame(animateScroll);
+      }
+    };
+
+    requestAnimationFrame(animateScroll);
+  };
+
   const scrollToSection = (href: string) => {
     const element = document.querySelector(href);
     if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
+      const targetY = element.offsetTop - 80; // Account for fixed header
+      smoothScrollTo(targetY);
     }
     setIsMobileMenuOpen(false);
   };
 
   const scrollToTop = () => {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
+    smoothScrollTo(0);
     setActiveSection('');
   };
 
