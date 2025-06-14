@@ -54,7 +54,7 @@ const UseCases = () => {
           </h2>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-20 lg:gap-52">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-20 lg:gap-32">
           {useCases.map((category, categoryIndex) => (
             <div 
               key={category.title}
