@@ -2,6 +2,7 @@ import React from 'react';
 import { useInView } from 'react-intersection-observer';
 import { Rocket, BarChart3, Users, DollarSign, Mail, Settings, FileText, User, CheckCircle, Target, Briefcase, ListChecks } from 'lucide-react';
 import CustomCrmIcon from './icons/CustomCrmIcon';
+import AiAssetGeneratorIcon from './icons/AiAssetGeneratorIcon';
 
 const UseCases = () => {
   const {
@@ -54,7 +55,7 @@ const UseCases = () => {
       icon: 'custom-crm'
     }, {
       name: 'AI Asset Generators',
-      icon: Rocket
+      icon: 'ai-asset-generator'
     }, {
       name: 'AI Nurture Systems',
       icon: Briefcase
@@ -92,6 +93,8 @@ const UseCases = () => {
                             <div className="mb-6 w-16 h-16 flex items-center justify-center flex-shrink-0">
                               {item.icon === 'custom-crm' ? (
                                 <CustomCrmIcon size={55} className="text-white" />
+                              ) : item.icon === 'ai-asset-generator' ? (
+                                <AiAssetGeneratorIcon size={55} className="text-white" />
                               ) : (
                                 React.createElement(item.icon, { size: 55, className: "text-white" })
                               )}
