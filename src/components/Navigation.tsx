@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useInView } from 'react-intersection-observer';
+import { animateScroll } from '../utils/scrollUtils';
 
 const Navigation = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -58,14 +59,20 @@ const Navigation = () => {
   const scrollToSection = (href: string) => {
     const element = document.querySelector(href);
     if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
+      // Get the top position relative to the document
+      const top = (element as HTMLElement).getBoundingClientRect().top + window.scrollY;
+      animateScroll(top, 700, () => {
+        setIsMobileMenuOpen(false);
+      });
+    } else {
+      setIsMobileMenuOpen(false);
     }
-    setIsMobileMenuOpen(false);
   };
 
   const scrollToTop = () => {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-    setActiveSection('');
+    animateScroll(0, 700, () => {
+      setActiveSection('');
+    });
   };
 
   const isActive = (href: string) => {
