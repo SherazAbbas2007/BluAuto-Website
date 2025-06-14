@@ -51,7 +51,7 @@ const About = () => {
     },
     {
       title: "Faster Revenue Generation:",
-      description: "By targeting only the most relevant prospects, the myoProcess Method shortens the sales cycle, helping you close deals quicker and get cash flowing faster, accelerating revenue growth."
+      description: "By targeting only the most relevant prospects, the BluAuto Method shortens the sales cycle, helping you close deals quicker and get cash flowing faster, accelerating revenue growth."
     }
   ];
 
@@ -100,7 +100,7 @@ const About = () => {
           <div className={`transition-all duration-700 ${inView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`} style={{ transitionDelay: '0.3s' }}>
             <div className="bg-baby-blue-900/80 backdrop-blur-sm border border-baby-blue-700/50 rounded-xl p-8">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-6 tracking-tight">
-                The "myoProcessWay"
+                The "BluAuto Way"
               </h2>
               
               <p className="text-lg text-white/90 font-light mb-8 leading-relaxed">
