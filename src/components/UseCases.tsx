@@ -1,7 +1,7 @@
 
 import React from 'react';
 import { useInView } from 'react-intersection-observer';
-import { Rocket, BarChart3, Users, DollarSign, Mail, Settings, FileText, User, CheckCircle, Target, Briefcase } from 'lucide-react';
+import { Rocket, BarChart3, Users, DollarSign, Mail, Settings, FileText, User, CheckCircle, Target, Briefcase, ListChecks } from 'lucide-react';
 import CustomCrmIcon from './icons/CustomCrmIcon';
 
 const UseCases = () => {
@@ -40,7 +40,7 @@ const UseCases = () => {
     title: 'Hiring Systems',
     items: [{
       name: 'Intake Systems',
-      icon: Settings
+      icon: ListChecks
     }, {
       name: 'AI Scoring Systems',
       icon: Target
