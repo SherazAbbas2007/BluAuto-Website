@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect } from 'react';
 import { useInView } from 'react-intersection-observer';
 import { scrollToSection, scrollToTop } from '../utils/scrollUtils';
@@ -59,8 +58,7 @@ const Navigation = () => {
 
   const handleScrollToSection = (href: string) => {
     scrollToSection(href);
-    // Close mobile menu after a small delay to allow scroll to start
-    setTimeout(() => setIsMobileMenuOpen(false), 100);
+    setIsMobileMenuOpen(false);
   };
 
   const handleScrollToTop = () => {
