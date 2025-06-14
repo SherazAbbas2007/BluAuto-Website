@@ -1,8 +1,9 @@
 
-import BezierEasing from 'bezier-easing';
 
-// Easing function for cubic-bezier(0.65, 0, 0.35, 1)
-const ease = BezierEasing(0.65, 0, 0.35, 1);
+// Approximate "easeInOutSine"
+function easeInOutSine(t: number) {
+  return -(Math.cos(Math.PI * t) - 1) / 2;
+}
 
 // Animate scroll
 export function animateScroll(targetY: number, duration = 700, callback?: () => void) {
@@ -13,7 +14,7 @@ export function animateScroll(targetY: number, duration = 700, callback?: () => 
   function scrollStep(currentTime: number) {
     const elapsed = currentTime - startTime;
     const progress = Math.min(elapsed / duration, 1);
-    const eased = ease(progress);
+    const eased = easeInOutSine(progress);
 
     window.scrollTo(0, startY + diff * eased);
 
@@ -26,3 +27,4 @@ export function animateScroll(targetY: number, duration = 700, callback?: () => 
 
   requestAnimationFrame(scrollStep);
 }
+
