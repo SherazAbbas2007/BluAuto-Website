@@ -3,6 +3,7 @@ import { useInView } from 'react-intersection-observer';
 import { Rocket, BarChart3, Users, DollarSign, Mail, Settings, FileText, User, CheckCircle, Target, Briefcase, ListChecks } from 'lucide-react';
 import CustomCrmIcon from './icons/CustomCrmIcon';
 import AiAssetGeneratorIcon from './icons/AiAssetGeneratorIcon';
+import AiNurtureSystemsIcon from './icons/AiNurtureSystemsIcon';
 
 const UseCases = () => {
   const {
@@ -12,55 +13,57 @@ const UseCases = () => {
     threshold: 0.1,
     triggerOnce: true
   });
-  const useCases = [{
-    title: 'Lead Generation',
-    items: [{
-      name: 'AI Cold Email Systems',
-      icon: Mail
+  const useCases = [
+    {
+      title: 'Lead Generation',
+      items: [{
+        name: 'AI Cold Email Systems',
+        icon: Mail
+      }, {
+        name: 'Application Systems',
+        icon: FileText
+      }, {
+        name: 'Content Systems',
+        icon: FileText
+      }]
     }, {
-      name: 'Application Systems',
-      icon: FileText
+      title: 'Project Management',
+      items: [{
+        name: 'AI Automated Fulfillment',
+        icon: CheckCircle
+      }, {
+        name: 'AI Onboarding Systems',
+        icon: User
+      }, {
+        name: 'PM Systems',
+        icon: BarChart3
+      }]
     }, {
-      name: 'Content Systems',
-      icon: FileText
-    }]
-  }, {
-    title: 'Project Management',
-    items: [{
-      name: 'AI Automated Fulfillment',
-      icon: CheckCircle
+      title: 'Hiring Systems',
+      items: [{
+        name: 'Intake Systems',
+        icon: ListChecks
+      }, {
+        name: 'AI Scoring Systems',
+        icon: Target
+      }, {
+        name: 'Trial Systems',
+        icon: Users
+      }]
     }, {
-      name: 'AI Onboarding Systems',
-      icon: User
-    }, {
-      name: 'PM Systems',
-      icon: BarChart3
-    }]
-  }, {
-    title: 'Hiring Systems',
-    items: [{
-      name: 'Intake Systems',
-      icon: ListChecks
-    }, {
-      name: 'AI Scoring Systems',
-      icon: Target
-    }, {
-      name: 'Trial Systems',
-      icon: Users
-    }]
-  }, {
-    title: 'Sales Administration',
-    items: [{
-      name: 'Customized CRMs',
-      icon: 'custom-crm'
-    }, {
-      name: 'AI Asset Generators',
-      icon: 'ai-asset-generator'
-    }, {
-      name: 'AI Nurture Systems',
-      icon: Briefcase
-    }]
-  }];
+      title: 'Sales Administration',
+      items: [{
+        name: 'Customized CRMs',
+        icon: 'custom-crm'
+      }, {
+        name: 'AI Asset Generators',
+        icon: 'ai-asset-generator'
+      }, {
+        name: 'AI Nurture Systems',
+        icon: 'ai-nurture-systems'
+      }]
+    }
+  ];
   
   return <section id="usecases" className="py-10 bg-gradient-to-b from-baby-blue-800 to-baby-blue-700 min-h-screen flex items-center" ref={ref}>
       <div className="max-w-7xl mx-auto px-6 w-full">
@@ -95,6 +98,8 @@ const UseCases = () => {
                                 <CustomCrmIcon size={55} className="text-white" />
                               ) : item.icon === 'ai-asset-generator' ? (
                                 <AiAssetGeneratorIcon size={55} className="text-white" />
+                              ) : item.icon === 'ai-nurture-systems' ? (
+                                <AiNurtureSystemsIcon size={55} className="text-white" />
                               ) : (
                                 React.createElement(item.icon, { size: 55, className: "text-white" })
                               )}
