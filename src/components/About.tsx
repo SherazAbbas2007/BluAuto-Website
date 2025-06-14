@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { useInView } from 'react-intersection-observer';
 import { X, CheckCircle } from 'lucide-react';
@@ -44,17 +45,15 @@ const About = () => {
   }];
   return <section id="about" className="py-20 bg-gradient-to-b from-baby-blue-700 to-baby-blue-600" ref={ref}>
       <div className="max-w-7xl mx-auto px-6">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-stretch">
           {/* Problems Section */}
-          <div className={`transition-all duration-700 ${inView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
-            <div className="bg-baby-blue-900/80 backdrop-blur-sm border border-baby-blue-700/50 rounded-xl p-8">
+          <div className={`transition-all duration-700 ${inView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'} flex`}>
+            <div className="bg-baby-blue-900/80 backdrop-blur-sm border border-baby-blue-700/50 rounded-xl p-8 flex-1 flex flex-col">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-6 tracking-tight">
                 What 99% of SDRs/lead gen agencies do
               </h2>
               
-              
-
-              <div className="space-y-6">
+              <div className="space-y-6 flex-1">
                 {problems.map((problem, index) => <div key={index} className={`flex items-start space-x-4 transition-all duration-700 ${inView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`} style={{
                 transitionDelay: `${index * 0.1}s`
               }}>
@@ -75,17 +74,15 @@ const About = () => {
           </div>
 
           {/* Solutions Section */}
-          <div className={`transition-all duration-700 ${inView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`} style={{
+          <div className={`transition-all duration-700 ${inView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'} flex`} style={{
           transitionDelay: '0.3s'
         }}>
-            <div className="bg-baby-blue-900/80 backdrop-blur-sm border border-baby-blue-700/50 rounded-xl p-8">
+            <div className="bg-baby-blue-900/80 backdrop-blur-sm border border-baby-blue-700/50 rounded-xl p-8 flex-1 flex flex-col">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-6 tracking-tight">
                 The "BluAuto Way"
               </h2>
               
-              
-
-              <div className="space-y-6">
+              <div className="space-y-6 flex-1">
                 {solutions.map((solution, index) => <div key={index} className={`flex items-start space-x-4 transition-all duration-700 ${inView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`} style={{
                 transitionDelay: `${0.3 + index * 0.1}s`
               }}>
