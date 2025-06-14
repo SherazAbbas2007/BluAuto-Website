@@ -1,3 +1,4 @@
+
 import React, { useState, useEffect } from 'react';
 import { useInView } from 'react-intersection-observer';
 
@@ -58,13 +59,63 @@ const Navigation = () => {
   const scrollToSection = (href: string) => {
     const element = document.querySelector(href);
     if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
+      const targetPosition = (element as HTMLElement).offsetTop;
+      const startPosition = window.scrollY;
+      const distance = targetPosition - startPosition;
+      
+      // Custom cubic-bezier scroll
+      const duration = 1000; // 1 second duration
+      const startTime = performance.now();
+      
+      function easeInOutCubic(t: number): number {
+        // Implementing the cubic-bezier(0.45, 0, 0.55, 1) easing
+        return t < 0.5
+          ? 4 * t * t * t
+          : 1 - Math.pow(-2 * t + 2, 3) / 2;
+      }
+      
+      function scroll() {
+        const elapsed = performance.now() - startTime;
+        const progress = Math.min(elapsed / duration, 1);
+        const easeProgress = easeInOutCubic(progress);
+        
+        window.scrollTo(0, startPosition + distance * easeProgress);
+        
+        if (progress < 1) {
+          requestAnimationFrame(scroll);
+        }
+      }
+      
+      requestAnimationFrame(scroll);
     }
     setIsMobileMenuOpen(false);
   };
 
   const scrollToTop = () => {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
+    const startPosition = window.scrollY;
+    const duration = 1000; // 1 second duration
+    const startTime = performance.now();
+    
+    function easeInOutCubic(t: number): number {
+      // Implementing the cubic-bezier(0.45, 0, 0.55, 1) easing
+      return t < 0.5
+        ? 4 * t * t * t
+        : 1 - Math.pow(-2 * t + 2, 3) / 2;
+    }
+    
+    function scroll() {
+      const elapsed = performance.now() - startTime;
+      const progress = Math.min(elapsed / duration, 1);
+      const easeProgress = easeInOutCubic(progress);
+      
+      window.scrollTo(0, startPosition * (1 - easeProgress));
+      
+      if (progress < 1) {
+        requestAnimationFrame(scroll);
+      }
+    }
+    
+    requestAnimationFrame(scroll);
     setActiveSection('');
   };
 
