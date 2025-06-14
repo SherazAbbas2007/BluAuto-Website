@@ -10,6 +10,7 @@ const About = () => {
     threshold: 0.1,
     triggerOnce: true
   });
+
   const problems = [
     {
       title: "Generic Outreach:",
@@ -46,8 +47,16 @@ const About = () => {
       description: "By targeting only the most relevant prospects, the BluAuto Method shortens the sales cycle, helping you close deals quicker and get cash flowing faster, accelerating revenue growth."
     }
   ];
+
   return <section id="about" className="py-20 bg-gradient-to-b from-baby-blue-700 to-baby-blue-600" ref={ref}>
       <div className="max-w-[1760px] mx-auto px-8">
+        {/* Title Section */}
+        <div className={`text-center mb-16 transition-all duration-700 ${inView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
+          <h1 className="text-5xl md:text-6xl font-bold text-white mb-4 tracking-tight">
+            Why choose us
+          </h1>
+        </div>
+
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-stretch">
           {/* Problems Section */}
           <div className={`transition-all duration-700 ${inView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'} flex`}>
