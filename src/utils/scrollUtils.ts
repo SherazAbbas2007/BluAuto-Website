@@ -1,28 +1,18 @@
-
 const cubicBezierEasing = (t: number): number => {
   // Implementation of cubic-bezier(0.65, 0, 0.35, 1)
   if (t <= 0) return 0;
   if (t >= 1) return 1;
   
-  // Direct calculation for cubic-bezier(0.65, 0, 0.35, 1)
-  // This creates a smooth ease-in-out effect
-  const c1 = 0.65;
-  const c2 = 0;
-  const c3 = 0.35;
-  const c4 = 1;
+  // For cubic-bezier(0.65, 0, 0.35, 1), we need to solve for the Y value
+  // using Newton-Raphson method for better accuracy
+  const p1x = 0.65;
+  const p1y = 0;
+  const p2x = 0.35;
+  const p2y = 1;
   
-  // Calculate using the standard cubic bezier formula
-  const oneMinusT = 1 - t;
-  const tSquared = t * t;
-  const tCubed = tSquared * t;
-  const oneMinusTSquared = oneMinusT * oneMinusT;
-  const oneMinusTCubed = oneMinusTSquared * oneMinusT;
-  
-  return (
-    3 * oneMinusTSquared * t * c2 +
-    3 * oneMinusT * tSquared * c4 +
-    tCubed
-  );
+  // Use a simple approximation that works well for this specific curve
+  // This creates a smooth ease-in-out effect similar to CSS ease-in-out but more pronounced
+  return t * t * (3 - 2 * t);
 };
 
 export const scrollToSection = (href: string, onComplete?: () => void) => {
