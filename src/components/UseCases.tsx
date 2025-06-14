@@ -63,7 +63,7 @@ const UseCases = () => {
                 }`}
                 style={{ transitionDelay: `${categoryIndex * 0.2}s` }}
               >
-                <div className="text-center">
+                <div className="text-center border-2 border-white/30 rounded-3xl p-8 bg-transparent backdrop-blur-sm">
                   <h3 className="text-3xl lg:text-4xl font-bold text-white mb-16 tracking-tight h-20 flex items-center justify-center">
                     {category.title}
                   </h3>
