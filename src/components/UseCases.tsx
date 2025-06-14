@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { useInView } from 'react-intersection-observer';
 import { Rocket, BarChart3, Users, DollarSign, Mail, Settings, FileText, User, CheckCircle, Target, Briefcase, ListChecks } from 'lucide-react';
@@ -19,7 +18,7 @@ const UseCases = () => {
       icon: Mail
     }, {
       name: 'Application Systems',
-      icon: Settings
+      icon: FileText
     }, {
       name: 'Content Systems',
       icon: FileText
