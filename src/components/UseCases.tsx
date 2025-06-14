@@ -1,4 +1,5 @@
 
+
 import React from 'react';
 import { useInView } from 'react-intersection-observer';
 import { Rocket, BarChart3, Users, DollarSign, Mail, Settings, Database, FileText, User, CheckCircle, Target, Briefcase } from 'lucide-react';
@@ -62,7 +63,7 @@ const UseCases = () => {
               }`}
               style={{ transitionDelay: `${categoryIndex * 0.2}s` }}
             >
-              <div className="border-4 border-white/80 rounded-3xl p-8 bg-black/20 backdrop-blur-sm min-h-[200px]">
+              <div className="border-4 border-white/80 rounded-3xl p-8 bg-black/10 backdrop-blur-sm min-h-[200px]">
                 <div className="grid grid-cols-1 lg:grid-cols-4 gap-8 items-center h-full">
                   {/* Category Title */}
                   <div className="lg:col-span-1 flex items-center justify-center lg:justify-start">
@@ -106,3 +107,4 @@ const UseCases = () => {
 };
 
 export default UseCases;
+
