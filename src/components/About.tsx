@@ -81,9 +81,7 @@ const About = () => {
           transitionDelay: '0.3s'
         }}>
             <div className="bg-baby-blue-900/80 backdrop-blur-sm border border-baby-blue-700/50 rounded-xl p-12 flex-1 flex flex-col">
-              <h2 className="text-4xl md:text-5xl font-bold text-white mb-8 tracking-tight leading-tight">
-                The "BluAuto Way"
-              </h2>
+              <h2 className="text-4xl md:text-5xl font-bold text-white mb-8 tracking-tight leading-tight">Whats different about BluAuto?</h2>
               
               <div className="space-y-8 flex-1">
                 {solutions.map((solution, index) => <div key={index} className={`flex items-start space-x-6 transition-all duration-700 ${inView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`} style={{
