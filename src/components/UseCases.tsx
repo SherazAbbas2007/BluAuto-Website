@@ -94,10 +94,10 @@ const UseCases = () => {
                 </div>
               </div>
               
-              {/* Vertical separator line positioned in the gap between sections */}
+              {/* Vertical separator line - thicker and centered in the gap */}
               {categoryIndex < useCases.length - 1 && (
-                <div className="hidden lg:block absolute top-0 bottom-0 w-px bg-white/20" 
-                     style={{ left: `${(categoryIndex + 1) * 25}%`, transform: 'translateX(-50%)' }} />
+                <div className="hidden lg:block absolute top-0 bottom-0 w-1 bg-white/30" 
+                     style={{ left: `${(categoryIndex + 1) * 25 - 12.5}%`, transform: 'translateX(-50%)' }} />
               )}
             </React.Fragment>
           ))}
