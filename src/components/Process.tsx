@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { useInView } from 'react-intersection-observer';
 
@@ -12,7 +11,7 @@ const Process = () => {
     {
       icon: 'ph-phone',
       title: 'Discovery call',
-      description: 'We analyze your business processes and core systems to identify opportunities where AI automation can enhance and streamline your operations.'
+      description: 'We analyze your sales processes and outbound systems to identify key opportunities where AI automation can boost lead generation, reduce manual outreach, and accelerate client acquisition.'
     },
     {
       icon: 'ph-flow-arrow',
