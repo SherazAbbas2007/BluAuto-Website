@@ -98,12 +98,12 @@ const UseCases = () => {
 
           {/* Vertical separator lines - only visible on large screens */}
           <div className="hidden lg:block absolute inset-0 pointer-events-none">
-            {/* First separator line */}
-            <div className="absolute top-0 bottom-0 w-px bg-white/20" style={{ left: 'calc(25% + 26px)' }}></div>
-            {/* Second separator line */}
-            <div className="absolute top-0 bottom-0 w-px bg-white/20" style={{ left: 'calc(50% + 26px)' }}></div>
-            {/* Third separator line */}
-            <div className="absolute top-0 bottom-0 w-px bg-white/20" style={{ left: 'calc(75% + 26px)' }}></div>
+            {/* First separator line - between Lead Generation and Project Management */}
+            <div className="absolute top-0 bottom-0 w-px bg-white/20" style={{ left: 'calc(25% + 130px)' }}></div>
+            {/* Second separator line - between Project Management and Hiring Systems */}
+            <div className="absolute top-0 bottom-0 w-px bg-white/20" style={{ left: 'calc(50% + 130px)' }}></div>
+            {/* Third separator line - between Hiring Systems and Sales Administration */}
+            <div className="absolute top-0 bottom-0 w-px bg-white/20" style={{ left: 'calc(75% + 130px)' }}></div>
           </div>
         </div>
       </div>
