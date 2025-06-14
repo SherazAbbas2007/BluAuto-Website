@@ -10,41 +10,45 @@ const About = () => {
     threshold: 0.1,
     triggerOnce: true
   });
-  const problems = [{
-    title: "Generic Outreach:",
-    description: "Messaging is too broad and fails to resonate with prospect's unique pain points."
-  }, {
-    title: "Missed Opportunities:",
-    description: "You might overlook potential clients who need your help but don't fit the usual criteria."
-  }, {
-    title: "Wasted Resources:",
-    description: "Time and effort are spent on leads that aren't interested, leading to you losing money and time."
-  }, {
-    title: "Advertising Cost Spiral:",
-    description: "When cold emails flop, companies panic, overspend on PPC, and still don't fix their prospecting problem."
-  }, {
-    title: "Opportunity Cost Creep:",
-    description: "While your team wastes billable hours chasing unqualified prospects, your competitors are closing deals."
-  }];
-  const solutions = [{
-    title: "Personalized Messaging:",
-    description: "We speak directly to the issues your prospects face, making them more relevant and timely."
-  }, {
-    title: "Better Conversion Rates:",
-    description: "Prospects are more likely to buy from you when they see you providing solutions to their problems (simple math)."
-  }, {
-    title: "No time wasted on prospection:",
-    description: "We target leads that really need your services, making your outreach more effective."
-  }, {
-    title: "Build Trust:",
-    description: "Showing you understand their challenges and can solve their problem helps build trust and get them on retainers aka long-term relationships for your business."
-  }, {
-    title: "Faster Revenue Generation:",
-    description: "By targeting only the most relevant prospects, the BluAuto Method shortens the sales cycle, helping you close deals quicker and get cash flowing faster, accelerating revenue growth."
-  }];
+  const problems = [
+    {
+      title: "Generic Outreach:",
+      description: "Messaging is too broad and fails to resonate with prospect's unique pain points."
+    }, {
+      title: "Missed Opportunities:",
+      description: "You might overlook potential clients who need your help but don't fit the usual criteria."
+    }, {
+      title: "Wasted Resources:",
+      description: "Time and effort are spent on leads that aren't interested, leading to you losing money and time."
+    }, {
+      title: "Advertising Cost Spiral:",
+      description: "When cold emails flop, companies panic, overspend on PPC, and still don't fix their prospecting problem."
+    }, {
+      title: "Opportunity Cost Creep:",
+      description: "While your team wastes billable hours chasing unqualified prospects, your competitors are closing deals."
+    }
+  ];
+  const solutions = [
+    {
+      title: "Personalized Messaging:",
+      description: "We speak directly to the issues your prospects face, making them more relevant and timely."
+    }, {
+      title: "Better Conversion Rates:",
+      description: "Prospects are more likely to buy from you when they see you providing solutions to their problems (simple math)."
+    }, {
+      title: "No time wasted on prospection:",
+      description: "We target leads that really need your services, making your outreach more effective."
+    }, {
+      title: "Build Trust:",
+      description: "Showing you understand their challenges and can solve their problem helps build trust and get them on retainers aka long-term relationships for your business."
+    }, {
+      title: "Faster Revenue Generation:",
+      description: "By targeting only the most relevant prospects, the BluAuto Method shortens the sales cycle, helping you close deals quicker and get cash flowing faster, accelerating revenue growth."
+    }
+  ];
   return <section id="about" className="py-20 bg-gradient-to-b from-baby-blue-700 to-baby-blue-600" ref={ref}>
-      <div className="max-w-[1600px] mx-auto px-8">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 items-stretch">
+      <div className="max-w-[1760px] mx-auto px-8">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-stretch">
           {/* Problems Section */}
           <div className={`transition-all duration-700 ${inView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'} flex`}>
             <div className="bg-baby-blue-900/80 backdrop-blur-sm border border-baby-blue-700/50 rounded-xl p-12 flex-1 flex flex-col">
