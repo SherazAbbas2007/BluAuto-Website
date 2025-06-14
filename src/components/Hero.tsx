@@ -28,7 +28,7 @@ const Hero = () => {
           animationFillMode: 'forwards'
         }}>At BluAuto, we use advanced AI to streamline operations and deliver scalable B2B growth solutions. Our custom systems cut manual work, boost efficiency, and free teams to focus on strategic growth.</p>
           
-          <button onClick={handleContactClick} className="bg-white text-zinc-950 px-8 py-5 sm:px-10 sm:py-6 lg:px-12 lg:py-7 text-lg sm:text-xl lg:text-xl rounded-2xl font-semibold hover:bg-gray-100 hover:scale-110 transition-all duration-300 tracking-wide hover:shadow-[0_0_20px_rgba(255,255,255,0.6)] animate-fade-in-up" style={{
+          <button onClick={handleContactClick} className="bg-white text-zinc-950 px-8 py-5 sm:px-10 sm:py-6 lg:px-12 lg:py-7 text-lg sm:text-xl lg:text-xl rounded-2xl font-semibold hover:bg-gray-100 hover:scale-105 transition-all duration-300 tracking-wide hover:shadow-[0_0_20px_rgba(255,255,255,0.6)] animate-fade-in-up" style={{
           animationDelay: '0.6s',
           opacity: 0,
           animationFillMode: 'forwards'
