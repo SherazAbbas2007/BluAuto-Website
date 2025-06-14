@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { useInView } from 'react-intersection-observer';
 import { X, CheckCircle } from 'lucide-react';
@@ -12,46 +11,46 @@ const About = () => {
   const problems = [
     {
       title: "Generic Outreach:",
-      description: "Messaging is too broad and fails to resonate with prospect's unique pain points and business challenges."
+      description: "Broad messaging fails to resonate with prospect's unique pain points."
     },
     {
       title: "Missed Opportunities:",
-      description: "You might overlook potential clients who need AI automation but don't fit traditional targeting criteria."
+      description: "Overlooking potential clients who need AI automation but don't fit criteria."
     },
     {
       title: "Wasted Resources:",
-      description: "Time and effort are spent on unqualified leads, leading to lost revenue and inefficient resource allocation."
+      description: "Time spent on unqualified leads leads to lost revenue and inefficiency."
     },
     {
       title: "Advertising Cost Spiral:",
-      description: "When generic outreach fails to convert, companies panic-pivot to expensive paid ads, burning through budgets on inflated CPAs without solving the core lead qualification problem."
+      description: "Generic outreach failure leads to expensive paid ads and inflated CPAs."
     },
     {
       title: "Opportunity Cost Creep:",
-      description: "While your team wastes time chasing unqualified prospects, competitors are implementing AI systems and scaling efficiently."
+      description: "While chasing unqualified prospects, competitors implement AI systems and scale efficiently."
     }
   ];
 
   const solutions = [
     {
       title: "AI-Powered Personalization:",
-      description: "We use advanced AI to create highly targeted messaging that speaks directly to each prospect's specific operational challenges."
+      description: "Advanced AI creates targeted messaging for each prospect's specific operational challenges."
     },
     {
       title: "Higher Conversion Rates:",
-      description: "Prospects are more likely to engage when they see you understand their automation needs and can solve their efficiency problems."
+      description: "Prospects engage more when you understand their automation needs completely."
     },
     {
       title: "Smart Lead Qualification:",
-      description: "Our AI systems identify and prioritize leads that truly need automation solutions, making your outreach laser-focused."
+      description: "AI systems identify and prioritize leads that truly need automation solutions."
     },
     {
       title: "Build Authority & Trust:",
-      description: "Demonstrating deep understanding of their operational challenges positions you as the go-to automation expert, leading to long-term partnerships."
+      description: "Demonstrating operational understanding positions you as the go-to automation expert."
     },
     {
       title: "Accelerated Growth:",
-      description: "By targeting only the most relevant prospects with AI-driven precision, BluAuto's approach shortens sales cycles and accelerates revenue generation through automated systems."
+      description: "AI-driven precision targeting shortens sales cycles and accelerates revenue generation."
     }
   ];
 
