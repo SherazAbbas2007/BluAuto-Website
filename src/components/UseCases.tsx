@@ -1,6 +1,6 @@
 import React from 'react';
 import { useInView } from 'react-intersection-observer';
-import { Rocket, BarChart3, Users, DollarSign, Mail, Settings, Edit, User, CheckCircle, Target, Briefcase, ListChecks } from 'lucide-react';
+import { Rocket, BarChart3, Users, DollarSign, Mail, Settings, Edit, User, CheckCircle, Target, Briefcase, ListChecks, FileText } from 'lucide-react';
 import CustomCrmIcon from './icons/CustomCrmIcon';
 import AiAssetGeneratorIcon from './icons/AiAssetGeneratorIcon';
 import AiNurtureSystemsIcon from './icons/AiNurtureSystemsIcon';
@@ -24,7 +24,7 @@ const UseCases = () => {
         icon: Settings
       }, {
         name: 'Content Systems',
-        icon: Edit
+        icon: FileText
       }]
     }, {
       title: 'Project Management',
