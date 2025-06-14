@@ -45,15 +45,15 @@ const UseCases = () => {
   ];
 
   return (
-    <section id="usecases" className="py-20 bg-gradient-to-b from-baby-blue-800 to-baby-blue-700" ref={ref}>
-      <div className="max-w-7xl mx-auto px-6">
-        <div className={`text-center mb-20 transition-all duration-700 ${inView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
-          <h2 className="text-4xl md:text-5xl font-bold text-white mb-6 tracking-tight">
+    <section id="usecases" className="py-32 bg-gradient-to-b from-baby-blue-800 to-baby-blue-700 min-h-screen flex items-center" ref={ref}>
+      <div className="max-w-7xl mx-auto px-6 w-full">
+        <div className={`text-center mb-24 transition-all duration-700 ${inView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
+          <h2 className="text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-8 tracking-tight">
             Example Use Cases
           </h2>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-16">
           {useCases.map((category, categoryIndex) => (
             <div 
               key={category.title}
@@ -63,11 +63,11 @@ const UseCases = () => {
               style={{ transitionDelay: `${categoryIndex * 0.2}s` }}
             >
               <div className="text-center">
-                <h3 className="text-2xl font-bold text-white mb-10 tracking-tight min-h-[3rem] flex items-center justify-center">
+                <h3 className="text-3xl lg:text-4xl font-bold text-white mb-12 tracking-tight min-h-[4rem] flex items-center justify-center">
                   {category.title}
                 </h3>
                 
-                <div className="space-y-8">
+                <div className="space-y-12">
                   {category.items.map((item, itemIndex) => {
                     const IconComponent = item.icon;
                     return (
@@ -79,10 +79,10 @@ const UseCases = () => {
                         style={{ transitionDelay: `${(categoryIndex * 0.2) + (itemIndex * 0.1)}s` }}
                       >
                         <div className="flex flex-col items-center px-4">
-                          <div className="mb-4 w-16 h-16 flex items-center justify-center">
-                            <IconComponent size={48} className="text-white" />
+                          <div className="mb-6 w-20 h-20 lg:w-24 lg:h-24 flex items-center justify-center">
+                            <IconComponent size={64} className="text-white lg:w-16 lg:h-16" />
                           </div>
-                          <p className="text-white/90 text-lg font-medium text-center leading-tight min-h-[3rem] flex items-center justify-center">
+                          <p className="text-white/90 text-xl lg:text-2xl font-medium text-center leading-tight min-h-[4rem] flex items-center justify-center">
                             {item.name}
                           </p>
                         </div>
