@@ -1,17 +1,17 @@
 
 export const createCubicBezierEasing = () => {
   return function cubicBezier(t: number): number {
-    // Accurate implementation of cubic-bezier(0.45, 0, 0.55, 1)
+    // Implementation of cubic-bezier(0.65, 0, 0.35, 1)
     if (t <= 0) return 0;
     if (t >= 1) return 1;
     
-    // Binary search for accurate cubic bezier
+    // Binary search for accurate cubic bezier with new control points
     let start = 0;
     let end = 1;
     let mid = t;
     
     for (let i = 0; i < 10; i++) {
-      const x = 3 * (1 - mid) * (1 - mid) * mid * 0.45 + 3 * (1 - mid) * mid * mid * 0.55 + mid * mid * mid;
+      const x = 3 * (1 - mid) * (1 - mid) * mid * 0.65 + 3 * (1 - mid) * mid * mid * 0.35 + mid * mid * mid;
       if (Math.abs(x - t) < 0.001) break;
       if (x < t) start = mid;
       else end = mid;
