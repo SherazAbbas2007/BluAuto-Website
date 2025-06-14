@@ -2,7 +2,6 @@
 import React from 'react';
 import { useInView } from 'react-intersection-observer';
 import { Rocket, BarChart3, Users, DollarSign, Mail, Settings, Database, FileText, User, CheckCircle, Target, Briefcase } from 'lucide-react';
-import { Separator } from './ui/separator';
 
 const UseCases = () => {
   const { ref, inView } = useInView({
@@ -54,46 +53,58 @@ const UseCases = () => {
           </h2>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-20 lg:gap-52">
-          {useCases.map((category, categoryIndex) => (
-            <div 
-              key={category.title}
-              className={`transition-all duration-700 ${
-                inView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
-              }`}
-              style={{ transitionDelay: `${categoryIndex * 0.2}s` }}
-            >
-              <div className="text-center">
-                <h3 className="text-3xl lg:text-4xl font-bold text-white mb-16 tracking-tight h-20 flex items-center justify-center">
-                  {category.title}
-                </h3>
-                
-                <div className="space-y-16">
-                  {category.items.map((item, itemIndex) => {
-                    const IconComponent = item.icon;
-                    return (
-                      <div 
-                        key={item.name}
-                        className={`transition-all duration-700 ${
-                          inView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
-                        }`}
-                        style={{ transitionDelay: `${(categoryIndex * 0.2) + (itemIndex * 0.1)}s` }}
-                      >
-                        <div className="flex flex-col items-center px-4">
-                          <div className="mb-8 w-24 h-24 flex items-center justify-center flex-shrink-0">
-                            <IconComponent size={64} className="text-white w-16 h-16" />
+        <div className="relative">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-20 lg:gap-52">
+            {useCases.map((category, categoryIndex) => (
+              <div 
+                key={category.title}
+                className={`transition-all duration-700 ${
+                  inView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
+                }`}
+                style={{ transitionDelay: `${categoryIndex * 0.2}s` }}
+              >
+                <div className="text-center">
+                  <h3 className="text-3xl lg:text-4xl font-bold text-white mb-16 tracking-tight h-20 flex items-center justify-center">
+                    {category.title}
+                  </h3>
+                  
+                  <div className="space-y-16">
+                    {category.items.map((item, itemIndex) => {
+                      const IconComponent = item.icon;
+                      return (
+                        <div 
+                          key={item.name}
+                          className={`transition-all duration-700 ${
+                            inView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
+                          }`}
+                          style={{ transitionDelay: `${(categoryIndex * 0.2) + (itemIndex * 0.1)}s` }}
+                        >
+                          <div className="flex flex-col items-center px-4">
+                            <div className="mb-8 w-24 h-24 flex items-center justify-center flex-shrink-0">
+                              <IconComponent size={64} className="text-white w-16 h-16" />
+                            </div>
+                            <p className="text-white/90 text-xl lg:text-2xl font-medium text-center leading-tight h-16 flex items-center justify-center">
+                              {item.name}
+                            </p>
                           </div>
-                          <p className="text-white/90 text-xl lg:text-2xl font-medium text-center leading-tight h-16 flex items-center justify-center">
-                            {item.name}
-                          </p>
                         </div>
-                      </div>
-                    );
-                  })}
+                      );
+                    })}
+                  </div>
                 </div>
               </div>
-            </div>
-          ))}
+            ))}
+          </div>
+
+          {/* Vertical separator lines - only visible on large screens */}
+          <div className="hidden lg:block absolute inset-0 pointer-events-none">
+            {/* First separator line */}
+            <div className="absolute top-0 bottom-0 w-px bg-white/20" style={{ left: 'calc(25% + 26px)' }}></div>
+            {/* Second separator line */}
+            <div className="absolute top-0 bottom-0 w-px bg-white/20" style={{ left: 'calc(50% + 26px)' }}></div>
+            {/* Third separator line */}
+            <div className="absolute top-0 bottom-0 w-px bg-white/20" style={{ left: 'calc(75% + 26px)' }}></div>
+          </div>
         </div>
       </div>
     </section>
