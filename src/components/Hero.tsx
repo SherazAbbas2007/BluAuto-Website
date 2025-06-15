@@ -33,7 +33,7 @@ const Hero = () => {
           
           <button 
             onClick={handleContactClick} 
-            className="bg-white text-zinc-950 px-8 py-5 sm:px-10 sm:py-6 lg:px-12 lg:py-7 text-lg sm:text-xl lg:text-xl rounded-2xl font-semibold hover:bg-gray-100 transform hover:scale-105 transition-transform duration-300 ease-out tracking-wide hover:shadow-[0_0_20px_rgba(255,255,255,0.6)] animate-fade-in-up" 
+            className="bg-white text-zinc-950 px-8 py-5 sm:px-10 sm:py-6 lg:px-12 lg:py-7 text-lg sm:text-xl lg:text-xl rounded-2xl font-semibold hover:bg-gray-100 transition-all duration-300 ease-out tracking-wide hover:shadow-[0_0_20px_rgba(255,255,255,0.6)] animate-fade-in-up hover:scale-110" 
             style={{
               animationDelay: '0.6s',
               opacity: 0,
