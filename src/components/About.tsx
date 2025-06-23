@@ -63,14 +63,14 @@ const About = () => {
       <div className="max-w-7xl mx-auto px-10">
         {/* Title Section */}
         <div className={`text-center mb-10 transition-all duration-700 ${inView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
-          <h1 className="text-xl md:text-2xl font-bold text-white mb-3 tracking-tight">Why choose us?</h1>
+          <h1 className="text-2xl md:text-3xl font-bold text-white mb-3 tracking-tight">Why choose us?</h1>
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-stretch">
           {/* Problems Section */}
           <div className={`transition-all duration-700 ${inView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'} flex`}>
             <div className="bg-baby-blue-900/80 backdrop-blur-sm border border-baby-blue-700/50 rounded-xl p-12 flex-1 flex flex-col">
-              <h2 className="text-lg md:text-xl font-bold text-white mb-5 tracking-tight leading-tight">
+              <h2 className="text-xl md:text-2xl font-bold text-white mb-5 tracking-tight leading-tight">
                 What 99% of SDRs/lead gen agencies do
               </h2>
               
@@ -87,10 +87,10 @@ const About = () => {
                       <X size={14} className="text-red-400" />
                     </div>
                     <div>
-                      <h3 className="font-semibold text-white text-base mb-1 leading-tight">
+                      <h3 className="font-semibold text-white text-lg mb-2 leading-tight">
                         {problem.title}
                       </h3>
-                      <p className="text-white/80 font-light leading-relaxed text-sm">
+                      <p className="text-white/80 font-light leading-relaxed text-base">
                         {problem.description}
                       </p>
                     </div>
@@ -108,7 +108,7 @@ const About = () => {
             }}
           >
             <div className="bg-baby-blue-900/80 backdrop-blur-sm border border-baby-blue-700/50 rounded-xl p-12 flex-1 flex flex-col">
-              <h2 className="text-lg md:text-xl font-bold text-white mb-5 tracking-tight leading-tight">
+              <h2 className="text-xl md:text-2xl font-bold text-white mb-5 tracking-tight leading-tight">
                 Whats different about BluAuto?
               </h2>
               
@@ -125,10 +125,10 @@ const About = () => {
                       <CheckCircle size={14} className="text-green-400" />
                     </div>
                     <div>
-                      <h3 className="font-semibold text-white text-base mb-1 leading-tight">
+                      <h3 className="font-semibold text-white text-lg mb-2 leading-tight">
                         {solution.title}
                       </h3>
-                      <p className="text-white/80 font-light leading-relaxed text-sm">
+                      <p className="text-white/80 font-light leading-relaxed text-base">
                         {solution.description}
                       </p>
                     </div>
