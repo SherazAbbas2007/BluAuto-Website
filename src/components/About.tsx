@@ -1,8 +1,6 @@
-
 import React from 'react';
 import { useInView } from 'react-intersection-observer';
 import { X, CheckCircle } from 'lucide-react';
-
 const About = () => {
   const {
     ref,
@@ -11,7 +9,6 @@ const About = () => {
     threshold: 0.1,
     triggerOnce: true
   });
-  
   const problems = [{
     title: "Generic Outreach:",
     description: "Messaging is too broad and fails to resonate with prospect's unique pain points."
@@ -28,7 +25,6 @@ const About = () => {
     title: "Opportunity Cost Creep:",
     description: "While your team wastes billable hours chasing unqualified prospects, your competitors are closing deals."
   }];
-
   const solutions = [{
     title: "Personalized Messaging:",
     description: "We speak directly to the issues your prospects face, making them more relevant and timely."
@@ -45,77 +41,69 @@ const About = () => {
     title: "Faster Revenue Generation:",
     description: "By targeting only the most relevant prospects, the BluAuto Method shortens the sales cycle, helping you close deals quicker and get cash flowing faster, accelerating revenue growth."
   }];
-
-  return (
-    <section id="about" className="py-12 bg-gradient-to-b from-baby-blue-700 to-baby-blue-600" ref={ref}>
-      <div className="max-w-5xl mx-auto px-8">
+  return <section id="about" className="py-20 bg-gradient-to-b from-baby-blue-700 to-baby-blue-600" ref={ref}>
+      <div className="max-w-[1760px] mx-auto px-8">
         {/* Title Section */}
-        <div className={`text-center mb-10 transition-all duration-700 ${inView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
-          <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-4 tracking-tight">Why choose us?</h1>
+        <div className={`text-center mb-16 transition-all duration-700 ${inView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
+          <h1 className="text-5xl md:text-6xl font-bold text-white mb-4 tracking-tight">Why choose us?</h1>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-stretch">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-stretch">
           {/* Problems Section */}
           <div className={`transition-all duration-700 ${inView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'} flex`}>
-            <div className="bg-baby-blue-900/80 backdrop-blur-sm border border-baby-blue-700/50 rounded-xl p-8 flex-1 flex flex-col">
-              <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-white mb-6 tracking-tight leading-tight">
+            <div className="bg-baby-blue-900/80 backdrop-blur-sm border border-baby-blue-700/50 rounded-xl p-12 flex-1 flex flex-col">
+              <h2 className="text-4xl md:text-5xl font-bold text-white mb-8 tracking-tight leading-tight">
                 What 99% of SDRs/lead gen agencies do
               </h2>
               
-              <div className="space-y-6 flex-1">
-                {problems.map((problem, index) => (
-                  <div key={index} className={`flex items-start space-x-4 transition-all duration-700 ${inView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`} style={{
-                    transitionDelay: `${index * 0.1}s`
-                  }}>
-                    <div className="flex-shrink-0 w-6 h-6 bg-red-500/20 rounded-full flex items-center justify-center mt-1">
-                      <X size={16} className="text-red-400" />
+              <div className="space-y-8 flex-1">
+                {problems.map((problem, index) => <div key={index} className={`flex items-start space-x-6 transition-all duration-700 ${inView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`} style={{
+                transitionDelay: `${index * 0.1}s`
+              }}>
+                    <div className="flex-shrink-0 w-8 h-8 bg-red-500/20 rounded-full flex items-center justify-center mt-2">
+                      <X size={20} className="text-red-400" />
                     </div>
                     <div>
-                      <h3 className="font-semibold text-white text-lg md:text-xl mb-2 leading-tight">
+                      <h3 className="font-semibold text-white text-xl md:text-2xl mb-3 leading-tight">
                         {problem.title}
                       </h3>
-                      <p className="text-white/80 font-light leading-relaxed text-base md:text-lg">
+                      <p className="text-white/80 font-light leading-relaxed text-lg md:text-xl">
                         {problem.description}
                       </p>
                     </div>
-                  </div>
-                ))}
+                  </div>)}
               </div>
             </div>
           </div>
 
           {/* Solutions Section */}
           <div className={`transition-all duration-700 ${inView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'} flex`} style={{
-            transitionDelay: '0.3s'
-          }}>
-            <div className="bg-baby-blue-900/80 backdrop-blur-sm border border-baby-blue-700/50 rounded-xl p-8 flex-1 flex flex-col">
-              <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-white mb-6 tracking-tight leading-tight">Whats different about BluAuto?</h2>
+          transitionDelay: '0.3s'
+        }}>
+            <div className="bg-baby-blue-900/80 backdrop-blur-sm border border-baby-blue-700/50 rounded-xl p-12 flex-1 flex flex-col">
+              <h2 className="text-4xl md:text-5xl font-bold text-white mb-8 tracking-tight leading-tight">Whats different about BluAuto?</h2>
               
-              <div className="space-y-6 flex-1">
-                {solutions.map((solution, index) => (
-                  <div key={index} className={`flex items-start space-x-4 transition-all duration-700 ${inView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`} style={{
-                    transitionDelay: `${0.3 + index * 0.1}s`
-                  }}>
-                    <div className="flex-shrink-0 w-6 h-6 bg-green-500/20 rounded-full flex items-center justify-center mt-1">
-                      <CheckCircle size={16} className="text-green-400" />
+              <div className="space-y-8 flex-1">
+                {solutions.map((solution, index) => <div key={index} className={`flex items-start space-x-6 transition-all duration-700 ${inView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`} style={{
+                transitionDelay: `${0.3 + index * 0.1}s`
+              }}>
+                    <div className="flex-shrink-0 w-8 h-8 bg-green-500/20 rounded-full flex items-center justify-center mt-2">
+                      <CheckCircle size={20} className="text-green-400" />
                     </div>
                     <div>
-                      <h3 className="font-semibold text-white text-lg md:text-xl mb-2 leading-tight">
+                      <h3 className="font-semibold text-white text-xl md:text-2xl mb-3 leading-tight">
                         {solution.title}
                       </h3>
-                      <p className="text-white/80 font-light leading-relaxed text-base md:text-lg">
+                      <p className="text-white/80 font-light leading-relaxed text-lg md:text-xl">
                         {solution.description}
                       </p>
                     </div>
-                  </div>
-                ))}
+                  </div>)}
               </div>
             </div>
           </div>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default About;
