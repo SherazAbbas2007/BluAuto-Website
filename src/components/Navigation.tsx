@@ -1,3 +1,4 @@
+
 import React, { useState, useEffect } from 'react';
 import { useInView } from 'react-intersection-observer';
 import { scrollToSection, scrollToTop } from '../utils/scrollUtils';
@@ -66,6 +67,11 @@ const Navigation = () => {
     setActiveSection('');
   };
 
+  const handleBookMoreMeetings = () => {
+    console.log('Book More Meetings button clicked');
+    window.open('https://cal.com/sheraz-bluauto/45-minutes-discovery-call?overlayCalendar=true', '_blank');
+  };
+
   const isActive = (href: string) => {
     const sectionId = href.replace('#', '');
     return activeSection === sectionId;
@@ -114,8 +120,15 @@ const Navigation = () => {
               </div>
             </div>
 
-            {/* Empty div for flex balance */}
-            <div className="hidden md:block w-20"></div>
+            {/* Book More Meetings Button - Right Side (Desktop) */}
+            <div className="hidden md:block">
+              <button 
+                onClick={handleBookMoreMeetings}
+                className="bg-white text-slate-800 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-all duration-300 text-lg hover:scale-105"
+              >
+                Book More Meetings
+              </button>
+            </div>
 
             {/* Mobile Menu Button */}
             <button className="md:hidden text-white" onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}>
@@ -155,6 +168,14 @@ const Navigation = () => {
                 {item.name}
               </button>
             ))}
+            
+            {/* Book More Meetings Button for Mobile */}
+            <button 
+              onClick={handleBookMoreMeetings}
+              className="bg-white text-slate-800 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-all duration-300 text-lg mt-6 mx-2"
+            >
+              Book More Meetings
+            </button>
           </div>
         </div>
       </div>
