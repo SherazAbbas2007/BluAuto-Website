@@ -1,5 +1,4 @@
 
-
 import React, { useState, useEffect } from 'react';
 import { useInView } from 'react-intersection-observer';
 import { scrollToSection, scrollToTop } from '../utils/scrollUtils';
@@ -83,7 +82,7 @@ const Navigation = () => {
       <nav className="fixed top-0 left-0 right-0 z-50 transition-all duration-300 backdrop-blur-md" style={{
         backgroundColor: 'rgba(7, 90, 134, 0.5)'
       }}>
-        <div className="max-w-7xl mx-auto px-6">
+        <div className="max-w-7xl mx-auto px-6 relative">
           <div className="flex items-center justify-between h-20">
             {/* Logo Section - Left Side */}
             <div className="flex items-center cursor-pointer" onClick={handleScrollToTop}>
@@ -91,8 +90,8 @@ const Navigation = () => {
               <span className="font-semibold text-white tracking-tight text-2xl">BluAuto</span>
             </div>
 
-            {/* Desktop Navigation - Center */}
-            <div className="hidden md:flex items-center justify-center flex-1">
+            {/* Desktop Navigation - Center (absolutely centered) */}
+            <div className="hidden md:flex absolute left-1/2 transform -translate-x-1/2">
               <div className="flex items-center space-x-8">
                 {navItems.map(item => (
                   <button 
@@ -121,8 +120,8 @@ const Navigation = () => {
               </div>
             </div>
 
-            {/* Book More Meetings Button - Right Side (Desktop) with more margin */}
-            <div className="hidden md:block ml-8">
+            {/* Book More Meetings Button - Right Side (Desktop) */}
+            <div className="hidden md:block">
               <button 
                 onClick={handleBookMoreMeetings}
                 className="bg-white text-slate-800 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-all duration-300 text-lg hover:scale-105"
@@ -185,4 +184,3 @@ const Navigation = () => {
 };
 
 export default Navigation;
-
