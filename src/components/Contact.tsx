@@ -12,7 +12,7 @@ const Contact = () => {
 
   const handleBookCall = () => {
     console.log('Book A Call button clicked');
-    window.open('https://cal.com/sheraz-bluauto/want-to-work-with-me-d', '_blank');
+    window.open('https://cal.com/sheraz-bluauto/45-minutes-discovery-call', '_blank');
   };
 
   const handleEmailClick = () => {

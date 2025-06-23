@@ -1,10 +1,9 @@
-
 import React from 'react';
 
 const Hero = () => {
   const handleContactClick = () => {
     console.log('Contact Me button clicked!');
-    window.open('https://cal.com/sheraz-bluauto/want-to-work-with-me-d', '_blank');
+    window.open('https://cal.com/sheraz-bluauto/45-minutes-discovery-call', '_blank');
   };
 
   return (
