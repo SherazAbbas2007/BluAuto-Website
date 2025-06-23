@@ -60,7 +60,7 @@ const About = () => {
 
   return (
     <section id="about" className="py-20 bg-gradient-to-b from-baby-blue-700 to-baby-blue-600" ref={ref}>
-      <div className="max-w-7xl mx-auto px-10">
+      <div className="max-w-8xl mx-auto px-10">
         {/* Title Section */}
         <div className={`text-center mb-10 transition-all duration-700 ${inView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
           <h1 className="text-2xl md:text-3xl font-bold text-white mb-3 tracking-tight">Why choose us?</h1>
