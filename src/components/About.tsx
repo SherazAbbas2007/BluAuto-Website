@@ -69,7 +69,7 @@ const About = () => {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-stretch">
           {/* Problems Section */}
           <div className={`transition-all duration-700 ${inView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'} flex`}>
-            <div className="bg-baby-blue-900/80 backdrop-blur-sm border border-baby-blue-700/50 rounded-xl p-8 flex-1 flex flex-col">
+            <div className="bg-baby-blue-900/80 backdrop-blur-sm border border-baby-blue-700/50 rounded-xl p-10 flex-1 flex flex-col">
               <h2 className="text-lg md:text-xl font-bold text-white mb-4 tracking-tight leading-tight">
                 What 99% of SDRs/lead gen agencies do
               </h2>
@@ -107,7 +107,7 @@ const About = () => {
               transitionDelay: '0.3s'
             }}
           >
-            <div className="bg-baby-blue-900/80 backdrop-blur-sm border border-baby-blue-700/50 rounded-xl p-8 flex-1 flex flex-col">
+            <div className="bg-baby-blue-900/80 backdrop-blur-sm border border-baby-blue-700/50 rounded-xl p-10 flex-1 flex flex-col">
               <h2 className="text-lg md:text-xl font-bold text-white mb-4 tracking-tight leading-tight">
                 Whats different about BluAuto?
               </h2>
