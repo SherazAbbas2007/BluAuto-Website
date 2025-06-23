@@ -62,15 +62,15 @@ const About = () => {
     <section id="about" className="py-16 bg-gradient-to-b from-baby-blue-700 to-baby-blue-600" ref={ref}>
       <div className="max-w-6xl mx-auto px-8">
         {/* Title Section */}
-        <div className={`text-center mb-10 transition-all duration-700 ${inView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
-          <h1 className="text-2xl md:text-3xl font-bold text-white mb-4 tracking-tight">Why choose us?</h1>
+        <div className={`text-center mb-8 transition-all duration-700 ${inView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
+          <h1 className="text-xl md:text-2xl font-bold text-white mb-3 tracking-tight">Why choose us?</h1>
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-stretch">
           {/* Problems Section */}
           <div className={`transition-all duration-700 ${inView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'} flex`}>
-            <div className="bg-baby-blue-900/80 backdrop-blur-sm border border-baby-blue-700/50 rounded-xl p-6 flex-1 flex flex-col">
-              <h2 className="text-xl md:text-2xl font-bold text-white mb-5 tracking-tight leading-tight">
+            <div className="bg-baby-blue-900/80 backdrop-blur-sm border border-baby-blue-700/50 rounded-xl p-8 flex-1 flex flex-col">
+              <h2 className="text-lg md:text-xl font-bold text-white mb-4 tracking-tight leading-tight">
                 What 99% of SDRs/lead gen agencies do
               </h2>
               
@@ -107,8 +107,8 @@ const About = () => {
               transitionDelay: '0.3s'
             }}
           >
-            <div className="bg-baby-blue-900/80 backdrop-blur-sm border border-baby-blue-700/50 rounded-xl p-6 flex-1 flex flex-col">
-              <h2 className="text-xl md:text-2xl font-bold text-white mb-5 tracking-tight leading-tight">
+            <div className="bg-baby-blue-900/80 backdrop-blur-sm border border-baby-blue-700/50 rounded-xl p-8 flex-1 flex flex-col">
+              <h2 className="text-lg md:text-xl font-bold text-white mb-4 tracking-tight leading-tight">
                 Whats different about BluAuto?
               </h2>
               
