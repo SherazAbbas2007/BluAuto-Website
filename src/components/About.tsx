@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { useInView } from 'react-intersection-observer';
 import { X, CheckCircle } from 'lucide-react';
@@ -48,7 +47,7 @@ const About = () => {
 
   return (
     <section id="about" className="py-8 bg-gradient-to-b from-baby-blue-700 to-baby-blue-600" ref={ref}>
-      <div className="max-w-5xl mx-auto px-6">
+      <div className="max-w-4xl mx-auto px-6">
         {/* Title Section */}
         <div className={`text-center mb-6 transition-all duration-700 ${inView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
           <h1 className="text-2xl md:text-3xl lg:text-4xl font-bold text-white mb-3 tracking-tight">Why choose us?</h1>
