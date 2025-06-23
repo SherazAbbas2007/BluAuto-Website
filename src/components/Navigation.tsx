@@ -1,4 +1,5 @@
 
+
 import React, { useState, useEffect } from 'react';
 import { useInView } from 'react-intersection-observer';
 import { scrollToSection, scrollToTop } from '../utils/scrollUtils';
@@ -120,11 +121,11 @@ const Navigation = () => {
               </div>
             </div>
 
-            {/* Book More Meetings Button - Right Side (Desktop) */}
-            <div className="hidden md:block">
+            {/* Book More Meetings Button - Right Side (Desktop) with more margin */}
+            <div className="hidden md:block ml-8">
               <button 
                 onClick={handleBookMoreMeetings}
-                className="bg-white text-slate-800 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-all duration-300 text-lg hover:scale-105 ml-12"
+                className="bg-white text-slate-800 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-all duration-300 text-lg hover:scale-105"
               >
                 Book More Meetings
               </button>
@@ -184,3 +185,4 @@ const Navigation = () => {
 };
 
 export default Navigation;
+
