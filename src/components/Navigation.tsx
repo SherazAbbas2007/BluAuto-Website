@@ -121,7 +121,7 @@ const Navigation = () => {
             </div>
 
             {/* Book More Meetings Button - Right Side (Desktop) */}
-            <div className="hidden md:block">
+            <div className="hidden md:block ml-8">
               <button 
                 onClick={handleBookMoreMeetings}
                 className="bg-white text-slate-800 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-all duration-300 text-lg hover:scale-105"
