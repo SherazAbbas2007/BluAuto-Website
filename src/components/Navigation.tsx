@@ -69,7 +69,7 @@ const Navigation = () => {
 
   const handleBookMoreMeetings = () => {
     console.log('Book More Meetings button clicked');
-    window.open('https://cal.com/sheraz-bluauto/45-minutes-discovery-call?overlayCalendar=true', '_blank');
+    window.open('https://cal.com/sheraz-bluauto/30-minutes-discovery-call?overlayCalendar=true', '_blank');
   };
 
   const isActive = (href: string) => {
